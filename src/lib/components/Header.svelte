@@ -23,7 +23,7 @@
         <span
           class="inline-block w-5 h-5 mr-2 rounded bg-gradient-to-br from-[#6a5acd] to-[#8a2be2]"
         ></span>
-        Draftr
+        CIC Handbook
       </div>
     </a>
 
@@ -45,7 +45,8 @@
       >
         All About CIC
       </a>
-      <button class="md:hidden text-gray-800">
+
+      <button class="md:hidden text-gray-800" aria-label="Open mobile menu">
         <svg
           class="w-6 h-6"
           fill="none"

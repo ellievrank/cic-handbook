@@ -1,5 +1,4 @@
 <script>
-  // You can add dynamic data here later if needed (e.g., current year)
   const currentYear = new Date().getFullYear();
 </script>
 
@@ -15,22 +14,22 @@
       />
       <div class="flex gap-6">
         <a
-          href="#"
+          href="/"
           class="text-gray-500 hover:text-[#78081C] font-medium transition-colors"
           >Facebook</a
         >
         <a
-          href="#"
+          href="/"
           class="text-gray-500 hover:text-[#78081C] font-medium transition-colors"
           >X (Twitter)</a
         >
         <a
-          href="#"
+          href="/"
           class="text-gray-500 hover:text-[#78081C] font-medium transition-colors"
           >Instagram</a
         >
         <a
-          href="#"
+          href="/"
           class="text-gray-500 hover:text-[#78081C] font-medium transition-colors"
           >LinkedIn</a
         >
@@ -54,14 +53,14 @@
           </li>
           <li>
             <a
-              href="/cic"
+              href="/about-cic"
               class="text-gray-500 hover:text-[#78081C] transition-colors"
               >All about CIC</a
             >
           </li>
           <li>
             <a
-              href="/pricing"
+              href="/support-services"
               class="text-gray-500 hover:text-[#78081C] transition-colors"
               >Support services</a
             >
