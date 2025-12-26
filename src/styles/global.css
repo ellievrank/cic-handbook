@@ -1,0 +1,102 @@
+:root {
+  --sl-color-accent: #78081C;
+  --sl-color-text-accent: #78081C;
+  --sl-color-bg-nav: #ffffff;
+  --sl-color-bg-sidebar: #f9fafb;
+  --sl-color-bg: #ffffff;
+  --sl-color-text: #1f1f1f;
+}
+
+.hero {
+  background-color: #ffffff !important;
+  text-align: center !important;
+  padding-bottom: 4rem !important;
+  padding-top: 4rem !important;
+  
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.hero h1 {
+  color: #78081C !important;
+  font-size: 3.5rem !important;
+  font-weight: 800 !important;
+  line-height: 1.1;
+  margin-bottom: 1.5rem !important;
+  text-align: center !important;
+}
+
+.hero .tagline {
+  color: #6b7280 !important;
+  font-size: 1.25rem !important;
+  max-width: 700px;
+  margin: 0 auto 2.5rem auto !important;
+  line-height: 1.6;
+  text-align: center !important;
+}
+
+.hero .actions {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 1rem;
+  width: 100%;
+}
+
+.hero .action {
+  background-color: #78081C !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 9999px;
+  padding: 0.75rem 2.5rem !important;
+  font-size: 1.1rem !important;
+  font-weight: 600;
+  box-shadow: 0 4px 6px -1px rgba(120, 8, 28, 0.3);
+  text-decoration: none !important;
+}
+
+.hero .action:hover {
+  background-color: #5a0615 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(120, 8, 28, 0.4);
+}
+
+.hero img {
+  display: none !important;
+}
+
+.card-grid {
+  padding-top: 3rem;
+}
+
+.card {
+  background-color: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: #78081C !important;
+}
+
+.card .title {
+  color: #78081C !important;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.card a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.card p {
+  color: #4b5563 !important;
+  margin-top: 0.5rem;
+}
