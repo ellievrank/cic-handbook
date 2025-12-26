@@ -1,6 +1,7 @@
 <script>
+  import "../app.css";
   import Header from "$lib/components/Header.svelte";
-  import Footer from "$lib/components/Footer.svelte"; // Import the footer
+  import Footer from "$lib/components/Footer.svelte";
 
   // Feature List Data
   const features = [
@@ -13,7 +14,7 @@
   ];
 </script>
 
-<div class="overflow-x-hidden font-sans text-gray-900 bg-white antialiased">
+<div class="font-sans text-gray-900 bg-white antialiased scroll-smooth">
   <Header />
 
   <header class="pt-40 pb-24 text-center px-6">
@@ -34,8 +35,8 @@
 
       <div class="flex justify-center">
         <a
-          href="#about"
-          class="group inline-flex items-center justify-center px-8 py-3 rounded-full font-semibold text-white bg-[#78081C] hover:bg-[#5a0615] transition-transform hover:-translate-y-0.5 shadow-lg shadow-[#78081C]/30 gap-2.5"
+          href="/all-about-cic"
+          class="group inline-flex items-center justify-center px-8 py-3 rounded-full font-semibold text-white bg-[#78081C] hover:bg-[#5a0615] transition-transform hover:-translate-y-0.5 gap-2.5 shadow-lg shadow-[#78081C]/30"
         >
           All About CIC
           <div
@@ -70,17 +71,18 @@
             class="bg-gray-100 rounded-3xl pt-12 px-8 flex justify-center overflow-hidden relative w-full max-w-[400px]"
           >
             <img
-              src="https://framerusercontent.com/images/d7m2VScguJ8Bzi0pVEKE6QiFs.png?width=601&height=914"
-              alt="App Dashboard Preview"
+              src="/stock-typing.png"
+              alt="Person typing on laptop"
               class="w-full rounded-t-xl shadow-xl block -mb-2"
             />
           </div>
         </div>
+
         <div class="text-center md:text-left order-2 md:order-2">
           <h2
             class="text-4xl md:text-[2.8rem] leading-tight font-bold text-[#111] mb-8"
           >
-            A clear guide to Criminal Injuries Compensation in Western Australia
+            A clear, plain-English guide to CIC.
           </h2>
           <p class="text-lg text-gray-700 mb-6 leading-relaxed">
             If you have been injured, harmed, or affected by a crime, you may be
@@ -143,7 +145,7 @@
     </div>
   </section>
 
-  <section id="about" class="py-24 px-6 border-t border-gray-200">
+  <section id="who-we-are" class="py-24 px-6 border-t border-gray-200">
     <div class="max-w-[1000px] mx-auto">
       <div class="max-w-2xl">
         <h2 class="text-4xl md:text-[2.8rem] font-bold text-[#78081C] mb-6">
@@ -214,18 +216,18 @@
   <section class="pt-16 pb-24 px-6 bg-white">
     <div class="max-w-[1000px] mx-auto">
       <div
-        class="bg-[#0f0f0f] text-white rounded-3xl pt-20 px-8 text-center overflow-hidden"
+        class="bg-gray-100 text-black rounded-3xl pt-20 px-8 text-center overflow-hidden"
       >
         <div class="max-w-2xl mx-auto mb-10">
           <h2 class="text-4xl md:text-5xl font-bold mb-4">
             Get help with CIC here.
           </h2>
-          <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-lg mx-auto">
+          <p class="text-gray-500 text-lg md:text-xl mb-10 max-w-lg mx-auto">
             A step-by-step explanation of eligibility, applying, decisions,
             reviews, and appeals — written in clear, plain English.
           </p>
           <a
-            href="/start"
+            href="/all-about-cic"
             class="group inline-flex items-center justify-center px-8 py-3 rounded-full font-semibold text-white bg-[#78081C] hover:bg-[#5a0615] transition-transform hover:-translate-y-0.5 shadow-lg shadow-[#78081C]/30 gap-2.5"
           >
             Get Started
@@ -251,8 +253,8 @@
 
         <div class="flex justify-center">
           <img
-            src="https://framerusercontent.com/images/3uvceqytCHwJDIfhFyK75EuwCys.png?width=3840&height=2223"
-            alt="Dashboard"
+            src="/stock-writing.png"
+            alt="Person writing on paper"
             class="w-full max-w-[900px] rounded-t-xl shadow-2xl -mb-2"
           />
         </div>

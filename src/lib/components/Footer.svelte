@@ -7,11 +7,7 @@
     <div
       class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-16"
     >
-      <img
-        src="https://framerusercontent.com/images/eDQ7HIqAK4kdYZ3DQ5CyZeQqhV0.svg?width=122&height=40"
-        alt="Logo"
-        class="h-10 w-auto"
-      />
+      <img src="/book.png" alt="Book Logo" class="h-8 w-auto mr-2" />
       <div class="flex gap-6">
         <a
           href="/"
