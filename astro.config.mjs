@@ -1,16 +1,16 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import tailwind from '@astrojs/tailwind';
 
-// https://astro.build/config
 export default defineConfig({
     integrations: [
+        tailwind({
+            applyBaseStyles: false,
+        }),
         starlight({
             title: 'CIC Handbook',
-            customCss: [
-                './src/styles/global.css',
-            ],
-            // social line removed completely
+            customCss: ['./src/styles/global.css'],
             sidebar: [
                 {
                     label: 'Start Here',
@@ -26,6 +26,9 @@ export default defineConfig({
                     ],
                 },
             ],
+            components: {
+                Header: './src/components/Header.astro',
+            },
         }),
     ],
 });

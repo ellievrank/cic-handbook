@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --sl-color-accent: #78081C;
   --sl-color-text-accent: #78081C;
@@ -7,12 +11,16 @@
   --sl-color-text: #1f1f1f;
 }
 
+a.anchor {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
 .hero {
   background-color: #ffffff !important;
   text-align: center !important;
-  padding-bottom: 4rem !important;
-  padding-top: 4rem !important;
-  
+  padding: 4rem 0 !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
@@ -64,39 +72,4 @@
 
 .hero img {
   display: none !important;
-}
-
-.card-grid {
-  padding-top: 3rem;
-}
-
-.card {
-  background-color: #ffffff !important;
-  border: 1px solid #e5e7eb !important;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s, box-shadow 0.2s;
-  text-align: left;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  border-color: #78081C !important;
-}
-
-.card .title {
-  color: #78081C !important;
-  font-weight: 800;
-  font-size: 1.1rem;
-}
-
-.card a {
-  text-decoration: none !important;
-  color: inherit !important;
-}
-
-.card p {
-  color: #4b5563 !important;
-  margin-top: 0.5rem;
 }
