@@ -11,13 +11,20 @@
     </p>
     <div class="button-stack">
       <a
-        href="https://ecourts.justice.wa.gov.au/"
+        href="https://ecourts.justice.wa.gov.au/eCourtsPortal/OnlineResolution/Run/Page?stateId=6c571e3b-0f61-4909-ac4b-b884d58e5118&pageId=45e9c4d9-e8ff-45ff-be8f-19f04092019a"
         class="btn btn-red"
         target="_blank">Apply online (eCourts)</a
       >
-      <a href="https://www.wa.gov.au/" class="btn btn-outline" target="_blank"
+      <a href="/cic-form1.pdf" class="btn btn-outline" target="_blank"
         >Download Form 1 (PDF)</a
       >
+      <a
+        href="/criminal_injuries_compensation_guide.pdf"
+        class="btn btn-guide"
+        target="_blank"
+      >
+        <span class="icon">ℹ️</span> Guide to completing Form 1
+      </a>
     </div>
   </div>
 
@@ -29,13 +36,20 @@
     </p>
     <div class="button-stack">
       <a
-        href="https://ecourts.justice.wa.gov.au/"
+        href="https://ecourts.justice.wa.gov.au/eCourtsPortal/OnlineResolution/Run/Page?stateId=6c571e3b-0f61-4909-ac4b-b884d58e5118&pageId=45e9c4d9-e8ff-45ff-be8f-19f04092019a"
         class="btn btn-red"
         target="_blank">Apply online (eCourts)</a
       >
-      <a href="https://www.wa.gov.au/" class="btn btn-outline" target="_blank"
+      <a href="/cic-form2.pdf" class="btn btn-outline" target="_blank"
         >Download Form 2 (PDF)</a
       >
+      <a
+        href="/criminal_injuries_compensation_guide2.pdf"
+        class="btn btn-guide"
+        target="_blank"
+      >
+        <span class="icon">ℹ️</span> Guide to completing Form 2
+      </a>
     </div>
   </div>
 </div>
@@ -101,6 +115,12 @@
     font-size: 0.85rem;
     text-align: center;
     transition: all 0.2s;
+    line-height: 1.2;
+    gap: 0.5rem;
+  }
+
+  .icon {
+    font-size: 1rem;
     line-height: 1;
   }
 
@@ -108,7 +128,7 @@
   .btn-red {
     background-color: #78081c;
     border: 1px solid #78081c;
-    color: white !important; /* Forces white text */
+    color: white !important;
   }
   .btn-red:hover {
     background-color: #5a0615;
@@ -126,5 +146,14 @@
     border-color: #9ca3af;
     background-color: #f9fafb;
     color: black !important;
+  }
+  .btn-guide {
+    background-color: #f0f9ff;
+    border: 1px solid #bae6fd;
+    color: #0369a1 !important;
+  }
+  .btn-guide:hover {
+    background-color: #e0f2fe;
+    border-color: #7dd3fc;
   }
 </style>
