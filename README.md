@@ -50,7 +50,7 @@ Content is based on **authoritative public resources**, including Women’s Lega
 The current version focuses on:
 
 - **Western Australia**
-- Criminal Injuries Compensation under the **Criminal Injuries Compensation Act 2003 (WA)**
+- Criminal Injuries Compensation under the ***Criminal Injuries Compensation Act 2003* (WA)**
 
 The structure is intentionally modular so other Australian states and territories can be added in future.
 
