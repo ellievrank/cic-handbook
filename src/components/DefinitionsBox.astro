@@ -1,0 +1,60 @@
+---
+/* src/components/DefinitionsBox.astro */
+interface Props {
+  title?: string;
+}
+
+const { title = "Definitions" } = Astro.props;
+---
+
+<div class="definitions-box not-content">
+  <div class="definitions-header">
+    {title}
+  </div>
+  <div class="definitions-content sl-markdown-content">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .definitions-box {
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e5e7eb;
+  }
+
+  .definitions-header {
+    background-color: #78081c;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.025em;
+  }
+
+  .definitions-content {
+    padding: 1.25rem;
+    color: #374151;
+  }
+
+  /* The Term */
+  .definitions-content :global(dt) {
+    font-weight: 700;
+    color: #1f1f1f;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .definitions-content :global(dt:first-child) {
+    margin-top: 0;
+  }
+
+  .definitions-content :global(dd) {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+</style>

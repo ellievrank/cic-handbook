@@ -14,6 +14,10 @@ hero:
 ---
 
 import ApplyGrid from "../../../components/ApplyGrid.astro";
+import DefinitionsBox from "../../../components/DefinitionsBox.astro";
+import CompensationTable from "../../../components/CompensationTable.astro";
+import InfoBox from "../../../components/InfoBox.astro";
+import { LinkButton } from "@astrojs/starlight/components";
 
 <div class="description-bar">
   This page outlines the process of applying for Criminal Injuries Compensation.
@@ -36,6 +40,43 @@ import ApplyGrid from "../../../components/ApplyGrid.astro";
 </div>
 
 <div class="guide-content">
+:::caution[Content Warning]
+This page discusses experiences of crime, violence, injury, and the impacts of trauma.
+:::
+
+<DefinitionsBox title="Definitions">
+Victim
+: A person who has been physically or psychologically injured as a result of a criminal offence.
+
+Offence
+: A criminal act recognised under Western Australian law.
+
+Offender
+: The person who committed the crime.
+
+Injury
+: Physical harm, psychological harm, or pregnancy resulting from a criminal offence.
+
+Compensation
+: A payment that may be awarded to help cover losses and impacts caused by a crime.
+
+Assessor
+: The official who decides criminal injuries compensation claims in Western Australia.
+
+</DefinitionsBox>
+
+<InfoBox title="About This Guide">
+This handbook brings together key information about criminal injuries compensation in Western Australia to help readers navigate the system with greater confidence.
+
+It explains, in plain language, who may be eligible to apply, what compensation can cover, and where to find support during the process. The aim is to reduce confusion and help people know what questions to ask next.
+
+This handbook does not provide legal advice. Every situation is different, and the information here may not apply to all circumstances. If you are unsure about your eligibility or rights, it is strongly recommended that you speak with a lawyer or a community legal service.
+
+The content in this handbook has been informed by publicly available guidance from courts, government agencies, and community legal organisations. A list of resources consulted is available in the Acknowledgements section.
+
+This handbook reflects information available at the time it was prepared in 2025. Laws, policies, and procedures may change.
+
+</InfoBox>
 
 :::tip[Take your time]
 It is written in plain language and designed to be read slowly. You can scroll, pause, and come back later.
@@ -44,7 +85,7 @@ It is written in plain language and designed to be read slowly. You can scroll, 
 ## What is Criminal Injuries Compensation?
 
 Criminal Injuries Compensation is a payment that may be available if you were harmed because of a crime that happened in Western Australia.
-
+Victims of crime who have suffered an injury can apply for compensation under the _Criminal Injuries Compensation Act 2003_ (WA).
 The scheme is run by the **Office of Criminal Injuries Compensation (OCIC)**.
 
 You may still be able to apply even if:
@@ -61,7 +102,7 @@ Compensation is assessed individually. It is **not automatic**.
 
 ### Victims of crime
 
-You may be able to apply if you were injured because of a criminal offence. "Injury" can include:
+You may be able to apply if you were the primary victim suffering injury from a criminal offence. "Injury" can include:
 
 - physical injury
 - psychological or mental harm
@@ -70,6 +111,23 @@ You may be able to apply if you were injured because of a criminal offence. "Inj
 ### Close relatives
 
 A close relative may be able to apply if the victim died as a result of the offence, or if they suffered psychological harm because of what happened to the victim.
+
+**This can be the victims:**
+
+- Parents
+- Grandparents
+- Step Parents
+- Spouse
+- De facto partner
+- Child
+- Grandchild
+- Step child
+
+It is recommended to seek legal advice to determine if you qualify as an indirect victim.
+
+<LinkButton href="/support-services" variant="secondary" icon="external">
+  Find Support Services
+</LinkButton>
 
 :::danger
 **Brothers and sisters are NOT considered close relatives under the scheme.**
@@ -85,11 +143,36 @@ Compensation may include payment for:
 - travel costs for treatment
 - funeral expenses (for eligible close relatives)
 
-## Do I need to report the crime to police?
+The amount you receive will depend on the extent of your injuries and losses you have suffered. The maximum compensation that may be awarded also depends on the **date of the offence**.
 
-**In most cases, yes.**
+<CompensationTable />
+The maximum amount of compensation applies **per offence**, as long as the offences
+are **unrelated**. If two or more offences are related — meaning they occurred around
+the same time — they are treated as a **single offence** for compensation purposes.
 
-You are expected to report the offence to police as soon as reasonably possible. When reporting, it helps to keep the **police report number** and the **name of the officer**.
+:::note[Impact on Centrelink and Debts]
+**Centrelink:**
+Receiving criminal injuries compensation may affect your Centrelink payments. It’s important to check with Centrelink about how an award could impact your current or future benefits.
+
+**State Debts:**
+If you owe State debts (such as unpaid fines or court penalties), the Assessor may use part of your compensation to clear those debts first. Any remaining amount will then be paid to you.
+:::
+
+## Claims without a charge or conviction
+
+A criminal injuries compensation claim can still be made even if the offender was never charged or convicted.
+
+What matters most is whether you cooperated with police as much as you reasonably could, such as by making a report, giving information, or assisting with an investigation.
+
+<details>
+  <summary>
+    <strong>What if I was unable to help the police?</strong>
+  </summary>
+  In some situations, a person may be unable to help police. If there were valid
+  reasons for this and you can explain or support them with evidence, compensation
+  may still be considered. If you are unsure how this applies to your situation,
+  getting legal advice before applying may be helpful.
+</details>
 
 <details>
   <summary>
@@ -101,14 +184,30 @@ You are expected to report the offence to police as soon as reasonably possible.
 
 ## Time limits (very important)
 
-In most cases, you must apply within **3 years** of the date of the offence.
+In most cases, you must apply within **3 years** of the date of the last offence.
+
+<details>
+<summary><strong>Can the time limit be extended?</strong></summary>
+
+Yes. An extension may be granted for good reasons. Situations where an extension may be considered include (but are not limited to):
+
+- the offence occurred during childhood
+- living in a remote location with limited access to services or information
+- mental health issues that made it difficult to prepare an application
+- family, cultural, or community barriers
+- other significant or exceptional circumstances
+
+If you are considering a claim for an offence that happened **more than three years ago**, it is strongly recommended that you seek legal advice.
+
+</details>
 
 <details>
   <summary>
-    <strong>Can the time limit be extended?</strong>
+    <strong>What if the time limit is approaching?</strong>
   </summary>
-  Yes, sometimes. An extension may be granted for good reasons (e.g., childhood abuse,
-  mental health impacts).
+  If the three-year deadline is approaching and you are not ready to lodge a full
+  application, legal advice may also help you understand whether there are steps
+  you can take to **protect your time limit**.
 </details>
 
 ## When should I apply?
