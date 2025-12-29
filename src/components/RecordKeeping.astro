@@ -1,0 +1,175 @@
+---
+/* src/components/RecordKeeping.astro */
+---
+
+<div class="record-keeping-box not-content">
+  <div class="header">
+    <h3>Keeping Records</h3>
+    <p>
+      Before lodging an application, start keeping clear and detailed records
+      immediately.
+    </p>
+  </div>
+
+  <div class="grid-container">
+    <div class="column">
+      <div class="col-title">
+        <span class="icon">📄</span> Expenses to track
+      </div>
+      <ul class="check-list">
+        <li>
+          <strong>Medical costs:</strong> GP, dental, and specialist fees.
+        </li>
+        <li><strong>Counselling:</strong> Psychology or psychiatry costs.</li>
+        <li>
+          <strong>Travel:</strong> Fuel, parking, or public transport tickets for
+          appointments.
+        </li>
+        <li>
+          <strong>Lost income:</strong> Payslips or records of unpaid leave.
+        </li>
+        <li>
+          <strong>Reports:</strong> The cost of obtaining medical evidence.
+        </li>
+      </ul>
+    </div>
+
+    <div class="column">
+      <div class="col-title">
+        <span class="icon">💡</span> Best practices
+      </div>
+      <ul class="tip-list">
+        <li>
+          <strong>Log it as you go:</strong> Use a simple notebook or phone note to
+          record dates and costs immediately.
+        </li>
+        <li>
+          <strong>Take photos:</strong> Receipts fade. Take a photo of every receipt
+          and physical injury immediately.
+        </li>
+        <li>
+          <strong>Digital backup:</strong> Email photos to yourself or save them in
+          a secure private folder so they aren't lost.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">
+    <strong>Why is this important?</strong>
+    These documents are essential to your claim and directly affect the amount of
+    compensation awarded. You will need to attach copies to your application form.
+  </div>
+</div>
+
+<style>
+  .record-keeping-box {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  }
+
+  .header {
+    background-color: #f9fafb;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  .header h3 {
+    color: #78081c;
+    margin-top: 0;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+
+  .header p {
+    margin: 0;
+    color: #4b5563;
+    font-size: 0.95rem;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .column {
+    padding: 1.5rem;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  @media (min-width: 768px) {
+    .column {
+      border-bottom: none;
+      border-right: 1px solid #f3f4f6;
+    }
+    .column:last-child {
+      border-right: none;
+    }
+  }
+
+  .col-title {
+    font-weight: 700;
+    color: #1f1f1f;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.05rem;
+  }
+
+  .icon {
+    font-size: 1.2rem;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    color: #374151;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 1.25rem;
+  }
+
+  .check-list li::before {
+    content: "✓";
+    color: #78081c;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
+
+  .tip-list li::before {
+    content: "•";
+    color: #78081c;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+
+  .footer {
+    background-color: #fff1f2;
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+    color: #881337;
+    border-top: 1px solid #fecdd3;
+  }
+</style>

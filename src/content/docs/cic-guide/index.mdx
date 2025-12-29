@@ -12,11 +12,13 @@ hero:
       variant: primary
       attrs: { onclick: "window.print()" }
 ---
-
-import ApplyGrid from "../../../components/ApplyGrid.astro";
-import DefinitionsBox from "../../../components/DefinitionsBox.astro";
-import CompensationTable from "../../../components/CompensationTable.astro";
-import InfoBox from "../../../components/InfoBox.astro";
+import ApplyGrid from "@components/ApplyGrid.astro";
+import DefinitionsBox from "@components/DefinitionsBox.astro";
+import CompensationTable from "@components/CompensationTable.astro";
+import InfoBox from "@components/InfoBox.astro";
+import RecordKeeping from "@components/RecordKeeping.astro";
+import StatementGuide from "@components/StatementGuide.astro";
+import GuideSidebar from "@components/GuideSidebar.astro";
 import { LinkButton } from "@astrojs/starlight/components";
 
 <div class="description-bar">
@@ -25,19 +27,7 @@ import { LinkButton } from "@astrojs/starlight/components";
 
 <div class="guide-container">
 
-<div class="guide-sidebar">
-  <div class="sticky-box">
-    <strong>Jump to</strong>
-    <a href="#what-is-criminal-injuries-compensation">What is CIC?</a>
-    <a href="#who-can-apply">Who can apply?</a>
-    <a href="#what-can-compensation-cover">What it covers</a>
-    <a href="#do-i-need-to-report-the-crime-to-police">Reporting to police</a>
-    <a href="#time-limits-very-important">Time limits</a>
-    <a href="#how-do-i-apply">How to apply</a>
-    <a href="#writing-your-statement">Writing your statement</a>
-    <a href="#getting-help">Getting help</a>
-  </div>
-</div>
+<GuideSidebar />
 
 <div class="guide-content">
 :::caution[Content Warning]
@@ -261,8 +251,8 @@ What matters most is whether you cooperated with police as much as you reasonabl
   <summary>
     <strong>What if I didn’t report the offence?</strong>
   </summary>
-  If you did not report the offence, you may still be able to apply, but you will
-  usually need a strong reason (e.g., fear, trauma). **Legal advice is strongly recommended.**
+  You need to have reported the offence to apply. It is important to note the name
+  of the police officer and the report number when reporting the offence.
 </details>
 
 ## Time limits (very important)
@@ -288,11 +278,16 @@ If you are considering a claim for an offence that happened **more than three ye
   <summary>
     <strong>What if the time limit is approaching?</strong>
   </summary>
-  It is best to apply after your injuries have stabalised. If the three-year deadline
-  is approaching and you are not ready to lodge a full application, legal advice
-  may also help you understand whether there are steps you can take to **protect
-  your time limit**.
+  It is best to apply after your injuries have stabalised. If the time limit is close
+  and your injuries have not yet stabilised, you can lodge a claim before the deadline
+  and include a short letter explaining that further medical information will be
+  provided later. While the claim will not be assessed until the additional information
+  is submitted, lodging early may preserve your time limit and avoid the need to
+  apply for an extension. Legal advice may also help you understand whether there
+  are steps you can take to **protect your time limit**.
 </details>
+
+<RecordKeeping />
 
 ## How do I apply?
 
@@ -335,7 +330,20 @@ If you have questions about lodging your application or need assistance, you can
 
 </InfoBox>
 
-## Writing your statement
+### What does the application include?
+
+A single application can cover multiple offences if they were committed by the same offender. If you were injured by more than one offender, you must submit a separate application for each offender.
+These documents are usually lodged together and assessed as one application.
+
+There is no fee to lodge an application. However, some supporting documents — such as police or medical records obtained through Freedom of Information (FOI) requests — may involve an administration fee charged by the organisation providing the records.
+
+**Each application generally includes:**
+
+- the completed Application Form
+- a Statement of Impact explaining what happened and how it has affected you (_see bellow for more information_)
+- supporting evidence (_see bellow for more information_)
+
+## Writing a Statement of Impact
 
 Your statement explains:
 
@@ -345,30 +353,256 @@ Your statement explains:
 
 There is no required format. **Clear and honest is enough.**
 
+<StatementGuide />
+
+:::note[Important note about writing your statement]
+Preparing your Personal Statement may bring up difficult or distressing memories. It is normal to find this part of the process emotionally challenging.
+
+If writing your statement feels overwhelming, you do not have to do it alone. You may wish to pause, take breaks, or seek support from someone you trust, a counsellor, or a specialist victim support service.
+
+You can access confidential support services at any time:
+
+<LinkButton href="/support-services" variant="secondary" icon="external">
+  Find support services
+</LinkButton>
+:::
+
+## Supporting evidence
+
+You will need to provide evidence that supports your claim. This evidence helps show that the offence occurred and explains the injuries or losses you experienced as a result. What evidence is required will depend on your circumstances, but it should be relevant, clear, and connected to your claim.
+
+### Accessing records (FOI)
+
+You have the right to request access to information held about you by government agencies and other organisations under **Freedom of Information (FOI)** laws. Many organisations provide online request forms, while others may require a written request explaining what records you are seeking and the time period covered.
+
+You will usually need to provide proof of identity when requesting records.
+
+**Supporting evidence may include (but is not limited to):**
+
+- police information relating to the incident
+- medical or health records
+- reports from treating health professionals
+- photographs of injuries or property damage
+- documents showing financial loss (such as lost income or expenses)
+- any other relevant material that supports your application
+
+### Police information
+
+Police information can help confirm that the offence was reported and provide details about what occurred. This information is usually requested directly from WA Police and may include incident reports or other relevant records.
+
+Requests can be made online or in writing and may involve an administration fee. Processing times can vary, and it may take several weeks for information to be provided.
+
+<details>
+<summary><strong>Costs associated with police information</strong></summary>
+
+WA Police charge an administration fee for providing information for criminal injuries compensation purposes.
+
+- The standard fee is **approximately $30**, but this may increase depending on the volume or type of documents requested.
+- Proof of identity is required when making a request.
+- Processing can take **several weeks**, particularly if investigations or court proceedings have only recently concluded.
+
+</details>
+
+<details>
+<summary><strong>How to apply for police information</strong></summary>
+
+Police information can be requested in one of the following ways:
+
+**Online:**
+Applications can be made through the WA Police website:
+👉 [Apply for Information (WA Police)](https://www.police.wa.gov.au/Police-Direct/Apply-for-Information)
+
+**Hard copy:**
+A written application can be lodged directly with WA Police, along with proof of identity and payment of the required fee.
+
+The information provided is commonly referred to as an **Information Report for Criminal Injuries Compensation**.
+
+</details>
+
+### Medical or health records
+
+Medical or health records can show that you sought treatment following the offence. These records may come from hospitals, general practitioners, specialists, or other health services involved in your care.
+
+Records are usually requested directly from the relevant health service and may require a written request and proof of identity.
+
+When requesting records or reports, it is best to be clear about what information is needed and the time period covered. You may wish to ask the provider to include:
+
+- relevant dates of treatment
+- your relevant medical history
+- a description of your symptoms and diagnosis
+- details of any examinations or tests performed
+- how the offence contributed to your condition
+- details of treatment received, including ongoing care
+- medications prescribed or likely to be required
+- the impact of the injury on daily life or ability to work
+- your prognosis, including expected recovery or future needs
+
+### Reports from treating health professionals
+
+In some cases, a report from a treating doctor, psychologist, psychiatrist, or other health professional may be needed to support your claim, particularly where ongoing treatment or future needs are being claimed.
+
+Reports are best obtained from a practitioner who knows your situation. Costs for reports are not covered by Medicare, and fees can vary. Some practitioners may reduce fees or offer payment plans—this can be discussed when booking an appointment.
+
+:::note[Interim Payments]
+Interim payments may be available in limited circumstances to help cover certain costs before a final decision is made. If an application is unsuccessful, any interim payment may need to be repaid.
+:::
+
+<details>
+<summary><strong>Costs associated with medical or psychological reports</strong></summary>
+
+Medical report fees are **not covered by Medicare**. Typical costs may include:
+
+- **General practitioner reports:** approximately $50–$300
+- **Specialist medical reports:** approximately $300–$1,500
+- **Psychological or psychiatric reports:** approximately $500–$3,000
+
+If cost is a concern, some practitioners may reduce fees, waive costs, or allow payment by instalments.
+
+</details>
+
+### Photographs of injuries or property damage
+
+Photographs can help demonstrate the physical impact of the offence or any damage to personal property. Where possible, photographs should be clear, dated, and taken as close as practicable to the time of the incident or injury.
+
+### Documents showing financial loss
+
+Documents showing financial loss can include evidence of lost income, medical expenses, travel costs, or other out-of-pocket expenses related to the offence. Receipts, payslips, invoices, or employer letters may be used to support these claims.
+
+### Other relevant material
+
+Depending on your circumstances, other documents—such as insurance records or workers’ compensation information—may also be relevant and can be requested from the organisation that holds them.
+
 ## Can I get money before a final decision?
 
-In some cases, you may be able to request an **interim payment** for treatment or funeral expenses.
+In some cases, you may be able to request an **interim payment** to help cover urgent costs before your application is finally decided. Interim payments are not automatic and must be requested.
+
+Interim payments are generally used to help cover:
+
+- medical or treatment expenses
+- the cost of obtaining medical or psychological reports
+- funeral expenses (for eligible relatives)
+
+You can choose to pay expenses yourself and claim them later, or request an interim payment where costs cannot reasonably be met upfront. Keep all receipts, as proof of payment is required.
 
 <details>
-  <summary>
-    <strong>Important things to know about interim payments</strong>
-  </summary>
-  * Interim payments are part of the final compensation amount. * If your claim is
-  refused, the interim payment may need to be repaid.
+<summary><strong>Important things to know about interim payments</strong></summary>
+
+- **Part of final compensation:** Interim payments are part of your final compensation and will be deducted from any amount you are ultimately awarded.
+- **Caps apply:** The total amount of interim payments generally cannot exceed **3% of the maximum compensation** that could be awarded in your case (approx. $2,250).
+- **Case-by-case:** Interim payments are assessed on a case-by-case basis and are not guaranteed.
+- **Evidence required:** You may need to provide evidence showing why the payment is required before the final decision is made.
+- **Repayment risk:** If your application is refused, any interim payment received may become a **debt to the State** and must be repaid.
+
 </details>
 
-## Will the offender be told?
+:::tip[Seek Advice]
+If you’re unsure whether an interim payment is appropriate for your situation, you may wish to seek legal advice or assistance from a victim support service before applying.
+:::
+
+## Will the offender be notified?
 
 **Usually, yes.**
-The offender may receive an edited copy of your application. They will **not** be given your address.
+
+In most cases, the Assessor will notify the offender that an application for criminal injuries compensation has been made. This allows the offender an opportunity to respond to the claim.
+
+The offender may receive an **edited copy** of your application. Your **personal contact details**, such as your address, are not disclosed.
+
+Notification is generally limited to offences where the offender was **charged or convicted**, but this will depend on the circumstances of the case.
 
 <details>
-  <summary>
-    <strong>What if I’m worried about my safety?</strong>
-  </summary>
-  You can ask the Assessor not to recover compensation from the offender by explaining
-  your safety concerns in writing.
+<summary><strong>What if I’m worried about my safety?</strong></summary>
+
+If you have concerns about your safety, you can raise these with the Assessor in writing. In some circumstances, the Assessor may consider requests to limit notification or recovery action against the offender.
+
+These decisions are made on a case-by-case basis. If you are seeking to prevent the offender from being notified, it is strongly recommended that you obtain legal advice.
+
 </details>
+
+## After you lodge your application: what to expect
+
+<details>
+<summary><strong>How long does the process usually take?</strong></summary>
+
+There is no set timeframe for criminal injuries compensation applications.
+
+Some matters are finalised within months, while others can take **a year or more**, particularly where additional information is required or the claim is complex.
+
+</details>
+
+<details>
+<summary><strong>How does the Assessor make a decision?</strong></summary>
+
+An Assessor will review the information you submit, including your application form and supporting evidence. They may also consider information provided by other parties or obtained from external organisations.
+
+The Assessor is not limited to the documents you provide and may rely on a range of relevant material when making a decision.
+
+</details>
+
+<details>
+<summary><strong>Can the Assessor request more information?</strong></summary>
+
+**Yes.** The Assessor has the power to formally request information from external organisations, such as police, government agencies, or health services.
+
+These requests are made using official notices that require the organisation to provide documents or information.
+
+</details>
+
+<details>
+<summary><strong>Will there be a hearing?</strong></summary>
+
+Most applications are decided on the paperwork alone. In some cases, the Assessor may decide that a hearing is necessary.
+
+- Hearings are **private**.
+- You may be asked to attend and give evidence.
+- If a hearing is required, you will be notified in advance.
+
+</details>
+
+<details>
+<summary><strong>What if I have safety concerns?</strong></summary>
+
+If you have concerns about your safety in relation to other people involved in the process, you can inform the Assessor. Suitable arrangements can be discussed to address those concerns.
+
+</details>
+
+<details>
+<summary><strong>How is compensation paid?</strong></summary>
+
+If compensation is awarded, payment is made **directly to you** by the Government.
+
+</details>
+
+<details>
+<summary><strong>Can the offender challenge the decision?</strong></summary>
+
+**Yes.** An offender has the right to appeal a compensation decision in certain circumstances.
+
+</details>
+
+## Can I appeal a decision?
+
+If you are unhappy with the outcome of your application, you may be able to **appeal the decision**. This includes situations where:
+
+- your application is refused, or
+- you believe the amount of compensation awarded is too low.
+
+### How long do I have to appeal?
+
+An appeal must usually be lodged within **21 days** of the date you receive the Assessor’s decision.
+
+### Where is an appeal made?
+
+Appeals are made to the **District Court of Western Australia**. You must lodge a notice of appeal and provide copies to the required parties.
+
+### What happens during an appeal?
+
+The Court will review the Assessor’s decision and the material relied upon. In some cases, the Court may:
+
+- confirm the original decision,
+- vary the amount awarded, or
+- overturn the decision entirely.
+
+You may be required to provide further information or attend a court hearing.
 
 ## Getting help
 

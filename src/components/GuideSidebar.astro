@@ -1,0 +1,75 @@
+---
+/* src/components/GuideSidebar.astro */
+---
+
+<div class="guide-sidebar">
+  <div class="sticky-box">
+    <strong>Jump to</strong>
+    <nav>
+      <a href="#what-is-criminal-injuries-compensation">What is CIC?</a>
+      <a href="#who-can-apply">Who can apply?</a>
+      <a href="#what-can-compensation-cover">What it covers</a>
+      <a href="#time-limits-very-important">Time limits</a>
+      <a href="#how-do-i-apply">How to apply</a>
+      <a href="#writing-a-statement-of-impact">Statement of Impact</a>
+      <a href="#supporting-evidence">Supporting evidence</a>
+      <a href="#can-i-get-money-before-a-final-decision">Interim payments</a>
+      <a href="#after-you-lodge-your-application-what-to-expect"
+        >What to expect</a
+      >
+      <a href="#can-i-appeal-a-decision">Appeals</a>
+      <a href="#getting-help">Getting help</a>
+    </nav>
+  </div>
+</div>
+
+<style>
+  .guide-sidebar {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .guide-sidebar {
+      display: block;
+      width: 240px;
+      flex-shrink: 0;
+    }
+  }
+
+  .sticky-box {
+    position: sticky;
+    top: 2rem;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .sticky-box strong {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: #111827;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .sticky-box nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sticky-box a {
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+    line-height: 1.4;
+  }
+
+  .sticky-box a:hover {
+    color: #78081c;
+    text-decoration: underline;
+  }
+</style>
