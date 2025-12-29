@@ -1,0 +1,36 @@
+---
+/* src/components/HomeCTA.astro */
+import { LinkButton } from "@astrojs/starlight/components";
+---
+
+<div class="action-bar">
+  <h3>Need immediate help or support?</h3>
+  <p>Find confidential support services available in your area.</p>
+
+  <LinkButton href="/support-services" variant="primary" icon="external">
+    Explore Support Services
+  </LinkButton>
+</div>
+
+<style>
+  .action-bar {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #fdf2f2; /* Very light red background */
+    border-radius: 12px;
+    border: 1px solid #fecdd3;
+  }
+
+  .action-bar h3 {
+    color: #78081c;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    margin-top: 0;
+  }
+
+  .action-bar p {
+    margin-bottom: 1.5rem;
+    color: #4b5563;
+  }
+</style>
