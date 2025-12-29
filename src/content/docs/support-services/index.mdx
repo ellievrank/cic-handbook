@@ -4,11 +4,14 @@ description: Confidential support services for victims of crime.
 template: splash
 hero:
   tagline: You do not need to make a claim to access help.
+previous:
+  link: /
+  label: Home
 ---
 
 import { LinkButton } from "@astrojs/starlight/components";
-import SupportServicesGrid from '../../../components/SupportServicesGrid.astro';
-import LegalHelpCard from "../../../components/LegalHelpCard.astro";
+import SupportServicesGrid from '@components/SupportServicesGrid.astro';
+import LegalHelpCard from "@components/LegalHelpCard.astro";
 
 :::danger[In an emergency]
 **If you or someone else is in immediate danger, call Triple Zero (000).**
@@ -27,10 +30,6 @@ If you are affected by crime, confidential support is available. These services 
 Each state and territory also offers its own victim support services, counselling programs, and referral networks. These services may provide additional assistance tailored to local systems and communities.
 
 If you are unsure which service is right for you, a national helpline can help connect you to appropriate local support.
-
-<LinkButton href="/cic-guide" variant="secondary" icon="right-arrow">
-  Return to CIC Guide
-</LinkButton>
 
 ## Legal help
 

@@ -189,3 +189,48 @@ width: 100vw;
 [data-template="splash"] .hero .action svg {
   color: #ffffff !important;
 }
+
+
+.pagination-links a {
+  border: 1px solid #e5e7eb; 
+  background-color: white;
+  border-radius: 12px;    
+  padding: 1.5rem;       
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  text-decoration: none !important;
+  transition: all 0.2s ease-in-out;
+}
+.pagination-links a:hover {
+  border-color: #78081C;          
+  transform: translateY(-2px);    
+  box-shadow: 0 8px 15px -3px rgba(120, 8, 28, 0.15); 
+}
+
+.pagination-links .label {
+  color: #6b7280;                
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.pagination-links .title {
+  color: #111827;                
+  font-size: 1.25rem;
+  font-weight: 800;
+  transition: color 0.2s;
+}
+
+.pagination-links a:hover .title {
+  color: #78081C;               
+}
+
+.pagination-links svg {
+  color: #9ca3af;     
+  transition: color 0.2s;
+}
+
+.pagination-links a:hover svg {
+  color: #78081C;             
+}
