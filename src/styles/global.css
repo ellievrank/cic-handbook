@@ -74,7 +74,6 @@ a.anchor {
   display: none !important;
 }
 
-/* 1. Description Bar */
 .description-bar {
   background-color: #78081C; 
   color: white;
@@ -92,7 +91,6 @@ a.anchor {
   margin-right: -50vw;
   margin-bottom: 3rem;
 }
-/* 2. The Guide Grid */
 .guide-container {
 width: 100vw;
   position: relative;
@@ -102,8 +100,7 @@ width: 100vw;
   margin-right: -50vw;
 
   display: grid;
-  grid-template-columns: 1fr; /* Mobile: Single column */
-  gap: 4rem; 
+  grid-template-columns: 1fr;
   padding-left: 2rem;
   padding-right: 2rem;
   align-items: start;
@@ -116,7 +113,6 @@ width: 100vw;
   }
 }
 
-/* 3. The Left Sidebar ("Jump To") */
 .guide-sidebar {
   display: none; 
 }
@@ -166,7 +162,6 @@ width: 100vw;
   color: #831843;
 }
 
-/* 5. Clean up the Hero Title for this page */
 [data-template="splash"] .hero h1 {
   font-size: 3rem !important;
   color: #1f1f1f !important; 
@@ -176,11 +171,21 @@ width: 100vw;
   color: #4b5563 !important;
 }
 
-/* 6. Fix the "Download PDF" button in the Hero */
 [data-template="splash"] .hero .action {
   background-color: #78081C !important;
   color: white !important;
   border-radius: 9999px;
   font-weight: 600;
   border: none;
+}
+
+.sl-link-button.primary,
+.sl-link-button.primary:hover,
+[data-template="splash"] .hero .action {
+  color: #ffffff !important;
+}
+
+.sl-link-button.primary svg,
+[data-template="splash"] .hero .action svg {
+  color: #ffffff !important;
 }

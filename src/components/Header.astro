@@ -4,7 +4,20 @@ import Search from "@astrojs/starlight/components/Search.astro";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "CIC Guide", href: "/cic-guide" },
+  {
+    name: "CIC Guide",
+    href: "/cic-guide",
+    dropdown: [
+      { name: "Western Australia", href: "/cic-guide", active: true },
+      { name: "Victoria", href: "#", active: false },
+      { name: "New South Wales", href: "#", active: false },
+      { name: "Queensland", href: "#", active: false },
+      { name: "South Australia", href: "#", active: false },
+      { name: "Tasmania", href: "#", active: false },
+      { name: "Northern Territory", href: "#", active: false },
+      { name: "ACT", href: "#", active: false },
+    ],
+  },
   { name: "Support Services", href: "/support-services" },
 ];
 ---
@@ -26,16 +39,60 @@ const navLinks = [
       </div>
     </a>
 
-    <div class="hidden md:flex gap-8 items-center">
+    <div class="hidden md:flex gap-8 items-center h-full">
       {
-        navLinks.map((link) => (
-          <a
-            href={link.href}
-            class="text-gray-600 font-medium text-[0.95rem] hover:text-[#78081C] transition-colors no-underline"
-          >
-            {link.name}
-          </a>
-        ))
+        navLinks.map((link) =>
+          link.dropdown ? (
+            <div class="relative group h-full flex items-center">
+              <button class="flex items-center gap-1 text-gray-600 font-medium text-[0.95rem] group-hover:text-[#78081C] transition-colors focus:outline-none cursor-pointer bg-transparent border-none p-0 h-full">
+                {link.name}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="transition-transform group-hover:rotate-180"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+
+              <div class="absolute top-[calc(100%-0.5rem)] left-1/2 -translate-x-1/2 pt-2 hidden group-hover:block w-56">
+                <div class="bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden py-2">
+                  {link.dropdown.map((subItem) =>
+                    subItem.active ? (
+                      <a
+                        href={subItem.href}
+                        class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#78081C] font-medium"
+                      >
+                        {subItem.name}
+                      </a>
+                    ) : (
+                      <div class="px-4 py-2.5 text-sm text-gray-400 flex justify-between items-center cursor-default bg-gray-50/50">
+                        <span>{subItem.name}</span>
+                        <span class="text-[0.65rem] uppercase font-bold tracking-wider bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded">
+                          Soon
+                        </span>
+                      </div>
+                    )
+                  )}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <a
+              href={link.href}
+              class="text-gray-600 font-medium text-[0.95rem] hover:text-[#78081C] transition-colors no-underline flex items-center h-full"
+            >
+              {link.name}
+            </a>
+          )
+        )
       }
     </div>
 

@@ -3,12 +3,12 @@ title: Support Services
 description: Confidential support services for victims of crime.
 template: splash
 hero:
-  title: Find Support
   tagline: You do not need to make a claim to access help.
 ---
 
 import { LinkButton } from "@astrojs/starlight/components";
-import SupportServicesGrid from "../../../components/SupportServicesGrid.astro";
+import SupportServicesGrid from '../../../components/SupportServicesGrid.astro';
+import LegalHelpCard from "../../../components/LegalHelpCard.astro";
 
 :::danger[In an emergency]
 **If you or someone else is in immediate danger, call Triple Zero (000).**
@@ -31,3 +31,7 @@ If you are unsure which service is right for you, a national helpline can help c
 <LinkButton href="/cic-guide" variant="secondary" icon="right-arrow">
   Return to CIC Guide
 </LinkButton>
+
+## Legal help
+
+<LegalHelpCard />
