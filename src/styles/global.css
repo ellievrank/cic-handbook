@@ -15,21 +15,65 @@
   --brand-slate: #1e293b;
 }
 
-/* Framework-specific overrides */
-a.anchor {
+/* Hide ALL anchor links in headings - comprehensive approach */
+a.anchor,
+a[class*="anchor"],
+a[class*="heading-anchor"],
+.sl-heading-anchor,
+a.sl-heading-anchor,
+.sl-markdown-content a.anchor,
+.sl-markdown-content .sl-heading-anchor,
+h2 a,
+h3 a,
+h4 a,
+h2 > a,
+h3 > a,
+h4 > a,
+h2 a.anchor,
+h3 a.anchor,
+h4 a.anchor,
+h2 .sl-heading-anchor,
+h3 .sl-heading-anchor,
+h4 .sl-heading-anchor,
+.sl-markdown-content h2 a,
+.sl-markdown-content h3 a,
+.sl-markdown-content h4 a,
+.sl-markdown-content h2 > a,
+.sl-markdown-content h3 > a,
+.sl-markdown-content h4 > a,
+.sl-markdown-content h2 a svg,
+.sl-markdown-content h3 a svg,
+.sl-markdown-content h4 a svg,
+h2 svg,
+h3 svg,
+h4 svg,
+.sl-markdown-content h2 svg,
+.sl-markdown-content h3 svg,
+.sl-markdown-content h4 svg {
   display: none !important;
   visibility: hidden !important;
+  opacity: 0 !important;
   pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
 }
 
-/* Markdown content styles */
 .sl-markdown-content h2 {
-  color: var(--brand-red) !important;
+  background-color: #eddaff !important;
+  color: #000000 !important;
   font-family: system-ui, sans-serif;
   font-weight: 800 !important;
   font-size: 2rem !important; 
   margin-top: 4rem !important;
   margin-bottom: 1.5rem !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 8px !important;
+  width: 100% !important;
+  display: block !important;
   letter-spacing: -0.02em;
   position: relative;
 }
@@ -211,6 +255,7 @@ details > *:not(summary) {
 
 .hero img { display: none !important; }
 
+
 .sl-link-button.primary,
 .sl-link-button.primary:hover,
 [data-template="splash"] .hero .action {
@@ -221,7 +266,6 @@ details > *:not(summary) {
   color: #ffffff !important;
 }
 
-/* Starlight aside components */
 .starlight-aside--caution,
 .starlight-aside--tip,
 .starlight-aside--note,
@@ -245,7 +289,23 @@ details > *:not(summary) {
   letter-spacing: 0.05em;
 }
 
-/* Pagination next/previous cards */
+.starlight-aside--tip {
+  background-color: #eddaff !important;
+  border-color: #a855f7 !important;
+  color: #6b21a8 !important;
+}
+.starlight-aside--tip .starlight-aside__title {
+  color: #7c3aed !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.05em;
+}
+
+.starlight-aside--note {
+  background-color: #c2e1ff !important;
+  border-color: #9ccbfa !important;
+  color: #1a2892 !important;
+}
+
 .pagination-links a {
   display: block;
   background-color: #ffffff;

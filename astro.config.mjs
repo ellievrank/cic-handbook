@@ -11,6 +11,9 @@ export default defineConfig({
         starlight({
             title: 'CIC Handbook',
             customCss: ['./src/styles/global.css'],
+            markdown: {
+                headingLinks: false,
+            },
             sidebar: [
                 {
                     label: 'Start Here',
