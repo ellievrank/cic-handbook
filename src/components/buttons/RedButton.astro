@@ -1,37 +1,12 @@
 ---
+import "../../styles/global.css";
 /* src/components/SupportButton.astro */
 const { href = "/support-services" } = Astro.props;
 ---
 
-<a href={href} class="support-btn"> Find Support Services </a>
-
-<style>
-  .support-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-
-    background-color: white;
-    color: #78081c;
-    border: 2px solid #78081c;
-
-    padding: 0.75rem 1.5rem;
-    border-radius: 9999px;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 1rem;
-    line-height: 1.2;
-
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .support-btn:hover {
-    background-color: #78081c;
-    color: white;
-    transform: translateY(-2px);
-  }
-</style>
+<a
+  href={href}
+  class="mt-4 mb-4 inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#78081c] bg-white px-6 py-3 text-base font-bold text-[#78081c] no-underline transition hover:-translate-y-0.5 hover:bg-[#78081c] hover:text-white"
+>
+  Find Support Services
+</a>

@@ -1,0 +1,50 @@
+---
+import "../../styles/global.css";
+
+/* src/components/JurisdictionGrid.astro */
+const jurisdictions = [
+  { name: "Western Australia", href: "/wa-guide", active: true },
+  { name: "Victoria", href: "#", active: false },
+  { name: "New South Wales", href: "#", active: false },
+  { name: "Queensland", href: "#", active: false },
+  { name: "South Australia", href: "#", active: false },
+  { name: "Tasmania", href: "#", active: false },
+  { name: "Northern Territory", href: "#", active: false },
+  { name: "ACT", href: "#", active: false },
+];
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+  {
+    jurisdictions.map((state) => (
+      <a
+        href={state.active ? state.href : undefined}
+        class={`
+          flex flex-col justify-center min-h-40 p-8 rounded-lg no-underline shadow-md border transition-all duration-200 ease-in-out
+          ${state.active 
+            ? 'bg-white border-gray-200 hover:-translate-y-1 hover:shadow-lg hover:border-[#78081c]' 
+            : 'bg-gray-50 border-gray-100 cursor-default opacity-80'
+          }
+        `}
+      >
+        <div>
+          <h3 class={`
+            text-xl font-bold mt-0 mb-4
+            ${state.active ? 'text-[#78081c]' : 'text-gray-400'}
+          `}>
+            {state.name}
+          </h3>
+          {state.active ? (
+            <span class="text-2xl text-[#78081c] font-bold">➔</span>
+          ) : (
+            <span class="inline-block bg-gray-200 text-gray-500 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+              Coming Soon
+            </span>
+          )}
+        </div>
+      </a>
+    ))
+  }
+</div>
+
+

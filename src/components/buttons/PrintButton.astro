@@ -1,8 +1,12 @@
 ---
+import "../../styles/global.css";
 /* src/components/PrintButton.astro */
 ---
 
-<button class="print-btn" id="print-page-btn">
+<button
+  class="print:hidden mt-4 inline-flex items-center gap-2 rounded-full bg-[#1f1f1f] px-6 py-3 text-sm font-semibold text-white transition hover:bg-black"
+  id="print-page-btn"
+>
   <svg
     width="20"
     height="20"
@@ -27,31 +31,3 @@
     window.print();
   });
 </script>
-
-<style>
-  .print-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #1f1f1f;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 9999px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: background 0.2s;
-    font-size: 0.9rem;
-  }
-
-  .print-btn:hover {
-    background-color: #000;
-  }
-
-  @media print {
-    .print-btn {
-      display: none;
-    }
-  }
-</style>

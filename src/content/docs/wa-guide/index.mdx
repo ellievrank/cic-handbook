@@ -19,20 +19,25 @@ previous:
   label: Home
 ---
 import ApplyGrid from "@components/guide-visuals/ApplyGrid.astro";
-import DefinitionsBox from "@components//guide-visuals/DefinitionsBox.astro";
-import CompensationTable from "@components/guide-visuals//CompensationTable.astro";
-import InfoBox from "@components/guide-visuals//InfoBox.astro";
-import RecordKeeping from "@components/guide-visuals//RecordKeeping.astro";
-import StatementGuide from "@components/guide-visuals//StatementGuide.astro";
-import GuideSidebar from "@components/GuideSidebar.astro";
+import DefinitionsBox from "@components/guide-visuals/DefinitionsBox.astro";
+import CompensationTable from "@components/guide-visuals/CompensationTable.astro";
+import InfoBox from "@components/guide-visuals/InfoBox.astro";
+import RecordKeeping from "@components/guide-visuals/RecordKeeping.astro";
+import StatementGuide from "@components/guide-visuals/StatementGuide.astro";
+import GuideSidebar from "@components/guide/GuideSidebar.astro";
 import RedButton from "@components/buttons/RedButton.astro";
 import { LinkButton } from "@astrojs/starlight/components";
 
-<div class="description-bar">
-  This page outlines the process of applying for Criminal Injuries Compensation.
+<div
+  class="relative left-0 right-0 mb-12 flex w-screen items-center justify-center bg-[#78081c] px-4 py-6 text-center text-lg font-semibold text-white shadow-md"
+  style="margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);"
+>
+  <div class="flex items-center justify-center text-white">
+    This page outlines the process of applying for Criminal Injuries Compensation.
+  </div>
 </div>
 
-<div class="guide-container">
+<div class="relative left-1/2 right-1/2 grid grid-cols-1 items-start px-8 -ml-[50vw] -mr-[50vw] w-screen md:grid-cols-[340px_minmax(0,800px)] md:justify-start md:pl-20">
 
 <GuideSidebar />
 

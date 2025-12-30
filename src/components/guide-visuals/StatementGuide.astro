@@ -1,173 +1,50 @@
 ---
+import "../../styles/global.css";
 /* src/components/StatementGuide.astro */
 ---
 
-<div class="statement-box not-content">
-  <div class="header">
-    <div class="icon-circle">📝</div>
-    <div class="header-text">
-      <h3>Statement of Impact Guide</h3>
-      <p>Your opportunity to explain how the offence has affected your life.</p>
+<div class="not-content my-8 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md">
+  <div class="flex items-center gap-4 border-b border-sky-200 bg-sky-50 px-6 py-5">
+    <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-xl shadow">
+      📝
+    </div>
+    <div class="space-y-1">
+      <h3 class="m-0 text-lg font-bold text-sky-900">Statement of Impact Guide</h3>
+      <p class="m-0 text-sm text-sky-700">Your opportunity to explain how the offence has affected your life.</p>
     </div>
   </div>
 
-  <div class="content-grid">
-    <div class="info-section">
-      <strong>What to include:</strong>
-      <ul class="impact-list">
-        <li>
-          <span class="category">Physical:</span> Injuries, pain, scarring, treatment
-          needed.
+  <div class="grid grid-cols-1 md:grid-cols-5">
+    <div class="border-b border-gray-100 p-6 md:col-span-3 md:border-b-0 md:border-r">
+      <strong class="text-gray-900">What to include:</strong>
+      <ul class="mt-4 list-none space-y-3 p-0">
+        <li class="flex items-baseline gap-2 text-sm text-gray-700">
+          <span class="min-w-[80px] font-bold text-sky-700">Physical:</span> Injuries, pain, scarring, treatment needed.
         </li>
-        <li>
-          <span class="category">Emotional:</span> Fear, anxiety, sleep issues, trauma.
+        <li class="flex items-baseline gap-2 text-sm text-gray-700">
+          <span class="min-w-[80px] font-bold text-sky-700">Emotional:</span> Fear, anxiety, sleep issues, trauma.
         </li>
-        <li>
-          <span class="category">Social:</span> Impact on relationships, safety, or
-          social life.
+        <li class="flex items-baseline gap-2 text-sm text-gray-700">
+          <span class="min-w-[80px] font-bold text-sky-700">Social:</span> Impact on relationships, safety, or social life.
         </li>
-        <li>
-          <span class="category">Financial:</span> Lost wages, medical costs, damaged
-          items.
+        <li class="flex items-baseline gap-2 text-sm text-gray-700">
+          <span class="min-w-[80px] font-bold text-sky-700">Financial:</span> Lost wages, medical costs, damaged items.
         </li>
       </ul>
     </div>
 
-    <div class="action-section">
-      <p>
-        There is no strict format. You can use dot points, a letter, or a
-        statutory declaration.
+    <div class="flex flex-col items-center justify-center gap-4 bg-gray-50 p-6 text-center md:col-span-2">
+      <p class="m-0 text-sm text-gray-600">
+        There is no strict format. You can use dot points, a letter, or a statutory declaration.
       </p>
 
-      <a href="/Statement_of_Impact.pdf" class="download-btn" target="_blank">
-        <span class="btn-icon">⬇️</span> Download Official Guide
+      <a
+        href="/Statement_of_Impact.pdf"
+        class="flex w-full max-w-xs items-center justify-center gap-2 rounded-full bg-sky-600 px-4 py-3 font-semibold text-white no-underline transition hover:bg-sky-700"
+        target="_blank"
+      >
+        <span class="text-lg leading-none">⬇️</span> Download Official Guide
       </a>
     </div>
   </div>
 </div>
-
-<style>
-  .statement-box {
-    background-color: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    margin: 2rem 0;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-  }
-
-  .header {
-    background-color: #f0f9ff;
-    padding: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    border-bottom: 1px solid #bae6fd;
-  }
-
-  .icon-circle {
-    background-color: white;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  }
-
-  .header h3 {
-    margin: 0;
-    color: #0c4a6e;
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-
-  .header p {
-    margin: 0;
-    color: #0369a1;
-    font-size: 0.95rem;
-  }
-
-  .content-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  @media (min-width: 768px) {
-    .content-grid {
-      grid-template-columns: 3fr 2fr;
-    }
-  }
-
-  .info-section {
-    padding: 1.5rem;
-    border-bottom: 1px solid #f3f4f6;
-  }
-
-  @media (min-width: 768px) {
-    .info-section {
-      border-bottom: none;
-      border-right: 1px solid #f3f4f6;
-    }
-  }
-
-  .impact-list {
-    margin: 1rem 0 0 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .impact-list li {
-    margin-bottom: 0.75rem;
-    font-size: 0.95rem;
-    color: #374151;
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
-  }
-
-  .category {
-    font-weight: 700;
-    color: #0369a1;
-    min-width: 80px;
-  }
-
-  .action-section {
-    padding: 1.5rem;
-    background-color: #fafafa;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .action-section p {
-    font-size: 0.9rem;
-    color: #6b7280;
-    margin-bottom: 1rem;
-  }
-
-  .download-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    background-color: #0284c7;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 9999px;
-    transition: background-color 0.2s;
-    width: 100%;
-    max-width: 250px;
-  }
-
-  .download-btn:hover {
-    background-color: #0369a1;
-    color: white;
-  }
-</style>

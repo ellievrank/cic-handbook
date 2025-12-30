@@ -1,4 +1,5 @@
 ---
+import "../../styles/global.css";
 /* src/components/FeatureCard.astro */
 interface Props {
   title: string;
@@ -9,58 +10,15 @@ interface Props {
 const { title, href, icon } = Astro.props;
 ---
 
-<a href={href} class="feature-card group">
-  <div class="card-content">
-    <div class="header">
-      {icon && <span class={`icon ${icon}`} />}
-      <h3 class="title">{title}</h3>
-    </div>
-    <div class="body">
-      <slot />
-    </div>
+<a
+  href={href}
+  class="group block h-full rounded-xl border border-gray-200 bg-white p-6 text-left no-underline shadow-md transition hover:-translate-y-1 hover:border-[#78081c] hover:shadow-lg"
+>
+  <div class="flex items-center gap-3 pb-2">
+    {icon && <span class={`text-lg ${icon}`} />}
+    <h3 class="m-0 text-lg font-extrabold text-[#78081c]">{title}</h3>
+  </div>
+  <div class="text-sm leading-6 text-gray-600">
+    <slot />
   </div>
 </a>
-
-<style>
-  /* Local Scoped CSS - No !important needed! */
-  .feature-card {
-    display: block;
-    background-color: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    transition:
-      transform 0.2s,
-      box-shadow 0.2s,
-      border-color 0.2s;
-    text-decoration: none;
-    height: 100%;
-  }
-
-  .feature-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    border-color: #78081c;
-  }
-
-  .header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .title {
-    color: #78081c;
-    font-weight: 800;
-    font-size: 1.1rem;
-    margin: 0;
-  }
-
-  .body {
-    color: #4b5563;
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-</style>

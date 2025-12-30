@@ -1,73 +1,17 @@
 ---
+import "../../styles/global.css";
 /* src/components/DefinitionsBox.astro */
 const { title } = Astro.props;
 ---
 
-<div class="def-card">
-  <div class="def-accent"></div>
-  <div class="def-content">
-    <h3>{title}</h3>
-    <div class="def-body">
+<div class="mb-10 flex overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+  <div class="w-1.5 shrink-0 bg-[#78081c]" />
+  <div class="w-full px-8 py-7">
+    <h3 class="mb-6 mt-0 flex items-center gap-2 text-xl font-extrabold tracking-wide text-slate-900">
+      {title}
+    </h3>
+    <dl class="grid gap-3">
       <slot />
-    </div>
+    </dl>
   </div>
 </div>
-
-<style>
-  .def-card {
-    display: flex;
-    background-color: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    margin-bottom: 2.5rem;
-    overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
-  }
-
-  .def-accent {
-    width: 6px;
-    background-color: #78081c;
-    flex-shrink: 0;
-  }
-
-  .def-content {
-    padding: 2rem;
-    width: 100%;
-  }
-
-  .def-content h3 {
-    margin-top: 0 !important;
-    margin-bottom: 1.5rem !important;
-    color: #1e293b;
-    font-size: 1.25rem;
-    font-weight: 800;
-    letter-spacing: 0.05em;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .def-content h3::before {
-    font-size: 1.2rem;
-    filter: grayscale(100%);
-    opacity: 0.6;
-  }
-
-  .def-body {
-    display: grid;
-    gap: 0.5rem;
-  }
-
-  .def-body :global(dt) {
-    font-weight: 700;
-    color: #78081c;
-    font-size: 1.05rem;
-    margin-top: 0;
-  }
-
-  .def-body :global(dd) {
-    margin-left: 0;
-    color: #475569;
-    line-height: 1.6;
-  }
-</style>
