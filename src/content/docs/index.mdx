@@ -3,45 +3,25 @@ title: The Criminal Injuries Compensation Guide
 description: A clear, plain-English guide to CIC in Western Australia.
 template: splash
 hero:
-  tagline: A toolkit for victims of crime and their supporters in Western Australia.
+  tagline: A toolkit for victims of crime and their supporters in Australia.
   actions:
     - text: Download the Guide as PDF
-      link: /cic-guide
+      link: /
       icon: document
       variant: primary
+next:
+  link: /wa-guide
+  label: Western Australia Guide
 ---
 
-import { Card, CardGrid } from "@astrojs/starlight/components";
+import JurisdictionGrid from "@components/home/JurisdictionGrid.astro";
+import HomeCTA from "@components/home/HomeCTA.astro";
 
-<div class="home-content">
+<div>
+  
+  <JurisdictionGrid />
 
-## Explore the Handbook
-
-<CardGrid>
-  <Card title="Start Here" icon="rocket">
-    [**CIC Guide**](/cic-guide) Understand eligibility, timelines, and the
-    process.
-  </Card>
-  <Card title="Eligibility" icon="approve-check-circle">
-    [**Who can apply?**](/cic-guide#who-can-apply) Victims, close relatives, and
-    specific situations.
-  </Card>
-  <Card title="Making a Claim" iFcon="document">
-    [**How to apply**](/cic-guide#how-do-i-apply) Forms, evidence, and writing
-    your statement.
-  </Card>
-  <Card title="Decisions" icon="gavel">
-    [**Outcomes & Appeals**](/cic-guide#what-happens-after-i-apply) What happens
-    after you submit your application.
-  </Card>
-  <Card title="Support" icon="heart">
-    [**Find Support**](/support-services) Legal help, crisis lines, and
-    counseling services.
-  </Card>
-  <Card title="Resources" icon="open-book">
-    [**Downloads**](/cic-guide#want-to-read-this-offline) PDF guides and
-    printable forms.
-  </Card>
-</CardGrid>
+  <HomeCTA />
 
 </div>
+

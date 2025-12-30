@@ -1,0 +1,17 @@
+---
+import "../../styles/global.css";
+/* src/components/DefinitionsBox.astro */
+const { title } = Astro.props;
+---
+
+<div class="mb-10 flex overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+  <div class="w-1.5 shrink-0 bg-[#78081c]" />
+  <div class="w-full px-8 py-7">
+    <h3 class="mb-6 mt-0 flex items-center gap-2 text-xl font-extrabold tracking-wide text-slate-900">
+      {title}
+    </h3>
+    <dl class="grid gap-3">
+      <slot />
+    </dl>
+  </div>
+</div>

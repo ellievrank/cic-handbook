@@ -1,0 +1,50 @@
+---
+import "../../styles/global.css";
+/* src/components/StatementGuide.astro */
+---
+
+<div class="not-content my-8 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md">
+  <div class="flex items-center gap-4 border-b border-sky-200 bg-sky-50 px-6 py-5">
+    <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-xl shadow">
+      📝
+    </div>
+    <div class="space-y-1">
+      <h3 class="m-0 text-lg font-bold text-sky-900">Statement of Impact Guide</h3>
+      <p class="m-0 text-sm text-sky-700">Your opportunity to explain how the offence has affected your life.</p>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-5">
+    <div class="border-b border-gray-100 p-6 md:col-span-3 md:border-b-0 md:border-r">
+      <strong class="text-gray-900">What to include:</strong>
+      <ul class="mt-4 list-none space-y-3 p-0">
+        <li class="flex items-baseline gap-2 text-sm text-gray-700">
+          <span class="min-w-[80px] font-bold text-sky-700">Physical:</span> Injuries, pain, scarring, treatment needed.
+        </li>
+        <li class="flex items-baseline gap-2 text-sm text-gray-700">
+          <span class="min-w-[80px] font-bold text-sky-700">Emotional:</span> Fear, anxiety, sleep issues, trauma.
+        </li>
+        <li class="flex items-baseline gap-2 text-sm text-gray-700">
+          <span class="min-w-[80px] font-bold text-sky-700">Social:</span> Impact on relationships, safety, or social life.
+        </li>
+        <li class="flex items-baseline gap-2 text-sm text-gray-700">
+          <span class="min-w-[80px] font-bold text-sky-700">Financial:</span> Lost wages, medical costs, damaged items.
+        </li>
+      </ul>
+    </div>
+
+    <div class="flex flex-col items-center justify-center gap-4 bg-gray-50 p-6 text-center md:col-span-2">
+      <p class="m-0 text-sm text-gray-600">
+        There is no strict format. You can use dot points, a letter, or a statutory declaration.
+      </p>
+
+      <a
+        href="/Statement_of_Impact.pdf"
+        class="flex w-full max-w-xs items-center justify-center gap-2 rounded-full bg-sky-600 px-4 py-3 font-semibold text-white no-underline transition hover:bg-sky-700"
+        target="_blank"
+      >
+        <span class="text-lg leading-none">⬇️</span> Download Official Guide
+      </a>
+    </div>
+  </div>
+</div>

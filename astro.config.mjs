@@ -16,9 +16,15 @@ export default defineConfig({
                     label: 'Start Here',
                     items: [
                         { label: 'Home', link: '/' },
-                        { label: 'All About CIC', link: '/about-cic' },
                     ],
                 },
+                {
+                    label: 'Western Australia',
+                    items: [
+                        { label: 'WA CIC Guide', link: '/wa-guide' },
+                    ],
+                },
+                // REMINDER: add other states here later
                 {
                     label: 'Resources',
                     items: [
@@ -27,7 +33,8 @@ export default defineConfig({
                 },
             ],
             components: {
-                Header: './src/components/Header.astro',
+                Header: './src/components/layout/Header.astro',
+                Footer: './src/components/layout/Footer.astro',
             },
         }),
     ],

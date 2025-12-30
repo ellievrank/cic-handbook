@@ -1,0 +1,41 @@
+---
+import "../../styles/global.css";
+/* src/components/CompensationTable.astro */
+---
+
+<div class="not-content my-6 overflow-x-auto rounded-lg border border-gray-200 bg-white shadow-sm">
+  <table class="w-full border-collapse text-left text-sm">
+    <thead class="bg-gray-50">
+      <tr>
+        <th class="border-b-2 border-gray-200 px-4 py-3 text-gray-900">Date of Offence</th>
+        <th class="border-b-2 border-gray-200 px-4 py-3 text-gray-900">Maximum Award</th>
+      </tr>
+    </thead>
+    <tbody class="text-gray-700">
+      <tr class="bg-rose-50 text-[#78081c]">
+        <td class="border-b border-gray-100 px-4 py-3">On or after 1 January 2004</td>
+        <td class="border-b border-gray-100 px-4 py-3"><strong>$75,000</strong></td>
+      </tr>
+      <tr class="even:bg-gray-50">
+        <td class="border-b border-gray-100 px-4 py-3">Between 1 July 1991 and 31 December 2003</td>
+        <td class="border-b border-gray-100 px-4 py-3">$50,000</td>
+      </tr>
+      <tr class="even:bg-gray-50">
+        <td class="border-b border-gray-100 px-4 py-3">Between 1 January 1986 and 30 June 1991</td>
+        <td class="border-b border-gray-100 px-4 py-3">$20,000</td>
+      </tr>
+      <tr class="even:bg-gray-50">
+        <td class="border-b border-gray-100 px-4 py-3">Between 1 January 1983 and 31 December 1985</td>
+        <td class="border-b border-gray-100 px-4 py-3">$15,000</td>
+      </tr>
+      <tr class="even:bg-gray-50">
+        <td class="border-b border-gray-100 px-4 py-3">Between 18 October 1976 and 31 December 1982</td>
+        <td class="border-b border-gray-100 px-4 py-3">$7,500</td>
+      </tr>
+      <tr class="even:bg-gray-50">
+        <td class="px-4 py-3">Between 22 January 1971 and 17 October 1976</td>
+        <td class="px-4 py-3">$2,000</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
