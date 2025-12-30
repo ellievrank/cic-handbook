@@ -1,7 +1,7 @@
 ---
 /* src/components/JurisdictionGrid.astro */
 const jurisdictions = [
-  { name: "Western Australia", href: "/cic-guide", active: true },
+  { name: "Western Australia", href: "/wa-guide", active: true },
   { name: "Victoria", href: "#", active: false },
   { name: "New South Wales", href: "#", active: false },
   { name: "Queensland", href: "#", active: false },
@@ -74,7 +74,6 @@ const jurisdictions = [
     margin-bottom: 1rem !important;
   }
 
-  /* Active Card Styling */
   .card.active:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 15px -3px rgba(120, 8, 28, 0.15);
@@ -91,7 +90,6 @@ const jurisdictions = [
     font-weight: bold;
   }
 
-  /* Coming Soon Styling */
   .card.coming-soon {
     background-color: #f9fafb;
     border-color: #f3f4f6;

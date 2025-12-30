@@ -3,8 +3,8 @@ title: Criminal Injuries Compensation (CIC) in Western Australia
 description: A comprehensive guide to the CIC process.
 template: splash
 hero:
-  title: Criminal Injuries Compensation (CIC) Guide
-  tagline: A toolkit for potential applicants in Western Australia.
+  title: Criminal Injuries Compensation (CIC) Guide Western Australia.
+  tagline: A toolkit for potential applicants.
   actions:
     - text: Download this page as PDF
       link: "#"
@@ -18,13 +18,14 @@ previous:
   link: /
   label: Home
 ---
-import ApplyGrid from "@components/ApplyGrid.astro";
-import DefinitionsBox from "@components/DefinitionsBox.astro";
-import CompensationTable from "@components/CompensationTable.astro";
-import InfoBox from "@components/InfoBox.astro";
-import RecordKeeping from "@components/RecordKeeping.astro";
-import StatementGuide from "@components/StatementGuide.astro";
+import ApplyGrid from "@components/guide-visuals/ApplyGrid.astro";
+import DefinitionsBox from "@components//guide-visuals/DefinitionsBox.astro";
+import CompensationTable from "@components/guide-visuals//CompensationTable.astro";
+import InfoBox from "@components/guide-visuals//InfoBox.astro";
+import RecordKeeping from "@components/guide-visuals//RecordKeeping.astro";
+import StatementGuide from "@components/guide-visuals//StatementGuide.astro";
 import GuideSidebar from "@components/GuideSidebar.astro";
+import RedButton from "@components/buttons/RedButton.astro";
 import { LinkButton } from "@astrojs/starlight/components";
 
 <div class="description-bar">
@@ -41,22 +42,22 @@ This page discusses experiences of crime, violence, injury, and the impacts of t
 :::
 
 <DefinitionsBox title="Definitions">
-Victim
+**Victim**
 : A person who has been physically or psychologically injured as a result of a criminal offence.
 
-Offence
+**Offence**
 : A criminal act recognised under Western Australian law.
 
-Offender
+**Offender**
 : The person who committed the crime.
 
-Injury
+**Injury**
 : Physical harm, psychological harm, or pregnancy resulting from a criminal offence.
 
-Compensation
+**Compensation**
 : A payment that may be awarded to help cover losses and impacts caused by a crime.
 
-Assessor
+**Assessor**
 : The official who decides criminal injuries compensation claims in Western Australia.
 
 </DefinitionsBox>
@@ -90,10 +91,6 @@ You may still be able to apply even if:
 - the offender was not charged
 - the offender was found not guilty
 
-:::note
-Compensation is assessed individually. It is **not automatic**.
-:::
-
 ## Who can apply?
 
 ### Victims of crime
@@ -121,12 +118,12 @@ A close relative may be able to apply if the victim died as a result of the offe
 
 It is recommended to seek legal advice to determine if you qualify as an indirect victim.
 
-<LinkButton href="/support-services" variant="secondary" icon="external">
+<RedButton href="/support-services">
   Find Support Services
-</LinkButton>
+</RedButton>
 
-:::danger
-**Brothers and sisters are NOT considered close relatives under the scheme.**
+:::caution[Please Note]
+Brothers and sisters are NOT considered close relatives under the scheme
 :::
 
 ## When compensation may be refused or reduced
@@ -368,9 +365,9 @@ If writing your statement feels overwhelming, you do not have to do it alone. Yo
 
 You can access confidential support services at any time:
 
-<LinkButton href="/support-services" variant="secondary" icon="external">
-  Find support services
-</LinkButton>
+<RedButton href="/support-services">
+  Find Support Services
+</RedButton>
 :::
 
 ## Supporting evidence
@@ -628,9 +625,9 @@ You may be also able to get free or low-cost assistance from community legal cen
 Not all services provide this assistance, and availability may depend on your circumstances and location.
 
 If you need emotional or practical support at any stage of the process, confidential help is available.
-<LinkButton href="/support-services" variant="secondary" icon="external">
+<RedButton href="/support-services">
   Find Support Services
-</LinkButton>
+</RedButton>
 
 </div> {/* End of guide-content */}
 </div> {/* End of guide-container */}
