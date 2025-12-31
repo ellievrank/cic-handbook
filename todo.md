@@ -8,3 +8,4 @@
 - [ ] edit styling homepage
 - [ ] edit styling WA page
 - [ ] edit styling support page
+- [ ] fix next/previous buttons

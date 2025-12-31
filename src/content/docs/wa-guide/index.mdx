@@ -26,7 +26,6 @@ import RecordKeeping from "@components/guide-visuals/RecordKeeping.astro";
 import StatementGuide from "@components/guide-visuals/StatementGuide.astro";
 import GuideSidebar from "@components/guide/GuideSidebar.astro";
 import RedButton from "@components/buttons/RedButton.astro";
-import { LinkButton } from "@astrojs/starlight/components";
 
 <div
   class="relative left-0 right-0 mb-12 flex w-screen items-center justify-center bg-[#78081c] px-4 py-6 text-center text-lg font-semibold text-white shadow-md"
@@ -310,7 +309,14 @@ Some people find the eCourts portal difficult to use. If you experience any issu
 
 **Need help using eCourts?**
 A step-by-step PDF guide explaining how to use the eCourts system is available.
-[_Click here to download the guide_](#) {/* ecourts-guide.pdf */}
+<a 
+  href="https://cict.justice.wa.gov.au/_files/OCIC_eCourts_User_Guide.pdf" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  class="underline hover:text-rose-800 transition"
+>
+  <em>Click here to download the guide</em>
+</a>
 
 ---
 
