@@ -343,6 +343,7 @@ details > *:not(summary) {
 
 .pagination-links svg {
   color: #9ca3af;
+
 }
 
 .pagination-links a:hover svg {
