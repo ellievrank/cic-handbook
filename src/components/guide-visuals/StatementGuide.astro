@@ -1,6 +1,8 @@
 ---
-import "../../styles/global.css";
 /* src/components/StatementGuide.astro */
+import "../../styles/global.css";
+// 1. Import your custom button
+import RedButton from "@components/buttons/RedButton.astro";
 ---
 
 <div
@@ -57,14 +59,11 @@ import "../../styles/global.css";
         statutory declaration.
       </p>
 
-      <a
+      <RedButton
         href="https://cict.justice.wa.gov.au/_files/Statement_of_Impact.pdf"
-        class="flex w-full max-w-xs items-center justify-center gap-2 rounded-full bg-rose-800 px-4 py-3 font-semibold text-white no-underline transition hover:bg-rose-900"
-        target="_blank"
-        rel="noopener noreferrer"
       >
-      </a>
-      <span class="text-lg leading-none"></span> Download Official Guide
+        Download Official Guide
+      </RedButton>
     </div>
   </div>
 </div>

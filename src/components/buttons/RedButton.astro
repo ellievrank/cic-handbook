@@ -1,12 +1,19 @@
 ---
-import "../../styles/global.css";
-/* src/components/SupportButton.astro */
-const { href = "/support-services" } = Astro.props;
+/* src/components/RedButton.astro */
+const { href } = Astro.props;
 ---
 
 <a
   href={href}
-  class="mt-4 mb-4 inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#78081c] bg-white px-6 py-3 text-base font-bold text-[#78081c] no-underline transition hover:-translate-y-0.5 hover:bg-[#78081c] hover:text-white"
+  class="group my-4 inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#78081c] bg-white px-6 py-3 text-base font-bold text-[#78081c] no-underline transition-transform duration-200 hover:-translate-y-0.5 hover:bg-[#78081c] hover:text-white"
 >
-  Find Support Services
+  <span class="leading-none m-0 p-0"><slot /></span>
 </a>
+
+<style>
+  a :global(p) {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+  }
+</style>
