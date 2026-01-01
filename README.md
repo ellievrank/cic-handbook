@@ -41,16 +41,14 @@ The handbook explains, in accessible language:
 - Appeals and other compensation options
 - Support services and legal help
 
-Content is based on **authoritative public resources**, including Women’s Legal Service WA and Legal Aid WA materials .
-
----
+## Content is based on **authoritative public resources**, including Government materials and Australian Community Legal Centre materials.
 
 ## Jurisdiction
 
 The current version focuses on:
 
 - **Western Australia**
-- Criminal Injuries Compensation under the **Criminal Injuries Compensation Act 2003 (WA)**
+- Criminal Injuries Compensation under the **_Criminal Injuries Compensation Act 2003_ (WA)**
 
 The structure is intentionally modular so other Australian states and territories can be added in future.
 
