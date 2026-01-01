@@ -23,7 +23,6 @@ const navLinks = [
 ];
 ---
 
-{}
 <nav
   id="custom-nav"
   class="fixed top-0 left-0 right-0 z-[100] w-full border-b border-transparent bg-white/90 backdrop-blur-md transition-all duration-300"
@@ -209,7 +208,30 @@ const navLinks = [
       <p class="text-xs font-bold text-gray-500 mb-2 uppercase tracking-wide">
         Search Handbook
       </p>
-      <Search {...Astro.props} />
+
+      <button
+        id="mobile-search-trigger"
+        class="flex w-full items-center gap-3 rounded-lg border border-gray-200 bg-white px-4 py-3 text-left text-gray-500 shadow-sm transition hover:border-gray-300 hover:text-gray-700"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="11" cy="11" r="8"></circle><line
+            x1="21"
+            y1="21"
+            x2="16.65"
+            y2="16.65"></line>
+        </svg>
+        <span>Search...</span>
+      </button>
     </div>
     <a
       href="https://www.google.com.au"
@@ -275,4 +297,13 @@ const navLinks = [
 
   menuBtn?.addEventListener("click", toggleMenu);
   closeBtn?.addEventListener("click", toggleMenu);
+
+  const mobileSearchBtn = document.getElementById("mobile-search-trigger");
+  mobileSearchBtn?.addEventListener("click", () => {
+    const realSearchBtn = document.querySelector("site-search button");
+    if (realSearchBtn) {
+      (realSearchBtn as HTMLElement).click();
+      toggleMenu();
+    }
+  });
 </script>
