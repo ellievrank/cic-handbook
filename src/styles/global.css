@@ -15,7 +15,6 @@
   --brand-slate: #1e293b;
 }
 
-/* Hide ALL anchor links in headings - comprehensive approach */
 a.anchor,
 a[class*="anchor"],
 a[class*="heading-anchor"],
@@ -108,7 +107,7 @@ h4 svg,
   margin-bottom: 2rem !important;
 }
 
-/* Dot point style*/
+/* dot point style*/
 .sl-markdown-content li {
   position: relative;
   padding-left: 1.5rem; 

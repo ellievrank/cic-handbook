@@ -10,6 +10,7 @@ export default defineConfig({
         }),
         starlight({
             title: 'CIC Handbook',
+            favicon: '/book.png',
             customCss: ['./src/styles/global.css'],
             markdown: {
                 headingLinks: false,
