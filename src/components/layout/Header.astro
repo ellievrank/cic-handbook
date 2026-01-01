@@ -1,4 +1,5 @@
 ---
+/* src/components/layout/Header.astro */
 import "../../styles/global.css";
 import Search from "@astrojs/starlight/components/Search.astro";
 
@@ -22,13 +23,12 @@ const navLinks = [
 ];
 ---
 
+{}
 <nav
   id="custom-nav"
-  class="sticky top-0 z-50 w-full border-b border-transparent bg-white/90 backdrop-blur-md transition-all duration-300"
+  class="fixed top-0 left-0 right-0 z-[100] w-full border-b border-transparent bg-white/90 backdrop-blur-md transition-all duration-300"
 >
-  <div
-    class="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-6"
-  >
+  <div class="flex h-16 w-full items-center justify-between px-6">
     <a
       href="/"
       class="group flex items-center gap-2 text-black no-underline hover:text-black"
@@ -61,7 +61,6 @@ const navLinks = [
                   <path d="m6 9 6 6 6-6" />
                 </svg>
               </button>
-
               <div class="absolute left-1/2 top-[calc(100%-0.5rem)] hidden w-56 -translate-x-1/2 pt-2 group-hover:block">
                 <div class="overflow-hidden rounded-lg border border-gray-100 bg-white py-2 shadow-xl">
                   {link.dropdown.map((subItem) =>
@@ -96,11 +95,8 @@ const navLinks = [
       }
     </div>
 
-    <div class="flex items-center gap-3">
-      <div class="flex items-center">
-        <Search />
-      </div>
-
+    <div class="hidden md:flex items-center gap-3">
+      <div class="flex items-center"><Search {...Astro.props} /></div>
       <a
         href="https://www.google.com.au"
         class="inline-flex h-10 items-center justify-center rounded-full border-2 border-[#78081c] bg-white px-4 py-2 text-sm font-bold text-[#78081c] no-underline transition hover:bg-[#78081c] hover:text-white"
@@ -108,12 +104,153 @@ const navLinks = [
         Quick Exit
       </a>
     </div>
+
+    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-700">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="4" x2="20" y1="12" y2="12"></line><line
+          x1="4"
+          x2="20"
+          y1="6"
+          y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line>
+      </svg>
+    </button>
   </div>
 </nav>
 
+<div id="mobile-menu" class="fixed inset-0 z-[100] hidden bg-white flex-col">
+  <div
+    class="flex h-16 items-center justify-between px-6 border-b border-gray-100"
+  >
+    <span class="font-extrabold text-xl text-gray-900">Menu</span>
+
+    <button id="close-menu-btn" class="p-2 text-gray-500 hover:text-red-600">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M18 6 6 18"></path><path d="M6 6 18 18"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="flex-1 overflow-y-auto px-6 py-2 flex flex-col">
+    {
+      navLinks.map((link) =>
+        link.dropdown ? (
+          <details class="group border-b border-gray-100">
+            <summary class="flex w-full cursor-pointer items-center justify-between py-4 text-lg font-semibold text-gray-800 list-none hover:text-[#78081C]">
+              {link.name}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-gray-400 transition-transform duration-200 group-open:rotate-180"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="flex flex-col pb-4 pl-4">
+              {link.dropdown.map((subItem) =>
+                subItem.active ? (
+                  <a
+                    href={subItem.href}
+                    class="block py-3 text-base text-gray-600 hover:text-[#78081C] border-l-2 border-gray-100 pl-4 hover:border-[#78081C]"
+                  >
+                    {subItem.name}
+                  </a>
+                ) : (
+                  <div class="flex items-center justify-between py-3 pl-4 border-l-2 border-gray-100 text-base text-gray-400">
+                    {subItem.name}{" "}
+                    <span class="text-[0.6rem] bg-gray-100 px-1.5 py-0.5 rounded font-bold uppercase tracking-wider">
+                      Soon
+                    </span>
+                  </div>
+                )
+              )}
+            </div>
+          </details>
+        ) : (
+          <a
+            href={link.href}
+            class="block py-4 text-lg font-semibold text-gray-800 border-b border-gray-100 hover:text-[#78081C]"
+          >
+            {link.name}
+          </a>
+        )
+      )
+    }
+  </div>
+
+  <div class="border-t border-gray-100 bg-gray-50 p-6 space-y-4">
+    <div class="w-full">
+      <p class="text-xs font-bold text-gray-500 mb-2 uppercase tracking-wide">
+        Search Handbook
+      </p>
+      <Search {...Astro.props} />
+    </div>
+    <a
+      href="https://www.google.com.au"
+      class="flex w-full items-center justify-center rounded-lg bg-[#78081C] py-3.5 text-center font-bold text-white shadow-sm transition hover:bg-[#5a0615]"
+    >
+      Quick Exit
+    </a>
+  </div>
+</div>
+
+<style is:global>
+  #mobile-menu details {
+    background-color: transparent !important;
+    border: none !important;
+
+    border-bottom: 1px solid #f3f4f6 !important;
+
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+  }
+
+  #mobile-menu summary {
+    background-color: transparent !important;
+    padding: 1rem 0 !important;
+    border: none !important;
+  }
+
+  #mobile-menu summary::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  #mobile-menu summary::-webkit-details-marker {
+    display: none !important;
+  }
+</style>
+
 <script>
   const nav = document.getElementById("custom-nav");
-
   window.addEventListener("scroll", () => {
     if (window.scrollY > 20) {
       nav?.classList.add("bg-white", "border-gray-200", "shadow-sm");
@@ -123,6 +260,19 @@ const navLinks = [
       nav?.classList.add("bg-white/90", "border-transparent");
     }
   });
+
+  const menuBtn = document.getElementById("mobile-menu-btn");
+  const closeBtn = document.getElementById("close-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+
+  function toggleMenu() {
+    menu?.classList.toggle("hidden");
+    menu?.classList.toggle("flex");
+    document.body.style.overflow = menu?.classList.contains("hidden")
+      ? ""
+      : "hidden";
+  }
+
+  menuBtn?.addEventListener("click", toggleMenu);
+  closeBtn?.addEventListener("click", toggleMenu);
 </script>
-
-

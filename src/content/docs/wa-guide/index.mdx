@@ -1,20 +1,13 @@
 ---
-title: Criminal Injuries Compensation (CIC) in Western Australia
+title: "Criminal Injuries Compensation (CIC) in Western Australia"
 description: A comprehensive guide to the CIC process.
 template: splash
 hero:
-  title: Criminal Injuries Compensation (CIC) Guide Western Australia.
-  tagline: A toolkit for potential applicants.
-  actions:
-    - text: Download this page as PDF
-      link: "#"
-      icon: document
-      variant: primary
-      attrs: { onclick: "window.print()" }
+  title: ""
 next:
   link: /support-services
   label: Support Services
-previous:
+prev:
   link: /
   label: Home
 ---
@@ -24,18 +17,11 @@ import CompensationTable from "@components/guide-visuals/CompensationTable.astro
 import InfoBox from "@components/guide-visuals/InfoBox.astro";
 import RecordKeeping from "@components/guide-visuals/RecordKeeping.astro";
 import StatementGuide from "@components/guide-visuals/StatementGuide.astro";
-import GuideSidebar from "@components/guide/GuideSidebar.astro";
+import GuideSidebar from "@components/guide-visuals/GuideSidebar.astro";
 import RedButton from "@components/buttons/RedButton.astro";
-import { LinkButton } from "@astrojs/starlight/components";
+import GuideHero from '@components/guide-visuals/GuideHero.astro';
 
-<div
-  class="relative left-0 right-0 mb-12 flex w-screen items-center justify-center bg-[#78081c] px-4 py-6 text-center text-lg font-semibold text-white shadow-md"
-  style="margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);"
->
-  <div class="flex items-center justify-center text-white">
-    This page outlines the process of applying for Criminal Injuries Compensation.
-  </div>
-</div>
+<GuideHero />
 
 <div class="relative left-1/2 right-1/2 grid grid-cols-1 items-start px-8 -ml-[50vw] -mr-[50vw] w-screen md:grid-cols-[340px_minmax(0,800px)] md:justify-start md:pl-20">
 
@@ -72,11 +58,11 @@ This handbook brings together key information about criminal injuries compensati
 
 It explains, in plain language, who may be eligible to apply, what compensation can cover, and where to find support during the process. The aim is to reduce confusion and help people know what questions to ask next.
 
-This handbook does not provide legal advice. Every situation is different, and the information here may not apply to all circumstances. If you are unsure about your eligibility or rights, it is strongly recommended that you speak with a lawyer or a community legal service.
+*This handbook does not provide legal advice.* Every situation is different, and the information here may not apply to all circumstances. If you are unsure about your eligibility or rights, it is strongly recommended that you seek legal advice.
 
 The content in this handbook has been informed by publicly available guidance from courts, government agencies, and community legal organisations. A list of resources consulted is available in the Acknowledgements section.
 
-This handbook reflects information available at the time it was prepared in 2025. Laws, policies, and procedures may change.
+This handbook reflects information available at the time it was prepared in 2025. Although we are dedicated to updating information, laws, policies, and procedures may change.
 
 </InfoBox>
 
@@ -121,7 +107,7 @@ A close relative may be able to apply if the victim died as a result of the offe
 - Grandchild
 - Step child
 
-It is recommended to seek legal advice to determine if you qualify as an indirect victim.
+It is recommended to seek legal advice if you are unsure of if you qualify as an indirect victim.
 
 <RedButton href="/support-services">
   Find Support Services
@@ -155,8 +141,8 @@ An award may be refused if paying compensation would **directly or indirectly be
 
 If compensation has already been:
 
-- awarded under this scheme,
-- paid under another compensation scheme, or
+- awarded under this scheme;
+- paid under another compensation scheme; or
 - recovered through another legal process,
 
 the Assessor may refuse the claim or limit any further payment.
@@ -259,8 +245,7 @@ What matters most is whether you cooperated with police as much as you reasonabl
   <summary>
     <strong>What if I didn’t report the offence?</strong>
   </summary>
-  You need to have reported the offence to apply. It is important to note the name
-  of the police officer and the report number when reporting the offence.
+  You will usually need to have reported the offence or otherwise assisted police as much as you reasonably could. If you didn't or couldn’t, explain why and provide supporting evidence.
 </details>
 
 ## Time limits (very important)
@@ -310,7 +295,14 @@ Some people find the eCourts portal difficult to use. If you experience any issu
 
 **Need help using eCourts?**
 A step-by-step PDF guide explaining how to use the eCourts system is available.
-[_Click here to download the guide_](#) {/* ecourts-guide.pdf */}
+<a 
+  href="https://cict.justice.wa.gov.au/_files/OCIC_eCourts_User_Guide.pdf" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  class="underline hover:text-rose-800 transition"
+>
+  <em>Click here to download the guide</em>
+</a>
 
 ---
 
@@ -326,9 +318,7 @@ PERTH WA 6841
 ---
 
 **In person**
-🏢 Level 12, International House
-26 St Georges Terrace
-PERTH WA 6000
+🏢 Level 10, Golden Square, 32 St Georges Terrace, PERTH WA 6000
 
 ---
 
@@ -405,7 +395,7 @@ Requests can be made online or in writing and may involve an administration fee.
 
 WA Police charge an administration fee for providing information for criminal injuries compensation purposes.
 
-- The standard fee is **approximately $30**, but this may increase depending on the volume or type of documents requested.
+- The standard fee is **$30**, but this may increase depending on the volume or type of documents requested.
 - Proof of identity is required when making a request.
 - Processing can take **several weeks**, particularly if investigations or court proceedings have only recently concluded.
 
@@ -418,7 +408,7 @@ Police information can be requested in one of the following ways:
 
 **Online:**
 Applications can be made through the WA Police website:
-👉 [Apply for Information (WA Police)](https://www.police.wa.gov.au/Police-Direct/Apply-for-Information)
+[*Click Here to Apply for Information (WA Police)*](https://www.wa.gov.au/service/security/law-enforcement/apply-criminal-injuries-compensation-report?utm_source=chatgpt.com)
 
 **Hard copy:**
 A written application can be lodged directly with WA Police, along with proof of identity and payment of the required fee.

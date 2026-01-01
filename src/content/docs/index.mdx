@@ -1,27 +1,20 @@
 ---
-title: The Criminal Injuries Compensation Guide
+title: ""
 description: A clear, plain-English guide to CIC in Western Australia.
 template: splash
-hero:
-  tagline: A toolkit for victims of crime and their supporters in Australia.
-  actions:
-    - text: Download the Guide as PDF
-      link: /
-      icon: document
-      variant: primary
 next:
   link: /wa-guide
   label: Western Australia Guide
 ---
 
+import Hero from "@components/home/Hero.astro";
 import JurisdictionGrid from "@components/home/JurisdictionGrid.astro";
 import HomeCTA from "@components/home/HomeCTA.astro";
 
-<div>
-  
+<Hero />
+
+<div id="jurisdictions">
   <JurisdictionGrid />
-
-  <HomeCTA />
-
 </div>
 
+<HomeCTA />
