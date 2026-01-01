@@ -1,30 +1,93 @@
 ---
+/* src/components/guide-visuals/GuideSidebar.astro */
 import "../../styles/global.css";
-/* src/components/GuideSidebar.astro */
+
+const { pdfUrl = "/cic-handbook-wa.pdf" } = Astro.props;
 ---
 
-<div class="sticky top-24 hidden w-[300px] shrink-0 self-start text-[0.95rem] lg:block">
+<div
+  class="sticky top-24 hidden w-[300px] shrink-0 self-start text-[0.95rem] lg:block"
+>
   <div class="flex flex-col gap-3 border-l-2 border-gray-200 pl-6">
-    <strong class="mb-2 block text-lg font-extrabold text-gray-900">Jump to</strong>
-    <a class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]" href="#what-is-criminal-injuries-compensation">What is CIC?</a>
-    <a class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]" href="#who-can-apply">Who can apply?</a>
-    <a class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]" href="#what-can-compensation-cover">What it covers</a>
-    <a class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]" href="#claims-without-a-charge-or-conviction">
+    <strong class="mb-2 block text-lg font-extrabold text-gray-900"
+      >Jump to</strong
+    >
+    <a
+      class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]"
+      href="#what-is-criminal-injuries-compensation">What is CIC?</a
+    >
+    <a
+      class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]"
+      href="#who-can-apply">Who can apply?</a
+    >
+    <a
+      class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]"
+      href="#what-can-compensation-cover">What it covers</a
+    >
+    <a
+      class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]"
+      href="#claims-without-a-charge-or-conviction"
+    >
       Claims without a charge or conviction
     </a>
-    <a class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]" href="#time-limits-very-important">Time limits</a>
-    <a class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]" href="#how-do-i-apply">How to apply</a>
-    <a class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]" href="#writing-a-statement-of-impact">Statement of Impact</a>
-    <a class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]" href="#supporting-evidence">Supporting evidence</a>
-    <a class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]" href="#can-i-get-money-before-a-final-decision">
+    <a
+      class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]"
+      href="#time-limits-very-important">Time limits</a
+    >
+    <a
+      class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]"
+      href="#how-do-i-apply">How to apply</a
+    >
+    <a
+      class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]"
+      href="#writing-a-statement-of-impact">Statement of Impact</a
+    >
+    <a
+      class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]"
+      href="#supporting-evidence">Supporting evidence</a
+    >
+    <a
+      class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]"
+      href="#can-i-get-money-before-a-final-decision"
+    >
       Interim payments
     </a>
-    <a class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]" href="#after-you-lodge-your-application-what-to-expect">
+    <a
+      class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]"
+      href="#after-you-lodge-your-application-what-to-expect"
+    >
       What to expect
     </a>
-    <a class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]" href="#can-i-appeal-a-decision">Appeals</a>
-    <a class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]" href="#getting-help">Getting help</a>
+    <a
+      class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]"
+      href="#can-i-appeal-a-decision">Appeals</a
+    >
+    <a
+      class="text-gray-600 no-underline transition-colors hover:font-semibold hover:text-[#78081c]"
+      href="#getting-help">Getting help</a
+    >
+
+    <a
+      href={pdfUrl}
+      target="_blank"
+      class="mt-6 flex w-full items-center justify-center gap-2 rounded-lg bg-[#78081c] px-4 py-2.5 text-center text-sm font-bold text-white shadow-sm transition hover:bg-[#5a0615] no-underline"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>
+      Download as PDF
+    </a>
   </div>
 </div>
-
-

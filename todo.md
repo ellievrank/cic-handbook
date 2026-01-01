@@ -1,8 +1,8 @@
 # TODO
 
 - [x] update to absolute path
-- [ ] add a robots.txt
-- [ ] make pdf page
+- [x] add a robots.txt
+- [x] make pdf page
 - [ ] add resources/acknowledgements page
 - [x] edit styling homepage
 - [x] edit styling WA page
