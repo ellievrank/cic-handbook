@@ -1,76 +1,126 @@
 ---
+/* src/components/layout/Footer.astro */
 import "../../styles/global.css";
-/* src/components/Footer.astro */
-import DefaultFooter from "@astrojs/starlight/components/Footer.astro";
+const currentYear = new Date().getFullYear();
 ---
 
-<DefaultFooter {...Astro.props} />
-
-<div
-  class="relative left-1/2 right-1/2 mt-16 w-screen -ml-[50vw] -mr-[50vw] border-t-4 border-[#78081c] bg-gray-100"
+{/* Full-width footer container */}
+<footer
+  class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-gray-50 border-t border-gray-200 mt-24"
 >
-  <footer class="px-4 py-10 text-sm leading-6 text-gray-700 sm:px-6">
-    <div class="mx-auto max-w-5xl">
-      <div class="mb-10 flex items-center gap-3">
-        <img src="/book.png" alt="Logo" class="h-8 w-auto" />
-        <span class="text-xl font-extrabold uppercase tracking-wide text-gray-900">CIC Handbook</span>
+  <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+    <div class="lg:flex lg:justify-between lg:items-start">
+      {/* --- LEFT SECTION: Logo & Brand --- */}
+      <div class="lg:w-1/3 mb-10 lg:mb-0">
+        <a
+          href="/"
+          class="flex items-center gap-3 mb-6 text-gray-900 no-underline hover:opacity-80 transition"
+        >
+          <img src="/book.png" alt="CIC Handbook Logo" class="h-10 w-auto" />
+          <span class="font-extrabold text-xl tracking-tight">CIC Handbook</span
+          >
+        </a>
+        <p class="text-sm text-gray-500 leading-relaxed mb-6 max-w-sm">
+          A plain-language guide to help you understand your rights and the
+          criminal injuries compensation process.
+        </p>
+        <div class="text-xs text-gray-400">
+          &copy; {currentYear} CIC Handbook.
+        </div>
       </div>
 
-      <div class="grid grid-cols-1 gap-8 border-b border-gray-200 pb-10 md:grid-cols-[1.5fr_1fr_1fr]">
-        <div class="space-y-3">
-          <h3 class="m-0 text-base font-bold text-[#78081c]">Acknowledgement</h3>
-          <p class="m-0 text-gray-600">
-            The CIC Handbook was produced on Whadjuk Noongar Boodjar, the lands of the Traditional Custodians in Perth, Western
-            Australia. We pay our respects to Elders past and present and extend that respect to all Aboriginal and Torres
-            Strait Islander peoples today. We acknowledge that sovereignty was never ceded.
-          </p>
+      {/* --- RIGHT SECTION: Three Columns of Links --- */}
+      {/* Changed to sm:grid-cols-3 to create the middle space */}
+      <div
+        class="lg:w-2/3 grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12 lg:justify-items-end"
+      >
+        {/* Column 1: CIC Guides (First 4) */}
+        <div class="text-left w-full">
+          <h3
+            class="text-sm font-bold uppercase tracking-wider text-gray-900 mb-4"
+          >
+            CIC Guides
+          </h3>
+          <ul class="space-y-3 list-none p-0 m-0">
+            <li>
+              <a
+                href="/wa-guide"
+                class="text-sm text-gray-600 no-underline hover:text-[#78081c] transition-colors"
+                >Western Australia</a>
+            </li>
+            <li>
+              <span class="text-sm text-gray-400 cursor-default"
+                >Victoria (Coming Soon)</span>
+            </li>
+            <li>
+              <span class="text-sm text-gray-400 cursor-default"
+                >New South Wales (Coming Soon)</span>
+            </li>
+            <li>
+              <span class="text-sm text-gray-400 cursor-default"
+                >Queensland (Coming Soon)</span>
+            </li>
+          </ul>
         </div>
 
-        <div class="space-y-3">
-          <h3 class="m-0 text-base font-bold text-[#78081c]">About this guide</h3>
-          <p class="m-0 text-gray-600">
-            This handbook is a plain-language toolkit designed to help victims of crime navigate the Criminal Injuries
-            Compensation process in Australia. It aims to reduce confusion and empower applicants with clear, accessible
-            information.
-          </p>
+        {/* Column 2: CIC Guides (Remaining 4) - The "Middle" Space */}
+        <div class="text-left w-full">
+          {/* Invisible header to keep alignment consistent with Column 1 */}
+          <h3
+            class="text-sm font-bold uppercase tracking-wider text-transparent select-none mb-4"
+            aria-hidden="true"
+          >
+            More Guides
+          </h3>
+          <ul class="space-y-3 list-none p-0 m-0">
+            <li>
+              <span class="text-sm text-gray-400 cursor-default"
+                >South Australia (Coming Soon)</span>
+            </li>
+            <li>
+              <span class="text-sm text-gray-400 cursor-default"
+                >Tasmania (Coming Soon)</span>
+            </li>
+            <li>
+              <span class="text-sm text-gray-400 cursor-default"
+                >Northern Territory (Coming Soon)</span>
+            </li>
+            <li>
+              <span class="text-sm text-gray-400 cursor-default"
+                >ACT (Coming Soon)</span>
+            </li>
+          </ul>
         </div>
 
-        <div class="space-y-3">
-          <h3 class="m-0 text-base font-bold text-[#78081c]">Quick Links</h3>
-          <ul class="m-0 list-none space-y-2 p-0">
+        {/* Column 3: Other Links */}
+        <div class="text-left w-full">
+          <h3
+            class="text-sm font-bold uppercase tracking-wider text-gray-900 mb-4"
+          >
+            Other Links
+          </h3>
+          <ul class="space-y-3 list-none p-0 m-0">
             <li>
               <a
                 href="/"
-                class="inline-block font-semibold text-gray-900 no-underline transition hover:translate-x-1 hover:text-[#78081c]"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="/cic-guide"
-                class="inline-block font-semibold text-gray-900 no-underline transition hover:translate-x-1 hover:text-[#78081c]"
-              >
-                Western Australian Guide
-              </a>
+                class="text-sm text-gray-600 no-underline hover:text-[#78081c] transition-colors"
+                >Home</a>
             </li>
             <li>
               <a
                 href="/support-services"
-                class="inline-block font-semibold text-gray-900 no-underline transition hover:translate-x-1 hover:text-[#78081c]"
-              >
-                Support Services
-              </a>
+                class="text-sm text-gray-600 no-underline hover:text-[#78081c] transition-colors"
+                >Support Services</a>
+            </li>
+            <li>
+              <a
+                href="/acknowledgements"
+                class="text-sm text-gray-600 no-underline hover:text-[#78081c] transition-colors"
+                >Acknowledgements</a>
             </li>
           </ul>
         </div>
       </div>
-
-      <div class="flex justify-end pt-6 text-xs font-medium text-gray-400">
-        &copy; {new Date().getFullYear()} CIC Handbook WA.
-      </div>
     </div>
-  </footer>
-</div>
-
-
+  </div>
+</footer>
