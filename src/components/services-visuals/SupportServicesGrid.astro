@@ -7,42 +7,70 @@ const services = [
     phone: "1800 819 817",
     desc: "Free, confidential support and referrals for victims of crime across Australia.",
     href: "tel:1800819817",
+    titleClass: "text-blue-800",
+    phoneClass: "text-blue-900 hover:text-blue-700",
+    bgClass: "bg-blue-50",
+    borderClass: "border-blue-200",
   },
   {
     name: "1800RESPECT",
     phone: "1800 737 732",
     desc: "24/7 counselling and support for people affected by sexual assault, family violence, or domestic violence.",
     href: "https://www.1800respect.org.au/",
+    titleClass: "text-purple-800",
+    phoneClass: "text-purple-900 hover:text-purple-700",
+    bgClass: "bg-purple-50",
+    borderClass: "border-purple-200",
   },
   {
     name: "Lifeline",
     phone: "13 11 14",
     desc: "24/7 crisis support for anyone experiencing emotional distress.",
     href: "https://www.lifeline.org.au/",
+    titleClass: "text-[#002B5C]",
+    phoneClass: "text-[#002B5C] hover:opacity-80",
+    bgClass: "bg-[#E5F0FA]",
+    borderClass: "border-[#B3D7F5]",
   },
   {
     name: "13YARN",
     phone: "13 92 76",
     desc: "24/7 culturally safe crisis support for Aboriginal and Torres Strait Islander peoples.",
     href: "https://www.13yarn.org.au/",
+    titleClass: "text-[#D32F2F]",
+    phoneClass: "text-[#C62828] hover:opacity-80",
+    bgClass: "bg-[#FFEBEE]",
+    borderClass: "border-[#FFCDD2]",
   },
   {
     name: "QLife",
     phone: "1800 184 527",
     desc: "Anonymous and free LGBTIQ+ peer support and referrals. Available 3pm – midnight every day.",
     href: "https://qlife.org.au/",
+    titleClass: "text-pink-700",
+    phoneClass: "text-pink-800 hover:text-pink-600",
+    bgClass: "bg-pink-50",
+    borderClass: "border-pink-200",
   },
   {
     name: "Rainbow Violence Helpline",
     phone: "1800 497 212",
     desc: "Specialist counselling for LGBTIQ+ people who have experienced sexual, domestic, or family violence.",
     href: "https://fullstop.org.au/",
+    titleClass: "text-violet-700",
+    phoneClass: "text-violet-800 hover:text-violet-600",
+    bgClass: "bg-violet-50",
+    borderClass: "border-violet-200",
   },
   {
     name: "Relationships Australia",
     phone: "1300 364 277",
     desc: "Counselling and support for individuals, families, and relationships.",
     href: "https://www.relationships.org.au/",
+    titleClass: "text-teal-800",
+    phoneClass: "text-teal-900 hover:text-teal-700",
+    bgClass: "bg-teal-50",
+    borderClass: "border-teal-200",
   },
 ];
 ---
@@ -50,8 +78,12 @@ const services = [
 <div class="mt-6 mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
   {
     services.map((service) => (
-      <div class="flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-rose-200 hover:shadow-lg">
-        <h3 class="m-0 text-lg font-bold text-[#78081c]">{service.name}</h3>
+      <div
+        class={`flex flex-col gap-2 rounded-xl border p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg ${service.bgClass} ${service.borderClass}`}
+      >
+        <h3 class={`m-0 text-lg font-bold ${service.titleClass}`}>
+          {service.name}
+        </h3>
 
         <a
           href={
@@ -59,12 +91,12 @@ const services = [
               ? service.href
               : `tel:${service.phone.replace(/\s/g, "")}`
           }
-          class="mb-2 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-[#78081c] hover:underline"
+          class={`mb-2 inline-block text-lg font-bold no-underline transition hover:underline ${service.phoneClass}`}
         >
           📞 {service.phone}
         </a>
 
-        <p class="m-0 text-sm text-gray-600">{service.desc}</p>
+        <p class="m-0 text-sm text-gray-700 font-medium">{service.desc}</p>
       </div>
     ))
   }

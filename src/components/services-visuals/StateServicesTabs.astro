@@ -1,0 +1,221 @@
+---
+/* src/components/services-visuals/StateServicesTabs.astro */
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+---
+
+<div class="not-content">
+  <Tabs>
+    <TabItem label="WA" icon="open-book">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {/* WA Card 1 */}
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">
+            Victim Support Service (WA)
+          </h3>
+          <a
+            href="tel:1800818988"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+          >
+            📞 1800 818 988
+          </a>
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            The official state service providing counselling, court support, and
+            advocacy for victims of crime in WA.
+          </p>
+        </div>
+
+        {/* WA Card 2 */}
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">Angelhands</h3>
+          <a
+            href="https://www.angelhands.org.au/"
+            target="_blank"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+          >
+            🌐 Visit Website
+          </a>
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            Specialist trauma recovery and community support for people affected
+            by homicide and serious violence.
+          </p>
+        </div>
+      </div>
+    </TabItem>
+
+    <TabItem label="VIC">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">
+            Victims of Crime Helpline
+          </h3>
+          <a
+            href="tel:1800819817"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+          >
+            📞 1800 819 817
+          </a>
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            The official helpline for victims of crime in Victoria. Open
+            8am–11pm, 7 days a week.
+          </p>
+        </div>
+      </div>
+    </TabItem>
+
+    <TabItem label="NSW">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {/* NSW Card 1 */}
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">
+            Victims Access Line
+          </h3>
+          <a
+            href="tel:1800633063"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+          >
+            📞 1800 633 063
+          </a>
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            Single entry point for victims of crime in NSW to access counselling
+            and financial support.
+          </p>
+        </div>
+
+        {/* NSW Card 2: Aboriginal Contact Line */}
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">
+            Aboriginal Contact Line
+          </h3>
+          <a
+            href="tel:1800019123"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+          >
+            📞 1800 019 123
+          </a>
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            Dedicated support line for Aboriginal victims of crime in NSW.
+          </p>
+        </div>
+      </div>
+    </TabItem>
+
+    <TabItem label="QLD">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">
+            Victim Assist Queensland
+          </h3>
+          <a
+            href="tel:1300546587"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+          >
+            📞 1300 546 587
+          </a>
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            Information, advice, and financial assistance for victims of violent
+            crime in Queensland.
+          </p>
+        </div>
+      </div>
+    </TabItem>
+
+    <TabItem label="SA">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">
+            Victim Support Service SA
+          </h3>
+          <a
+            href="tel:1800842846"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+          >
+            📞 1800 842 846
+          </a>
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            Therapeutic counseling and practical support for victims of crime
+            and abuse in SA.
+          </p>
+        </div>
+      </div>
+    </TabItem>
+
+    <TabItem label="ACT">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">
+            Victim Support ACT
+          </h3>
+          <a
+            href="tel:1800822272"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+          >
+            📞 1800 822 272
+          </a>
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            Support, advocacy, and financial assistance for victims of crime in
+            the ACT.
+          </p>
+        </div>
+      </div>
+    </TabItem>
+
+    <TabItem label="TAS">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">
+            Victims Support Services
+          </h3>
+          <a
+            href="tel:1300306375"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+          >
+            📞 1300 306 375
+          </a>
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            Counselling and case management for victims of crime in Tasmania.
+          </p>
+        </div>
+      </div>
+    </TabItem>
+
+    <TabItem label="NT">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">
+            Crime Victims Services Unit
+          </h3>
+          <a
+            href="tel:1800221372"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+          >
+            📞 1800 221 372
+          </a>
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            Assistance and compensation information for victims of crime in the
+            Northern Territory.
+          </p>
+        </div>
+      </div>
+    </TabItem>
+  </Tabs>
+</div>

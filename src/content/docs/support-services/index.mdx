@@ -14,6 +14,7 @@ next:
 
 import { LinkButton } from "@astrojs/starlight/components";
 import SupportServicesGrid from '@components/services-visuals/SupportServicesGrid.astro';
+import StateServicesTabs from '@components/services-visuals/StateServicesTabs.astro';
 import LegalHelpCard from "@components/services-visuals/LegalHelpCard.astro";
 
 :::danger[In an emergency]
@@ -32,7 +33,7 @@ If you are affected by crime, confidential support is available. These services 
 
 Each state and territory also offers its own victim support services, counselling programs, and referral networks. These services may provide additional assistance tailored to local systems and communities.
 
-If you are unsure which service is right for you, a national helpline can help connect you to appropriate local support.
+<StateServicesTabs />
 
 ## Legal help
 
