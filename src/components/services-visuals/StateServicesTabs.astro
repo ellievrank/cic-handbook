@@ -4,6 +4,25 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
 ---
 
 <div class="not-content">
+  {/* MOBILE SCROLL HINT: Only visible on mobile (hidden on md+ screens) */}
+  <div
+    class="md:hidden flex items-center justify-end gap-1 mb-1 pr-1 text-xs font-semibold text-teal-600/80 animate-pulse"
+  >
+    <span>Swipe for more states</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="12"
+      height="12"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      ><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
+    >
+  </div>
+
   <Tabs>
     <TabItem label="WA" icon="open-book">
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -219,3 +238,26 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
     </TabItem>
   </Tabs>
 </div>
+
+<style is:global>
+  /* UX IMPROVEMENT: Force a visible scrollbar on the tabs specifically on mobile 
+     so users know it scrolls horizontally.
+  */
+  @media (max-width: 768px) {
+    starlight-tabs [role="tablist"] {
+      scrollbar-width: thin; /* Firefox */
+      scrollbar-color: #cbd5e1 transparent; /* Thumb Color / Track Color */
+      padding-bottom: 4px; /* Space for scrollbar */
+    }
+    starlight-tabs [role="tablist"]::-webkit-scrollbar {
+      height: 3px; /* Webkit height */
+    }
+    starlight-tabs [role="tablist"]::-webkit-scrollbar-thumb {
+      background-color: #cbd5e1;
+      border-radius: 10px;
+    }
+    starlight-tabs [role="tablist"]::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  }
+</style>
