@@ -1,10 +1,8 @@
 ---
-/* src/components/services-visuals/StateServicesTabs.astro */
 import { Tabs, TabItem } from "@astrojs/starlight/components";
 ---
 
 <div class="not-content">
-  {/* MOBILE SCROLL HINT: Only visible on mobile (hidden on md+ screens) */}
   <div
     class="md:hidden flex items-center justify-end gap-1 mb-1 pr-1 text-xs font-semibold text-teal-600/80 animate-pulse"
   >
@@ -26,7 +24,6 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
   <Tabs>
     <TabItem label="WA" icon="open-book">
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        {/* WA Card 1 */}
         <div
           class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
         >
@@ -36,16 +33,13 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
           <a
             href="tel:1800818988"
             class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >📞 1800 818 988</a
           >
-            📞 1800 818 988
-          </a>
           <p class="m-0 text-sm text-gray-700 leading-snug">
             The official state service providing counselling, court support, and
             advocacy for victims of crime in WA.
           </p>
         </div>
-
-        {/* WA Card 2 */}
         <div
           class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
         >
@@ -54,12 +48,45 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
             href="https://www.angelhands.org.au/"
             target="_blank"
             class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >🌐 Visit Website</a
           >
-            🌐 Visit Website
-          </a>
           <p class="m-0 text-sm text-gray-700 leading-snug">
             Specialist trauma recovery and community support for people affected
             by homicide and serious violence.
+          </p>
+        </div>
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">
+            Sexual Assault Resource Centre (SARC)
+          </h3>
+          <a
+            href="tel:1800199888"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >📞 1800 199 888</a
+          >
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            Free service in Perth providing crisis services for recent sexual
+            assault (last 2 weeks) and counselling for past or recent abuse.
+            Available to all genders/sexualities aged 13+.
+          </p>
+        </div>
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">
+            Sexual Health Quarters (SHQ)
+          </h3>
+          <a
+            href="tel:0892276177"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >📞 (08) 9227 6177</a
+          >
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            Clinical services for testing/treatment of STIs, contraception,
+            medical abortion, and cervical screening. Also offers professional
+            counselling for relationships and sexual health issues.
           </p>
         </div>
       </div>
@@ -76,12 +103,41 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
           <a
             href="tel:1800819817"
             class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >📞 1800 819 817</a
           >
-            📞 1800 819 817
-          </a>
           <p class="m-0 text-sm text-gray-700 leading-snug">
             The official helpline for victims of crime in Victoria. Open
             8am–11pm, 7 days a week.
+          </p>
+        </div>
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">Safe Steps</h3>
+          <a
+            href="tel:1800015188"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >📞 1800 015 188</a
+          >
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            Victoria’s 24/7 family violence response centre for women and
+            children.
+          </p>
+        </div>
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">
+            Sexual Assault Crisis Line (SACL)
+          </h3>
+          <a
+            href="tel:1800806292"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >📞 1800 806 292</a
+          >
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            State-wide, after-hours, confidential, telephone crisis counselling
+            service for victims of sexual assault in Victoria.
           </p>
         </div>
       </div>
@@ -89,7 +145,6 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
 
     <TabItem label="NSW">
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        {/* NSW Card 1 */}
         <div
           class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
         >
@@ -99,16 +154,13 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
           <a
             href="tel:1800633063"
             class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >📞 1800 633 063</a
           >
-            📞 1800 633 063
-          </a>
           <p class="m-0 text-sm text-gray-700 leading-snug">
             Single entry point for victims of crime in NSW to access counselling
             and financial support.
           </p>
         </div>
-
-        {/* NSW Card 2: Aboriginal Contact Line */}
         <div
           class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
         >
@@ -118,11 +170,26 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
           <a
             href="tel:1800019123"
             class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >📞 1800 019 123</a
           >
-            📞 1800 019 123
-          </a>
           <p class="m-0 text-sm text-gray-700 leading-snug">
             Dedicated support line for Aboriginal victims of crime in NSW.
+          </p>
+        </div>
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">
+            RPA Sexual Assault Service
+          </h3>
+          <a
+            href="tel:0295159040"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >📞 (02) 9515 9040</a
+          >
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            Specialist medical, forensic, and counselling services for people
+            14+ located at Camperdown (RPA Hospital).
           </p>
         </div>
       </div>
@@ -139,12 +206,41 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
           <a
             href="tel:1300546587"
             class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >📞 1300 546 587</a
           >
-            📞 1300 546 587
-          </a>
           <p class="m-0 text-sm text-gray-700 leading-snug">
             Information, advice, and financial assistance for victims of violent
             crime in Queensland.
+          </p>
+        </div>
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">
+            Brisbane Youth Service
+          </h3>
+          <a
+            href="tel:0736202400"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >📞 (07) 3620 2400</a
+          >
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            Support for young people (12-25 years) experiencing homelessness or
+            at risk, including housing, health, and crisis support.
+          </p>
+        </div>
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">DVConnect</h3>
+          <a
+            href="tel:1800811811"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >📞 1800 811 811</a
+          >
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            24/7 statewide crisis response, counselling, and emergency
+            accommodation for people affected by domestic and family violence.
           </p>
         </div>
       </div>
@@ -161,9 +257,8 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
           <a
             href="tel:1800842846"
             class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >📞 1800 842 846</a
           >
-            📞 1800 842 846
-          </a>
           <p class="m-0 text-sm text-gray-700 leading-snug">
             Therapeutic counseling and practical support for victims of crime
             and abuse in SA.
@@ -183,9 +278,8 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
           <a
             href="tel:1800822272"
             class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >📞 1800 822 272</a
           >
-            📞 1800 822 272
-          </a>
           <p class="m-0 text-sm text-gray-700 leading-snug">
             Support, advocacy, and financial assistance for victims of crime in
             the ACT.
@@ -205,11 +299,26 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
           <a
             href="tel:1300306375"
             class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >📞 1300 306 375</a
           >
-            📞 1300 306 375
-          </a>
           <p class="m-0 text-sm text-gray-700 leading-snug">
             Counselling and case management for victims of crime in Tasmania.
+          </p>
+        </div>
+        <div
+          class="flex flex-col gap-2 rounded-xl border border-teal-200 bg-teal-50/50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-teal-400 hover:shadow-md hover:bg-teal-50"
+        >
+          <h3 class="m-0 text-lg font-bold text-teal-900">
+            Sexual Assault Support Service
+          </h3>
+          <a
+            href="tel:1800697877"
+            class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >📞 1800 697 877</a
+          >
+          <p class="m-0 text-sm text-gray-700 leading-snug">
+            Southern Tasmania's specialist support service for survivors of
+            sexual assault, providing counselling and 24/7 crisis support.
           </p>
         </div>
       </div>
@@ -226,9 +335,8 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
           <a
             href="tel:1800221372"
             class="mb-1 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-teal-700 hover:underline"
+            >📞 1800 221 372</a
           >
-            📞 1800 221 372
-          </a>
           <p class="m-0 text-sm text-gray-700 leading-snug">
             Assistance and compensation information for victims of crime in the
             Northern Territory.
@@ -240,17 +348,14 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
 </div>
 
 <style is:global>
-  /* UX IMPROVEMENT: Force a visible scrollbar on the tabs specifically on mobile 
-     so users know it scrolls horizontally.
-  */
   @media (max-width: 768px) {
     starlight-tabs [role="tablist"] {
-      scrollbar-width: thin; /* Firefox */
-      scrollbar-color: #cbd5e1 transparent; /* Thumb Color / Track Color */
-      padding-bottom: 4px; /* Space for scrollbar */
+      scrollbar-width: thin;
+      scrollbar-color: #cbd5e1 transparent;
+      padding-bottom: 4px;
     }
     starlight-tabs [role="tablist"]::-webkit-scrollbar {
-      height: 3px; /* Webkit height */
+      height: 3px;
     }
     starlight-tabs [role="tablist"]::-webkit-scrollbar-thumb {
       background-color: #cbd5e1;
