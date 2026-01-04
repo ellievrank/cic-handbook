@@ -1,52 +1,40 @@
 ---
-/* src/components/StatementGuide.astro */
 import "../../styles/global.css";
-// 1. Import your custom button
-import RedButton from "@components/buttons/RedButton.astro";
 ---
 
 <div
   class="not-content my-8 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md"
 >
-  <div
-    class="flex items-center gap-4 border-b border-rose-200 bg-rose-50 px-6 py-5"
-  >
-    <div
-      class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-xl shadow"
-    >
-      📝
-    </div>
-    <div class="space-y-1">
-      <h3 class="m-0 text-lg font-bold text-rose-800">
-        Statement of Impact Guide
-      </h3>
-      <p class="m-0 text-sm text-rose-800">
-        Your opportunity to explain how the offence has affected your life.
-      </p>
-    </div>
+  <div class="border-b border-rose-200 bg-rose-50 px-6 py-5">
+    <h3 class="m-0 text-lg font-bold text-rose-800">
+      Statement of Impact Guide
+    </h3>
+    <p class="m-0 text-sm text-rose-800">
+      Your opportunity to explain how the offence has affected your life.
+    </p>
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-5">
     <div
       class="border-b border-gray-100 p-6 md:col-span-3 md:border-b-0 md:border-r"
     >
-      <strong class="text-gray-900">What to include:</strong>
+      <strong class="text-gray-900">What you could include:</strong>
       <ul class="mt-4 list-none space-y-3 p-0">
         <li class="flex items-baseline gap-2 text-sm text-gray-700">
-          <span class="min-w-[80px] font-bold text-rose-800">Physical:</span> Injuries,
-          pain, scarring, treatment needed.
+          <span class="min-w-[80px] font-bold text-gray-900">Physical:</span> Injuries,
+          pain, scarring, treatment needed
         </li>
         <li class="flex items-baseline gap-2 text-sm text-gray-700">
-          <span class="min-w-[80px] font-bold text-rose-800">Emotional:</span> Fear,
-          anxiety, sleep issues, trauma.
+          <span class="min-w-[80px] font-bold text-gray-900">Emotional:</span> Fear,
+          anxiety, sleep issues, trauma
         </li>
         <li class="flex items-baseline gap-2 text-sm text-gray-700">
-          <span class="min-w-[80px] font-bold text-rose-800">Social:</span> Impact
-          on relationships, safety, or social life.
+          <span class="min-w-[80px] font-bold text-gray-900">Social:</span> Impact
+          on relationships, safety, or social life
         </li>
         <li class="flex items-baseline gap-2 text-sm text-gray-700">
-          <span class="min-w-[80px] font-bold text-rose-800">Financial:</span> Lost
-          wages, medical costs, damaged items.
+          <span class="min-w-[80px] font-bold text-gray-900">Financial:</span> Lost
+          wages, medical costs, damaged items
         </li>
       </ul>
     </div>
@@ -55,15 +43,17 @@ import RedButton from "@components/buttons/RedButton.astro";
       class="flex flex-col items-center justify-center gap-4 bg-gray-50 p-6 text-center md:col-span-2"
     >
       <p class="m-0 text-sm text-gray-600">
-        There is no strict format. You can use dot points, a letter, or a
-        statutory declaration.
+        There is no strict format. You can use dot points, write a letter, or
+        write a statutory declaration.
       </p>
-
-      <RedButton
+      <a
         href="https://cict.justice.wa.gov.au/_files/Statement_of_Impact.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center rounded-md border border-[#78081c] bg-[#78081c] px-4 py-2 text-sm font-bold text-white no-underline transition hover:border-[#5a0615] hover:bg-[#5a0615]"
       >
         Download Official Guide
-      </RedButton>
+      </a>
     </div>
   </div>
 </div>
