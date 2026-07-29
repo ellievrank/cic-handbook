@@ -62,3 +62,53 @@ This project is designed to support:
 - Downloadable PDF guides
 - Community education and outreach
 - Advocacy and policy literacy
+
+## Local Development
+
+This repository uses [Bun](https://bun.sh/) 1.3.x as its package manager and
+runtime. The currently pinned package manager version is Bun 1.3.11.
+
+Install the locked dependencies:
+
+```sh
+bun install --frozen-lockfile
+```
+
+Start the local development server:
+
+```sh
+bun run dev
+```
+
+The site is available at `http://localhost:4321` by default.
+
+Run the Astro and TypeScript checks:
+
+```sh
+bun run check
+```
+
+Build and preview the production site:
+
+```sh
+bun run build
+bun run preview
+```
+
+Generated files in `dist/` and `.astro/` are intentionally not committed.
+
+## Deployment
+
+The site is statically generated into `dist/`. The included `wrangler.jsonc`
+publishes that directory as Cloudflare static assets.
+
+Authenticate with Cloudflare, then validate and deploy:
+
+```sh
+bun install --frozen-lockfile
+bun run check
+bun run build
+bunx wrangler deploy
+```
+
+The canonical production URL is `https://cichandbook.com`.
