@@ -1,7 +1,7 @@
 # CIC Handbook — Approved Content
 
 **Document status:** Partial approval record
-**Last updated:** 29 July 2026
+**Last updated:** 30 July 2026
 
 This document records content explicitly approved by the project owner. Content not recorded here remains subject to the confirmation rules in [`PROJECT_SPEC.md`](PROJECT_SPEC.md).
 
@@ -35,6 +35,23 @@ This document records content explicitly approved by the project owner. Content 
 | Action label | Access resources |
 | Availability label | Coming soon |
 | Destination | None approved. The action must remain visibly unavailable and non-interactive. |
+
+### Support principles
+
+**Approval source:** Direct project-owner approval in the Codex homepage support-principles task, 30 July 2026.
+
+| Principle | Approved supporting copy |
+|---|---|
+| Plain English information | Clear, easy to understand guides and resources. |
+| Step-by-step guidance | Navigate the process with confidence. |
+| Compassionate and inclusive | We respect your experience and are here to help. |
+| WA focused | Information tailored to Western Australia. |
+
+The approved section heading is “We’re here to support you.”
+
+The supplied composition is retained as
+[`docs/reference/homepage-support-principles-reference.png`](reference/homepage-support-principles-reference.png)
+for design reference only. It is not a production website asset.
 
 ## Homepage image provenance
 
