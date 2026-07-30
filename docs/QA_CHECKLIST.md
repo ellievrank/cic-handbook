@@ -57,7 +57,8 @@ This checklist defines the minimum quality gates for CIC Handbook development, p
 - [ ] No copy or visual treatment implies CIC Handbook is a government agency, court, law firm, emergency service or authorised decision-maker.
 - [ ] No copy promises eligibility, an award amount, a processing time, claim approval or a successful outcome.
 - [ ] The individual pathway leads to the approved WA Guide route.
-- [ ] The organisation pathway is not linked to an unapproved route or incomplete module.
+- [ ] The organisation pathway links to the approved `/for-organisations/`
+  holding page and does not link directly to an incomplete module or resource.
 - [ ] When both audience pathways are shown, they have equally discoverable labels, descriptions, target sizes and actions.
 - [ ] Organisation training is not marked ready until each module has an approved title, objective, content, sequence and completion behaviour.
 - [ ] No on-site CIC application or application-status workflow exists.
@@ -446,7 +447,7 @@ If the page has no approved form, mark this subsection `N/A` with the reason rat
 - [ ] Every shipped client script supports a confirmed interaction.
 - [ ] The page’s important content and navigation remain available with JavaScript disabled.
 - [ ] No whole-page hydration or unused framework runtime is present.
-- [ ] No user-visible TODO, FIXME, Lorem Ipsum, “Coming Soon”, `[TO CONFIRM]`, empty title, fake contact detail, placeholder destination, temporary image or inactive control remains.
+- [ ] No user-visible TODO, FIXME, Lorem Ipsum, unapproved “Coming Soon”, `[TO CONFIRM]`, empty title, fake contact detail, placeholder destination, temporary image or inactive control remains. The approved “Coming soon” copy is permitted only on `/for-organisations/`.
 - [ ] No conditional form, account, LMS, analytics, social or integration feature is visually presented as available unless approved and functional.
 
 ### 2.10 Page-specific completion checks
@@ -499,13 +500,14 @@ If the page has no approved form, mark this subsection `N/A` with the reason rat
 
 #### For Organisations
 
-- [ ] The organisation pathway purpose is present.
-- [ ] The intended learner roles and organisation types are confirmed.
-- [ ] Only approved training modules appear in the catalogue.
-- [ ] Only approved resources and tools appear.
-- [ ] The primary start/access action reaches approved content.
-- [ ] Information-status and scope notices are present.
-- [ ] The page does not imply accounts, tracking, assessment, certification or CPD recognition unless each is approved and functional.
+- [ ] The page presents the approved holding state without unreleased
+  organisation-pathway purpose or training copy.
+- [ ] `/for-organisations/` has a unique page title, meta description, canonical URL and H1.
+- [ ] The visible page content is limited to “For organisations” and “Coming soon”.
+- [ ] The page is indexable and appears in the generated sitemap and Pagefind index.
+- [ ] The global-navigation link and homepage “Access resources” action both reach `/for-organisations/`.
+- [ ] No “Coming soon” label or inactive organisation control appears in the header or homepage.
+- [ ] No unapproved module, resource, release date, form, contact detail, start action, account, tracking, assessment, certification or CPD recognition appears.
 
 #### Training Module
 
@@ -538,7 +540,8 @@ If the completed page is a different approved type, record its required sections
 - [ ] Government or legal-service affiliation wording is confirmed.
 - [ ] Disclaimer, privacy obligations, terms and required legal pages are approved.
 - [ ] Footer identity, copyright holder, acknowledgement wording and legal destinations are approved.
-- [ ] Organisation route, navigation label, training scope and every released module are approved.
+- [ ] The organisation holding route and navigation label are approved; any
+  released training scope and modules have separate approval.
 - [ ] Newsletter, contact, analytics, social, quick exit, LMS, authentication and learner-management decisions are documented as approved or excluded.
 - [ ] The final supported browser, device and assistive-technology matrix is recorded.
 - [ ] Every legal-process page has accountable legal/content-owner approval.
@@ -567,7 +570,8 @@ If the completed page is a different approved type, record its required sections
 - [ ] Every telephone link is revalidated against its approved number.
 - [ ] The reviewer and date for external-link validation are recorded.
 - [ ] The complete individual journey works from Home through the WA Guide to approved official application and support destinations.
-- [ ] The complete organisation journey works from Home through the approved organisation route and released training content.
+- [ ] The current organisation journey works from Home to `/for-organisations/`;
+  released training is included in the journey only when separately approved.
 - [ ] A recorded Pagefind fixture contains at least five approved queries covering eligibility, time limits, Statement of Impact, interim payments and support services; each expected route or fragment appears within the first five results.
 - [ ] Every search result opens the correct page or guide section.
 - [ ] Every WA Guide topic link lands on the intended section.
@@ -663,7 +667,7 @@ If the completed page is a different approved type, record its required sections
 - [ ] Every console warning is resolved or has a recorded approved reason.
 - [ ] Every public route loads with zero failed first-party requests.
 - [ ] `rg -n 'console\\.|debugger|javascript:' src` returns no production debugging statement, `debugger`, or `javascript:` URL.
-- [ ] `rg -n -i 'TODO|FIXME|lorem|ipsum|coming soon|\\[TO CONFIRM\\]|example\\.com' src public` is reviewed and no user-visible placeholder remains.
+- [ ] `rg -n -i 'TODO|FIXME|lorem|ipsum|coming soon|\\[TO CONFIRM\\]|example\\.com' src public` is reviewed and no unapproved user-visible placeholder remains; “Coming soon” appears only as approved page copy on `/for-organisations/`.
 - [ ] No rendered page contains an empty title, fake contact detail, temporary image, inactive control or placeholder destination.
 - [ ] No unapproved route appears in navigation, search, sitemap or footer.
 - [ ] No unapproved newsletter, contact form, quick exit, account, authentication, LMS, progress, assessment, certificate, analytics, CRM, social link or third-party integration appears.

@@ -5,6 +5,29 @@
 
 This document records content explicitly approved by the project owner. Content not recorded here remains subject to the confirmation rules in [`PROJECT_SPEC.md`](PROJECT_SPEC.md).
 
+## Global navigation
+
+**Approval source:** Direct project-owner approval in the Codex global-navbar task, 30 July 2026.
+
+The linked public identity is **CIC Handbook** and returns to `/`. The approved
+acronym is **CIC**, not “CRC”.
+
+The desktop and compact navigation use the same order:
+
+| Item | Approved copy or behaviour |
+|---|---|
+| Home | Links to `/`. |
+| About CIC | Links to `/wa-guide/#what-is-criminal-injuries-compensation`. |
+| How to apply | Links to `/wa-guide/#how-do-i-apply`. |
+| For organisations | Links to `/for-organisations/`. No availability label appears in the navigation. |
+| Support services | Links to `/support-services/`. |
+| Quick Exit | Opens `https://www.google.com.au` in the same tab. It does not clear or conceal browser history. |
+| Search | Opens the existing site-wide search interface as the final navigation control. It has no dedicated page route. |
+
+**Approved visual treatment:** The global header uses a Warm Ivory surface, a
+compact CIC Handbook identity, a centred desktop link group, and a raised White
+Search control following the supplied navigation reference.
+
 ## Homepage
 
 **Approval source:** Direct project-owner approval in the Codex homepage-hero task, 29 July 2026.
@@ -16,6 +39,19 @@ This document records content explicitly approved by the project owner. Content 
 | Page title and H1 | Criminal injuries compensation, made simple. |
 | Introduction | Trusted information and support for victims of crime and the organisations that assist them. |
 | Audience prompt | How can we help you today? |
+
+**Approved visual treatment:** Direct project-owner approval in the centred
+homepage-hero task, 30 July 2026. The hero uses an image-free Warm Ivory surface,
+centred introductory copy, and a two-colour H1 with “made simple.” in Deep
+Burgundy. It remains content-led rather than filling the viewport.
+
+The supplied earlier composition is retained as
+[`docs/reference/homepage-centred-hero-reference.png`](reference/homepage-centred-hero-reference.png)
+for design reference only. Its Australia-wide wording and “Select your location”
+action are not approved website content. The superseded coastal reference remains
+available at
+[`docs/reference/homepage-hero-reference.png`](reference/homepage-hero-reference.png)
+as a historical design reference only.
 
 ### Individual pathway
 
@@ -33,8 +69,7 @@ This document records content explicitly approved by the project owner. Content 
 | Card title | I’m an organisation |
 | Description | Access training, resources and tools to help you support people with CIC claims. |
 | Action label | Access resources |
-| Availability label | Coming soon |
-| Destination | None approved. The action must remain visibly unavailable and non-interactive. |
+| Destination | `/for-organisations/` |
 
 ### Support principles
 
@@ -69,24 +104,38 @@ The supplied composition is retained as
 [`docs/reference/homepage-basics-reference.png`](reference/homepage-basics-reference.png)
 for design reference only. It is not a production website asset.
 
-## Homepage image provenance
+### Support pathway
 
-### Hero photograph
+**Approval source:** Direct project-owner approval in the Codex homepage support CTA task, 30 July 2026.
 
-| Field | Record |
+| Element | Approved copy or behaviour |
 |---|---|
-| Production asset | `src/assets/images/wa-coast-hero.png` |
-| Reference asset | `docs/reference/homepage-hero-reference.png` |
-| Generation method | OpenAI built-in image generation |
-| Generated | 29 July 2026 |
-| Intended use | Decorative homepage hero image |
-| Alternative text | Empty (`alt=""`) because the image does not convey information needed to use the page |
+| Section heading | Need support? You’re not alone. |
+| Description | Find support services and organisations that can help. Whether you need legal help, counselling, crisis support or information about local services, we’re here to help you connect with the right service. |
+| Action label | Find support near you |
+| Destination | `/support-services/` |
 
-**Generation prompt:**
+The supplied composition is retained as
+[`docs/reference/homepage-support-cta-reference.png`](reference/homepage-support-cta-reference.png)
+for design reference only. It is not a production website asset. The reference’s
+newsletter form and envelope icon are not approved homepage features.
 
-> Use case: photorealistic-natural. Asset type: 16:9 landing-page hero background for an Australian public-information website. Create an original, calm Western Australia-inspired coastal landscape at golden hour, evocative of a rugged limestone coastline without depicting or copying any identifiable real landmark. Show broad ocean and a gentle shoreline receding into atmospheric distance, with weathered warm limestone cliffs and native coastal shrubs concentrated on the right half and open sea and soft sky through the centre and left. Use photorealistic editorial landscape photography, authentic natural textures and restrained colour grading. Compose a very wide horizontal image with the strongest rocky cliff and vegetation detail on the far right, a level uncluttered horizon and broad low-detail sea and sky toward the left for a web-layout fade. Use warm low-angle late-afternoon sunlight and a calm, grounded, dignified mood. Do not include people, buildings, roads, signs, text, logos, watermarks, flags, recognisable landmarks, distress imagery, dramatic storms, tourism-poster styling, artificial HDR or excessive saturation.
+## For organisations
 
-The generated image contains no supplied third-party photograph. Publication approval and any organisation-wide policy for AI-generated imagery remain the responsibility of the project owner.
+**Approval source:** Direct project-owner approval in the Codex organisations-page task, 30 July 2026.
+
+| Element | Approved copy or behaviour |
+|---|---|
+| Page title and H1 | For organisations |
+| Availability message | Coming soon |
+| Meta description | Access training, resources and tools to help you support people with CIC claims. |
+| Route | `/for-organisations/` |
+
+Only the page title and availability message are visible page content. Training
+modules, resources, release dates, forms, contact details, and other organisation
+functionality remain unapproved and must not be presented as available.
+
+## Homepage image provenance
 
 ### Start with the basics photograph
 

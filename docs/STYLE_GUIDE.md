@@ -29,7 +29,7 @@ Where sources differ, apply this order:
 3. `DESIGN_SYSTEM.md`.
 4. The visual reference.
 
-`docs/reference/` contains the brand board and approved desktop homepage references. The hero reference confirms the broad coastal composition, protected left-aligned copy, lower audience chooser and balanced two-card treatment. The support-principles and basics references confirm their respective information hierarchy and desktop composition. Exact colours, fonts, radii and shadows continue to come from the Design System rather than being sampled from raster references.
+`docs/reference/` contains the brand board and approved desktop homepage references. The centred-hero reference confirms an image-free Warm Ivory composition with centred copy and a two-colour heading; the earlier coastal reference now confirms only the balanced two-card treatment. The support-principles, basics and support CTA references confirm their respective information hierarchy and desktop composition. Exact colours, fonts, radii and shadows continue to come from the Design System rather than being sampled from raster references.
 
 ## 2. Overall visual personality
 
@@ -84,7 +84,7 @@ The interface should never use:
 
 **Visual interpretation:**
 
-- **Home:** use a full-width Warm Ivory hero with protected left-aligned copy, a right-weighted coastal image that fades into the page surface, and the two audience choices grouped prominently below. On smaller screens, move the image into an in-flow 16:9 panel and stack the cards in individual-then-organisation order. Continue below the hero with principles, then a constrained two-column introductory panel that pairs the basics pathway with calm editorial imagery and stacks content before imagery on smaller screens.
+- **Home:** use a full-width, content-led Warm Ivory hero with centred introductory copy, no hero photograph, and a Midnight Navy display heading whose “made simple.” line is Deep Burgundy. Group the two audience choices prominently below without inserting a viewport-filling spacer, and stack the cards in individual-then-organisation order below the desktop breakpoint. Continue below the hero with principles, then a constrained two-column introductory panel that pairs the basics pathway with calm editorial imagery and stacks content before imagery on smaller screens. Follow it with a concise Dusty Rose support strip that places its phone icon, reassurance copy and single support action in one horizontal desktop row and stacks them in reading order on smaller screens.
 - **WA Guide:** prioritise the reading column and topic navigation. Visual devices should clarify sequence, definitions, warnings and next steps rather than decorate long passages.
 - **Support Services:** place emergency and high-priority support information before editorial imagery or spacious promotional composition.
 - **Organisation pathway:** use orderly module and resource groups, but do not imply accounts, completion tracking, assessment or certification unless those features are confirmed.

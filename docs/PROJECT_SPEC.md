@@ -1,7 +1,7 @@
 # CIC Handbook — Project Specification
 
 **Document status:** Draft  
-**Last updated:** 29 July 2026  
+**Last updated:** 30 July 2026
 **Geographic scope:** Western Australia  
 **Subject:** Criminal injuries compensation
 
@@ -20,7 +20,7 @@ Where sources conflict, use this precedence:
 3. Current repository content and functionality.
 4. Supplied visual references.
 
-The supplied homepage reference at [`docs/reference/homepage-hero-reference.png`](reference/homepage-hero-reference.png) confirms the homepage structure, hero composition and two audience pathways. Secondary destinations, forms, social links, and integrations visible in that reference remain `[TO CONFIRM]`.
+The supplied centred-hero reference at [`docs/reference/homepage-centred-hero-reference.png`](reference/homepage-centred-hero-reference.png) confirms the image-free, centred introductory composition and two-colour heading treatment. The earlier [`docs/reference/homepage-hero-reference.png`](reference/homepage-hero-reference.png) continues to confirm equal treatment for the two audience pathways only; its coastal hero treatment is superseded. Copy, destinations, forms, social links, and integrations visible in either reference are not approved unless recorded elsewhere in this specification or in [`CONTENT.md`](CONTENT.md).
 
 ## 2. Business or organisation
 
@@ -79,7 +79,8 @@ No legal knowledge may be assumed. The exact roles and organisation types target
 The homepage must first help a visitor select the appropriate pathway:
 
 - **I’m seeking compensation** → begin the individual CIC guide.
-- **I’m an organisation** → access the organisation training and resource pathway.
+- **I’m an organisation** → open the confirmed organisation pathway. Until
+  training and resources are approved, its page displays “Coming soon”.
 
 ### 5.2 Individual journey
 
@@ -92,11 +93,12 @@ The homepage must first help a visitor select the appropriate pathway:
 ### 5.3 Organisation journey
 
 1. Select the organisation pathway.
-2. View the purpose and intended audience for the training.
-3. Select a training module or supporting resource.
-4. Complete or use the material according to the confirmed delivery model.
+2. Open the confirmed `/for-organisations/` page.
+3. Read the current “Coming soon” availability message.
 
-Module sequencing, authentication, enrolment, progress tracking, assessment, certificates, and completion records are `[TO CONFIRM]`.
+Training content, supporting resources, module sequencing, authentication,
+enrolment, progress tracking, assessment, certificates, and completion records
+remain `[TO CONFIRM]`. They are not part of the current public journey.
 
 ### 5.4 Supporting journeys
 
@@ -114,9 +116,10 @@ Items marked `[TO CONFIRM]` are not approved pages or routes.
 | Confirmed | Home | `/` | Introduce CIC Handbook and route visitors into the individual or organisation pathway. |
 | Confirmed | Western Australian CIC Guide | `/wa-guide/` | Provide the end-to-end information pathway for people seeking compensation. |
 | Confirmed | Support Services | `/support-services/` | Provide crisis, support, referral, and legal-help pathways. |
-| Confirmed requirement; route `[TO CONFIRM]` | For Organisations | `[TO CONFIRM]` | Introduce training and resources for people and organisations assisting applicants. |
+| Confirmed navigation shortcut; standalone page `[TO CONFIRM]` | About CIC | `/wa-guide/#what-is-criminal-injuries-compensation` | Open the existing guide section explaining criminal injuries compensation; no standalone page is approved. |
+| Confirmed navigation shortcut | How to apply | `/wa-guide/#how-do-i-apply` | Open the existing guide section explaining how to apply; no standalone page is required. |
+| Confirmed | For organisations | `/for-organisations/` | Provide the approved organisation-pathway holding page with the visible message “Coming soon”. |
 | Confirmed requirement; route `[TO CONFIRM]` | Training Modules | `[TO CONFIRM]` | Deliver the organisation training material. |
-| `[TO CONFIRM]` | About CIC | `[TO CONFIRM]` | Explain CIC fundamentals separately from the full guide, if a separate page is required. |
 | `[TO CONFIRM]` | Resources | `[TO CONFIRM]` | Provide a broader resource library or directory. |
 | `[TO CONFIRM]` | Organisation Resources and Tools | `[TO CONFIRM]` | Provide practical tools supporting the training pathway. |
 | `[TO CONFIRM]` | Referral Pathways | `[TO CONFIRM]` | Explain how organisations refer or connect people with further help. |
@@ -128,7 +131,7 @@ Items marked `[TO CONFIRM]` are not approved pages or routes.
 | `[TO CONFIRM]` | Terms of Use | `[TO CONFIRM]` | State approved website-use terms. |
 | `[TO CONFIRM]` | Accessibility Statement | `[TO CONFIRM]` | State the accessibility commitment and contact process. |
 | `[TO CONFIRM]` | Disclaimer | `[TO CONFIRM]` | Provide a dedicated legal-information disclaimer if required in addition to in-page notices. |
-| Confirmed feature; page route `[TO CONFIRM]` | Search | `[TO CONFIRM]` | Search indexed public handbook content; a dedicated search-results route is not yet confirmed. |
+| Confirmed feature; no dedicated route required | Search | Search dialog | Search indexed public handbook content as the final global-navigation control. |
 
 Until separate pages are approved, “Check eligibility” and “Making a claim” are topics within the WA CIC Guide rather than standalone sitemap entries.
 
@@ -143,7 +146,19 @@ Every public page must use a consistent site shell containing:
 - a clear general-information/not-legal-advice notice in an appropriate global or page-level location; and
 - footer navigation appropriate to the confirmed sitemap.
 
-The exact primary-navigation labels, footer destinations, legal links, acknowledgement text, social profiles, and copyright holder are `[TO CONFIRM]`.
+The confirmed primary-navigation order is:
+
+1. **Home** → `/`
+2. **About CIC** → `/wa-guide/#what-is-criminal-injuries-compensation`
+3. **How to apply** → `/wa-guide/#how-do-i-apply`
+4. **For organisations** → `/for-organisations/`
+5. **Support services** → `/support-services/`
+6. **Quick Exit** → `https://www.google.com.au` in the same tab
+7. **Search** → the existing site-wide search interface
+
+The linked identity uses the public name **CIC Handbook** and returns to `/`.
+Footer destinations, legal links, acknowledgement text, social profiles, and the
+copyright holder remain `[TO CONFIRM]`.
 
 ## 8. Page purposes and required sections
 
@@ -169,7 +184,10 @@ The exact primary-navigation labels, footer destinations, legal links, acknowled
 6. Newsletter subscription section `[TO CONFIRM]`.
 7. Footer containing only approved destinations and organisation details.
 
-The homepage hero copy, audience-card copy and generated hero-image treatment are confirmed in [`CONTENT.md`](CONTENT.md) and [`STYLE_GUIDE.md`](STYLE_GUIDE.md). The organisation destination, acknowledgement wording and footer content remain `[TO CONFIRM]`.
+The homepage hero copy, audience-card copy, pathway destinations and centred
+image-free treatment are confirmed in [`CONTENT.md`](CONTENT.md) and
+[`STYLE_GUIDE.md`](STYLE_GUIDE.md). Acknowledgement wording and footer content
+remain `[TO CONFIRM]`.
 
 ### 8.2 Western Australian CIC Guide
 
@@ -221,21 +239,28 @@ Service names, telephone numbers, availability statements, eligibility statement
 
 ### 8.4 For Organisations
 
-**Purpose:** Explain the organisation pathway and provide access to training and resources for people assisting CIC applicants.
+**Current purpose:** Provide an honest availability state for the confirmed
+organisation pathway without presenting unreleased training or resources.
 
-**Primary action:** Select or begin a training module.
+**Route:** `/for-organisations/`
 
-**Confirmed required sections:**
+**Confirmed current visible content:**
 
-1. Purpose of the organisation pathway.
-2. Intended training audience `[TO CONFIRM: exact roles and organisation types]`.
-3. Training-module catalogue.
-4. Supporting resources and tools.
-5. Clear access or start action.
-6. Information-status and scope notice.
+1. Page title and H1: “For organisations”.
+2. Availability message: “Coming soon”.
 
-The following are `[TO CONFIRM]`:
+The approved homepage organisation sentence may be reused as the unique meta
+description but is not visible page copy. The holding page must not include a
+release date, form, contact detail, module, resource, or start action.
 
+**Future purpose:** Explain the organisation pathway and provide access to
+training and resources for people assisting CIC applicants.
+
+**Future primary action:** Select or begin a training module.
+
+The full pathway and the following implementation details remain `[TO CONFIRM]`:
+
+- intended training audience, including exact roles and organisation types;
 - module titles and number of modules;
 - learning objectives;
 - prerequisites and recommended sequence;
@@ -297,7 +322,7 @@ These pages are visible or implied in the supplied reference but are not confirm
 | Support actions | Confirmed | Telephone and external support links must use appropriate link behaviour and descriptive labels. |
 | Responsive navigation | Confirmed | Navigation, search, and pathway access must remain usable on mobile, tablet, and desktop. |
 | Error page | Confirmed | Provide a useful 404 page with a route back to the homepage, guide, search, or support. |
-| Quick exit | `[TO CONFIRM]` | Confirm whether the current quick-exit feature remains required, its destination, and expected history-clearing limitations. |
+| Quick exit | Confirmed | Open `https://www.google.com.au` in the same tab. This navigation does not clear or conceal browser history. |
 | Newsletter | `[TO CONFIRM]` | Do not implement until scope and behaviour in section 10 are confirmed. |
 | Contact form | `[TO CONFIRM]` | Do not implement until scope and behaviour in section 10 are confirmed. |
 | Training delivery | Partly confirmed | Training content is required; platform and learner-management functionality are `[TO CONFIRM]`. |
@@ -431,6 +456,8 @@ The supplied homepage reference is a desktop reference. Mobile and tablet visual
 ### 13.1 Confirmed requirements
 
 - Canonical production origin: `https://cichandbook.com`.
+- The confirmed organisation-pathway route is `/for-organisations/` and is
+  canonical, indexable, included in the XML sitemap, and available to site search.
 - Every indexable page must have a unique, non-empty page title and meta description.
 - Canonical URLs must use the production origin and the final route.
 - Generate an XML sitemap containing only canonical, indexable pages.
@@ -442,7 +469,8 @@ The supplied homepage reference is a desktop reference. Mobile and tablet visual
 
 ### 13.2 Items to confirm
 
-- final route names for the organisation pathway and proposed pages;
+- final route names for proposed pages other than the confirmed organisation
+  holding page;
 - index/no-index rules for training modules or authenticated material;
 - social-sharing image and metadata;
 - organisation and article structured data;
@@ -522,7 +550,10 @@ The website specification is satisfied when all applicable criteria below pass:
 - The site clearly states its Western Australian focus and general-information status.
 - The homepage presents both confirmed audience pathways without making one difficult to find.
 - The individual pathway reaches the WA CIC Guide.
-- The organisation pathway reaches approved training content once the route and module content are confirmed.
+- The organisation pathway reaches the confirmed `/for-organisations/` page and
+  presents “Coming soon” without implying that training or resources are released.
+- The organisation pathway reaches approved training content only after that
+  content and its delivery requirements are confirmed.
 - The WA CIC Guide contains every required section in section 8.2.
 - The Support Services page contains every required section in section 8.3.
 - No unconfirmed secondary page is presented as complete.
@@ -569,7 +600,7 @@ The following decisions must be resolved before their associated work can be imp
 | --- | --- |
 | Legal entity, project owner, and accountable publisher | Organisation identity, legal notices, footer, content approval |
 | Government or legal-service affiliation statement | Branding, disclaimer, About Us content |
-| Organisation pathway route and navigation label | Sitemap and navigation |
+| Organisation training and resource content | Replacing the confirmed “Coming soon” holding page with the full organisation pathway |
 | Training modules, learning objectives, and delivery model | Organisation pages and training implementation |
 | LMS, authentication, tracking, assessment, and certificate requirements | Training architecture |
 | Newsletter scope and provider | Newsletter form |
@@ -577,7 +608,6 @@ The following decisions must be resolved before their associated work can be imp
 | Privacy, terms, accessibility, and disclaimer requirements | Legal pages and forms |
 | Social profile URLs | Social links |
 | Analytics scope, provider, and consent model | Analytics integration |
-| Quick-exit requirement and destination | Safety navigation |
 | Mobile and tablet design plus supported viewport matrix | Responsive acceptance |
 | Formal accessibility target and test matrix | Accessibility acceptance |
 | Content owner, legal reviewer, and review schedule | Publication of legal-process content |

@@ -9,7 +9,8 @@ This document translates the supplied brand board into implementation rules for 
 | Reference | Status | Use |
 |---|---|---|
 | [`docs/reference/brand-board.png`](reference/brand-board.png) | **Brand-board value** | Authoritative for values printed on the board and for styles visibly demonstrated there. |
-| [`docs/reference/homepage-hero-reference.png`](reference/homepage-hero-reference.png) | **Confirmed homepage reference** | Authoritative for the desktop homepage hero composition, visual hierarchy and equal audience-card treatment approved on 29 July 2026. |
+| [`docs/reference/homepage-centred-hero-reference.png`](reference/homepage-centred-hero-reference.png) | **Confirmed homepage reference** | Authoritative for the centred, image-free hero composition and two-colour heading hierarchy approved on 30 July 2026. Its visible copy and location action are not authoritative. |
+| [`docs/reference/homepage-hero-reference.png`](reference/homepage-hero-reference.png) | **Supporting homepage reference** | Authoritative only for the equal audience-card treatment approved on 29 July 2026. Its coastal hero composition is superseded. |
 | Current repository configuration and styles | **Implementation context** | Used only to identify the existing Tailwind baseline and conflicts that will require later reconciliation. |
 
 ### Status legend
@@ -24,7 +25,8 @@ The hex labels printed on the board are authoritative. Pixel samples from the ra
 
 - **Brand-board value:** the reference displays “CIC WA” primary and secondary logo lockups, a book symbol and a favicon treatment.
 - **Implementation context:** the approved public project name is **CIC Handbook**.
-- **`[TO CONFIRM]`:** the final relationship between the CIC Handbook name and the CIC WA lockups, including the approved public-facing wordmark.
+- **Confirmed interim treatment:** until a production wordmark is approved, the global navigation uses an accessible text lockup reading **CIC Handbook** with the existing standalone book mark.
+- **`[TO CONFIRM]`:** the final relationship between the CIC Handbook name and the CIC WA lockups, including any replacement production wordmark.
 - **`[TO CONFIRM]`:** production-ready SVG logo, symbol and favicon exports, clear-space rules, minimum sizes, monochrome variants and misuse rules.
 - Do not trace, crop or extract production logo assets from the raster brand board.
 
