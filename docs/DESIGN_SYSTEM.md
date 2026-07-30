@@ -8,9 +8,9 @@ This document translates the supplied brand board into implementation rules for 
 
 | Reference | Status | Use |
 |---|---|---|
-| [`docs/reference/brand-board.png`](reference/brand-board.png) | **Brand-board value** | Sole supplied visual reference. It is authoritative for values printed on the board and for styles visibly demonstrated there. |
+| [`docs/reference/brand-board.png`](reference/brand-board.png) | **Brand-board value** | Authoritative for values printed on the board and for styles visibly demonstrated there. |
+| [`docs/reference/homepage-hero-reference.png`](reference/homepage-hero-reference.png) | **Confirmed homepage reference** | Authoritative for the desktop homepage hero composition, visual hierarchy and equal audience-card treatment approved on 29 July 2026. |
 | Current repository configuration and styles | **Implementation context** | Used only to identify the existing Tailwind baseline and conflicts that will require later reconciliation. |
-| Additional reference files | **`[TO CONFIRM]`** | No additional design reference files have been supplied. |
 
 ### Status legend
 
@@ -464,6 +464,6 @@ The following must be resolved before full visual implementation:
 2. Exact organisation green, semantic blue and semantic olive colours.
 3. Font source, licensing, delivery method, file formats and subsets.
 4. Approved icon and illustration asset library.
-5. Photography source, licensing, consent and attribution requirements.
+5. Photography source, licensing, consent and attribution requirements for future imagery; the generated homepage hero provenance is recorded in `CONTENT.md`.
 6. Exact hover, pressed and disabled treatments if non-colour cues are insufficient.
-7. Whether any additional reference material supersedes or extends the supplied board.
+7. Whether future reference material supersedes or extends the supplied board and homepage reference.

@@ -1,39 +1,244 @@
 ---
-/* src/components/home/Hero.astro */
+import { Image } from "astro:assets";
+import DefaultHero from "@astrojs/starlight/components/Hero.astro";
+import heroImage from "../../assets/images/wa-coast-hero.png";
+import AudienceCard from "./AudienceCard.astro";
+
+const isHomepage = Astro.url.pathname === "/";
 ---
 
-<section class="relative py-12 md:py-20 overflow-hidden bg-white">
-  <div
-    class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center"
-  >
-    <h1
-      class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-[1.1]"
-    >
-      Understand criminal injuries compensation across Australia
-      <span class="block text-[#78081C] mt-2">with clarity and confidence</span>
-    </h1>
+{
+  isHomepage ? (
+    <section class="home-hero" aria-labelledby="_top">
+      <div class="home-hero__inner">
+        <div class="home-hero__copy">
+          <h1 class="home-hero__title" id="_top" data-page-title>
+            Criminal injuries compensation, made simple.
+          </h1>
+          <div class="home-hero__divider" aria-hidden="true" />
+          <p class="home-hero__intro">
+            Trusted information and support for victims of crime and the organisations
+            that assist them.
+          </p>
+        </div>
 
-    <p class="mt-4 text-lg md:text-xl text-slate-600 max-w-3xl leading-relaxed">
-      The CIC Toolkit is a plain-language resource that helps victims of crime
-      understand criminal injuries compensation, including eligibility, what can
-      be claimed, and how to navigate the process with confidence.
-    </p>
+        <div class="home-hero__media" aria-hidden="true">
+          <Image
+            src={heroImage}
+            widths={[640, 960, 1280, 1600]}
+            sizes="(min-width: 1024px) 74vw, 100vw"
+            alt=""
+            priority
+            class="home-hero__image"
+          />
+        </div>
 
-    <div class="mt-10 flex justify-center gap-4">
-      <a
-        href="#jurisdictions"
-        class="inline-flex items-center justify-center
-          bg-[#78081C] text-white
-          hover:bg-[#5a0615]
-          px-8 py-4
-          rounded-full
-          text-lg font-bold
-          transition-all duration-200
-          hover:-translate-y-1 hover:shadow-lg
-          no-underline"
-      >
-        Select your location
-      </a>
-    </div>
-  </div>
-</section>
+        <div class="home-hero__chooser" aria-labelledby="audience-heading">
+          <h2 class="home-hero__prompt" id="audience-heading">
+            How can we help you today?
+          </h2>
+
+          <div class="home-hero__cards">
+            <AudienceCard
+              variant="individual"
+              title="I’m seeking compensation"
+              description="Understand your rights, check eligibility and learn how to make a claim."
+              ctaLabel="Get started"
+              href="/wa-guide/"
+            />
+            <AudienceCard
+              variant="organisation"
+              title="I’m an organisation"
+              description="Access training, resources and tools to help you support people with CIC claims."
+              ctaLabel="Access resources"
+              unavailable
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  ) : (
+    <DefaultHero />
+  )
+}
+
+<style>
+  .home-hero {
+    position: relative;
+    width: 100vw;
+    margin-top: -1.5rem;
+    margin-inline: calc(50% - 50vw);
+    overflow: clip;
+    background: var(--color-surface-page);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+  }
+
+  .home-hero__inner {
+    display: grid;
+    width: min(100%, var(--container-wide));
+    margin-inline: auto;
+    gap: 2rem;
+    padding: 2.5rem 1rem 1.5rem;
+  }
+
+  .home-hero__copy,
+  .home-hero__chooser {
+    position: relative;
+    z-index: 3;
+  }
+
+  .home-hero__copy {
+    max-width: 31rem;
+  }
+
+  h1.home-hero__title {
+    max-width: 13ch;
+    margin: 0;
+    color: var(--color-brand-midnight-navy);
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 1.75rem + 3vw, 4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .home-hero__divider {
+    width: 4rem;
+    height: 2px;
+    margin-top: 1.75rem;
+    background: var(--color-brand-deep-burgundy);
+  }
+
+  p.home-hero__intro {
+    max-width: 23rem;
+    margin: 1.5rem 0 0 !important;
+    color: var(--color-text-primary) !important;
+    font-family: var(--font-body) !important;
+    font-size: 1.125rem !important;
+    font-weight: 400 !important;
+    line-height: 1.65 !important;
+  }
+
+  .home-hero__media {
+    position: relative;
+    z-index: 1;
+    width: calc(100% + 2rem);
+    margin-inline: -1rem;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background: var(--color-brand-soft-grey);
+  }
+
+  .home-hero__media :global(img) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 72% center;
+  }
+
+  .home-hero__chooser {
+    width: 100%;
+  }
+
+  h2.home-hero__prompt {
+    margin: 0 0 1.5rem !important;
+    padding: 0 !important;
+    background: transparent !important;
+    color: var(--color-brand-midnight-navy) !important;
+    font-family: var(--font-heading) !important;
+    font-size: clamp(2rem, 1.5rem + 1vw, 2.25rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.02em !important;
+    text-align: center !important;
+  }
+
+  .home-hero__cards {
+    display: grid;
+    width: min(100%, 60rem);
+    margin-inline: auto;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 40rem) {
+    .home-hero__inner {
+      padding-inline: 1.5rem;
+    }
+
+    .home-hero__media {
+      width: calc(100% + 3rem);
+      margin-inline: -1.5rem;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .home-hero__inner {
+      min-height: calc(100svh - 4rem);
+      grid-template-rows: auto minmax(2rem, 1fr) auto;
+      gap: 2rem;
+      padding: 3.25rem 2rem 1.5rem;
+    }
+
+    .home-hero__copy {
+      grid-row: 1;
+    }
+
+    .home-hero__media {
+      position: absolute;
+      inset: 0 0 0 24%;
+      z-index: 1;
+      width: auto;
+      margin: 0;
+      aspect-ratio: auto;
+    }
+
+    .home-hero__media::before,
+    .home-hero__media::after {
+      position: absolute;
+      z-index: 1;
+      content: "";
+      pointer-events: none;
+      inset: 0;
+    }
+
+    .home-hero__media::before {
+      background: linear-gradient(
+        90deg,
+        var(--color-surface-page) 0%,
+        rgb(251 250 248 / 0.98) 17%,
+        rgb(251 250 248 / 0.78) 35%,
+        rgb(251 250 248 / 0.18) 58%,
+        transparent 74%
+      );
+    }
+
+    .home-hero__media::after {
+      background: linear-gradient(
+        0deg,
+        var(--color-surface-page) 0%,
+        rgb(251 250 248 / 0.96) 8%,
+        rgb(251 250 248 / 0.65) 22%,
+        transparent 48%
+      );
+    }
+
+    .home-hero__chooser {
+      grid-row: 3;
+    }
+
+    .home-hero__cards {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .home-hero *,
+    .home-hero *::before,
+    .home-hero *::after {
+      scroll-behavior: auto;
+    }
+  }
+</style>

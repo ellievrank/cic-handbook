@@ -40,6 +40,7 @@ export default defineConfig({
         components: {
             Header: './src/components/layout/Header.astro',
             Footer: './src/components/layout/Footer.astro',
+            Hero: './src/components/home/Hero.astro',
         },
     }), sitemap()],
 });

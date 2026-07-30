@@ -20,7 +20,7 @@ Where sources conflict, use this precedence:
 3. Current repository content and functionality.
 4. Supplied visual references.
 
-The supplied homepage reference confirms the homepage structure and its two audience pathways. Secondary destinations, forms, social links, and integrations visible in that reference remain `[TO CONFIRM]`.
+The supplied homepage reference at [`docs/reference/homepage-hero-reference.png`](reference/homepage-hero-reference.png) confirms the homepage structure, hero composition and two audience pathways. Secondary destinations, forms, social links, and integrations visible in that reference remain `[TO CONFIRM]`.
 
 ## 2. Business or organisation
 
@@ -169,7 +169,7 @@ The exact primary-navigation labels, footer destinations, legal links, acknowled
 6. Newsletter subscription section `[TO CONFIRM]`.
 7. Footer containing only approved destinations and organisation details.
 
-The final hero copy, card copy, photography, acknowledgement wording, and footer content belong in the content and design documents and are `[TO CONFIRM]` until supplied.
+The homepage hero copy, audience-card copy and generated hero-image treatment are confirmed in [`CONTENT.md`](CONTENT.md) and [`STYLE_GUIDE.md`](STYLE_GUIDE.md). The organisation destination, acknowledgement wording and footer content remain `[TO CONFIRM]`.
 
 ### 8.2 Western Australian CIC Guide
 
