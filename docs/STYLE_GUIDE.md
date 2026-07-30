@@ -2,7 +2,7 @@
 
 ## 1. Purpose, scope and authority
 
-This document defines the visual and creative direction for the CIC Handbook website. It translates the requirements in [`PROJECT_SPEC.md`](PROJECT_SPEC.md), the foundations in [`DESIGN_SYSTEM.md`](DESIGN_SYSTEM.md), the supplied [`brand-board.png`](reference/brand-board.png), and the approved [`homepage-hero-reference.png`](reference/homepage-hero-reference.png) into practical art-direction and composition rules.
+This document defines the visual and creative direction for the CIC Handbook website. It translates the requirements in [`PROJECT_SPEC.md`](PROJECT_SPEC.md), the foundations in [`DESIGN_SYSTEM.md`](DESIGN_SYSTEM.md), the supplied [`brand-board.png`](reference/brand-board.png), and the approved homepage references in [`docs/reference/`](reference/) into practical art-direction and composition rules.
 
 This guide does not:
 
@@ -29,7 +29,7 @@ Where sources differ, apply this order:
 3. `DESIGN_SYSTEM.md`.
 4. The visual reference.
 
-`docs/reference/` contains the brand board and the approved desktop homepage hero reference. The homepage reference confirms the broad coastal composition, protected left-aligned copy, lower audience chooser and balanced two-card treatment. Exact colours, fonts, radii and shadows continue to come from the Design System rather than being sampled from the raster reference.
+`docs/reference/` contains the brand board and approved desktop homepage references. The hero reference confirms the broad coastal composition, protected left-aligned copy, lower audience chooser and balanced two-card treatment. The support-principles and basics references confirm their respective information hierarchy and desktop composition. Exact colours, fonts, radii and shadows continue to come from the Design System rather than being sampled from raster references.
 
 ## 2. Overall visual personality
 
@@ -84,7 +84,7 @@ The interface should never use:
 
 **Visual interpretation:**
 
-- **Home:** use a full-width Warm Ivory hero with protected left-aligned copy, a right-weighted coastal image that fades into the page surface, and the two audience choices grouped prominently below. On smaller screens, move the image into an in-flow 16:9 panel and stack the cards in individual-then-organisation order. Continue below the hero with principles and a clear route into introductory material.
+- **Home:** use a full-width Warm Ivory hero with protected left-aligned copy, a right-weighted coastal image that fades into the page surface, and the two audience choices grouped prominently below. On smaller screens, move the image into an in-flow 16:9 panel and stack the cards in individual-then-organisation order. Continue below the hero with principles, then a constrained two-column introductory panel that pairs the basics pathway with calm editorial imagery and stacks content before imagery on smaller screens.
 - **WA Guide:** prioritise the reading column and topic navigation. Visual devices should clarify sequence, definitions, warnings and next steps rather than decorate long passages.
 - **Support Services:** place emergency and high-priority support information before editorial imagery or spacious promotional composition.
 - **Organisation pathway:** use orderly module and resource groups, but do not imply accounts, completion tracking, assessment or certification unless those features are confirmed.

@@ -1,0 +1,269 @@
+---
+import { Image } from "astro:assets";
+import basicsImage from "../../assets/images/homepage-basics.png";
+---
+
+<section class="basics-intro" aria-labelledby="basics-intro-heading">
+  <div class="basics-intro__panel">
+    <div class="basics-intro__content">
+      <div class="basics-intro__icon" aria-hidden="true">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-file-heart-icon lucide-file-heart"
+          focusable="false"
+        >
+          <path
+            d="M13 22h5a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v7"
+          ></path>
+          <path d="M14 2v5a1 1 0 0 0 1 1h5"></path>
+          <path
+            d="M3.62 18.8A2.25 2.25 0 1 1 7 15.836a2.25 2.25 0 1 1 3.38 2.966l-2.626 2.856a1 1 0 0 1-1.507 0z"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="basics-intro__copy">
+        <p class="basics-intro__eyebrow">New to CIC?</p>
+        <h2 class="basics-intro__heading" id="basics-intro-heading">
+          Start with the basics
+        </h2>
+        <p class="basics-intro__description">
+          Visit our WA Guide to learn what criminal injuries compensation is,
+          who may be able to apply and what compensation can cover.
+        </p>
+        <a
+          class="basics-intro__action"
+          href="/wa-guide/#what-is-criminal-injuries-compensation"
+        >
+          <span>Learn more</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M5 12h14"></path>
+            <path d="m13 6 6 6-6 6"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="basics-intro__media" aria-hidden="true">
+      <Image
+        src={basicsImage}
+        widths={[480, 720, 960, 1200]}
+        sizes="(min-width: 1200px) 600px, (min-width: 1024px) 50vw, (min-width: 640px) calc(100vw - 48px), calc(100vw - 32px)"
+        alt=""
+        loading="lazy"
+        class="basics-intro__image"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .basics-intro {
+    width: 100vw;
+    margin-block: 0 !important;
+    margin-inline: calc(50% - 50vw);
+    padding-inline: 1rem;
+    overflow: clip;
+    background: var(--color-utility-white);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+  }
+
+  .basics-intro__panel {
+    display: grid;
+    width: min(100%, var(--container-content));
+    margin-inline: auto;
+    overflow: hidden;
+    border: var(--border-subtle);
+    border-radius: var(--radius-lg);
+    background: var(--color-brand-soft-grey);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .basics-intro__content {
+    display: grid;
+    min-width: 0;
+    gap: 1.5rem;
+    align-content: center;
+    padding: 2rem 1.25rem;
+  }
+
+  .basics-intro__icon {
+    display: grid;
+    width: 4rem;
+    height: 4rem;
+    place-items: center;
+    border-radius: var(--radius-full);
+    background: var(--color-brand-sage-mist);
+    color: var(--color-brand-midnight-navy);
+  }
+
+  .basics-intro__icon svg {
+    display: block !important;
+    visibility: visible !important;
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    fill: none;
+    stroke: currentColor;
+  }
+
+  .basics-intro__copy {
+    min-width: 0;
+  }
+
+  p.basics-intro__eyebrow {
+    margin: 0 !important;
+    color: var(--color-brand-midnight-navy) !important;
+    font-family: var(--font-body) !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+  }
+
+  h2.basics-intro__heading {
+    width: auto !important;
+    margin: 0.5rem 0 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: var(--color-brand-midnight-navy) !important;
+    font-family: var(--font-heading) !important;
+    font-size: clamp(2rem, 1.5rem + 2vw, 3rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.02em !important;
+    text-align: left !important;
+  }
+
+  p.basics-intro__description {
+    max-width: 31rem;
+    margin: 1rem 0 0 !important;
+    color: var(--color-brand-slate) !important;
+    font-family: var(--font-body) !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+  }
+
+  .basics-intro__action {
+    display: inline-flex;
+    width: fit-content;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--color-brand-deep-burgundy);
+    border-radius: var(--radius-md);
+    background: var(--color-utility-white);
+    color: var(--color-brand-deep-burgundy);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    text-decoration: none;
+    transition:
+      background-color 180ms ease,
+      color 180ms ease,
+      transform 180ms ease;
+  }
+
+  .basics-intro__action svg {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 180ms ease;
+  }
+
+  .basics-intro__action:hover {
+    background: var(--color-brand-deep-burgundy);
+    color: var(--color-utility-white);
+    transform: translateY(-2px);
+  }
+
+  .basics-intro__action:hover svg {
+    transform: translateX(2px);
+  }
+
+  .basics-intro__action:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 2px var(--color-utility-white);
+  }
+
+  .basics-intro__media {
+    min-width: 0;
+    margin: 0 !important;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background: var(--color-brand-sand);
+  }
+
+  .basics-intro__media :global(img) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  @media (min-width: 40rem) {
+    .basics-intro {
+      padding-inline: 1.5rem;
+    }
+
+    .basics-intro__content {
+      grid-template-columns: 4rem minmax(0, 1fr);
+      padding: 2.5rem 2rem;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .basics-intro {
+      padding-inline: 2rem;
+    }
+
+    .basics-intro__panel {
+      min-height: 20rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .basics-intro__content {
+      padding: 3rem;
+    }
+
+    .basics-intro__media {
+      height: 100%;
+      aspect-ratio: auto;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .basics-intro__action,
+    .basics-intro__action svg {
+      transition: none;
+    }
+
+    .basics-intro__action:hover,
+    .basics-intro__action:hover svg {
+      transform: none;
+    }
+  }
+</style>
