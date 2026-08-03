@@ -1,7 +1,7 @@
 # CIC Handbook — Project Specification
 
 **Document status:** Draft  
-**Last updated:** 30 July 2026
+**Last updated:** 2 August 2026
 **Geographic scope:** Western Australia  
 **Subject:** Criminal injuries compensation
 
@@ -157,8 +157,27 @@ The confirmed primary-navigation order is:
 7. **Search** → the existing site-wide search interface
 
 The linked identity uses the public name **CIC Handbook** and returns to `/`.
-Footer destinations, legal links, acknowledgement text, social profiles, and the
-copyright holder remain `[TO CONFIRM]`.
+
+The confirmed global footer uses the existing book mark beside the accessible
+**CIC Handbook** identity and includes:
+
+- the tagline “Supporting victims. Empowering professionals. Strengthening communities.”;
+- **About CIC** → `/wa-guide/#what-is-criminal-injuries-compensation`;
+- **Making a claim** → `/wa-guide/#how-do-i-apply`;
+- **Check eligibility** → `/wa-guide/#who-can-apply`;
+- **Support services** → `/support-services/`;
+- a linked **For organisations** column heading → `/for-organisations/`, with no
+  unreleased child links;
+- the acknowledgement approved verbatim in [`CONTENT.md`](CONTENT.md);
+- `© [current year] CIC Handbook. All rights reserved.`, with the year generated
+  at build time; and
+- “This site provides general information only and is not legal advice.”
+
+The footer is a full-width Midnight Navy section with Warm Ivory text, a 1200px
+container, four desktop columns, a subtle internal divider, a responsive stacked
+layout, and a decorative dotted quarter-circle at the lower-right. Legal-page,
+news, contact, organisation training or resource, and social links shown in the
+reference remain omitted until separately approved.
 
 ## 8. Page purposes and required sections
 
@@ -184,10 +203,9 @@ copyright holder remain `[TO CONFIRM]`.
 6. Newsletter subscription section `[TO CONFIRM]`.
 7. Footer containing only approved destinations and organisation details.
 
-The homepage hero copy, audience-card copy, pathway destinations and centred
-image-free treatment are confirmed in [`CONTENT.md`](CONTENT.md) and
-[`STYLE_GUIDE.md`](STYLE_GUIDE.md). Acknowledgement wording and footer content
-remain `[TO CONFIRM]`.
+The homepage hero copy, audience-card copy, pathway destinations, centred
+image-free treatment, acknowledgement wording, and global footer content are
+confirmed in [`CONTENT.md`](CONTENT.md) and [`STYLE_GUIDE.md`](STYLE_GUIDE.md).
 
 ### 8.2 Western Australian CIC Guide
 
@@ -556,6 +574,9 @@ The website specification is satisfied when all applicable criteria below pass:
   content and its delivery requirements are confirmed.
 - The WA CIC Guide contains every required section in section 8.2.
 - The Support Services page contains every required section in section 8.3.
+- Every public page contains the approved global footer identity, tagline,
+  acknowledgement, current-year copyright, general-information disclaimer, and
+  confirmed destinations without unapproved conditional links.
 - No unconfirmed secondary page is presented as complete.
 - No service, legal claim, amount, time limit, location, contact detail, or outcome is published without an approved source and content review.
 
@@ -589,7 +610,7 @@ The website specification is satisfied when all applicable criteria below pass:
 - The generated sitemap and `robots.txt` use `https://cichandbook.com`.
 - Proposed, duplicate, private, or incomplete routes follow the confirmed indexing rules.
 - All legal-process content has been approved by the accountable reviewer `[TO CONFIRM]`.
-- The legal entity, publisher identity, disclaimer, privacy obligations, and required legal pages are confirmed before launch.
+- The legal entity, accountable publisher, privacy obligations, and any required dedicated legal pages are confirmed before launch; the approved global general-information disclaimer remains present on every public page.
 - All launch-blocking `[TO CONFIRM]` items have either been resolved or explicitly removed from scope.
 
 ## 18. Launch-blocking confirmations
@@ -598,14 +619,14 @@ The following decisions must be resolved before their associated work can be imp
 
 | Decision | Blocks |
 | --- | --- |
-| Legal entity, project owner, and accountable publisher | Organisation identity, legal notices, footer, content approval |
-| Government or legal-service affiliation statement | Branding, disclaimer, About Us content |
+| Legal entity, project owner, and accountable publisher | Legal notices, organisation governance, and content approval |
+| Government or legal-service affiliation statement | Branding, affiliation wording, and About Us content |
 | Organisation training and resource content | Replacing the confirmed “Coming soon” holding page with the full organisation pathway |
 | Training modules, learning objectives, and delivery model | Organisation pages and training implementation |
 | LMS, authentication, tracking, assessment, and certificate requirements | Training architecture |
 | Newsletter scope and provider | Newsletter form |
 | Contact method and submission handling | Contact page or form |
-| Privacy, terms, accessibility, and disclaimer requirements | Legal pages and forms |
+| Privacy, terms, accessibility, and any dedicated disclaimer-page requirements | Legal pages and forms |
 | Social profile URLs | Social links |
 | Analytics scope, provider, and consent model | Analytics integration |
 | Mobile and tablet design plus supported viewport matrix | Responsive acceptance |

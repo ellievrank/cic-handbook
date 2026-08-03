@@ -29,7 +29,7 @@ Where sources differ, apply this order:
 3. `DESIGN_SYSTEM.md`.
 4. The visual reference.
 
-`docs/reference/` contains the brand board and approved desktop homepage references. The centred-hero reference confirms an image-free Warm Ivory composition with centred copy and a two-colour heading; the earlier coastal reference now confirms only the balanced two-card treatment. The support-principles, basics and support CTA references confirm their respective information hierarchy and desktop composition. Exact colours, fonts, radii and shadows continue to come from the Design System rather than being sampled from raster references.
+`docs/reference/` contains the brand board and approved desktop homepage references. The centred-hero reference confirms an image-free Warm Ivory composition with centred copy and a two-colour heading; the earlier coastal reference now confirms only the balanced two-card treatment. The support-principles, basics and support CTA references confirm their respective information hierarchy and desktop composition. The supplied footer reference confirms its four-column Midnight Navy composition, internal divider and peripheral dotted motif, while approved footer copy and destinations come from [`CONTENT.md`](CONTENT.md). Exact colours, fonts, radii and shadows continue to come from the Design System rather than being sampled from raster references.
 
 ## 2. Overall visual personality
 
@@ -153,6 +153,32 @@ They must not imply:
 - a guaranteed linear path through a legal process.
 
 Personalised progress behaviour remains **`[TO CONFIRM]`** and is currently outside scope.
+
+### 6.4 Global footer composition
+
+**Confirmed direction:**
+
+- Use a full-width Midnight Navy surface with Warm Ivory text and a 1200px
+  constrained content area.
+- Arrange four desktop columns in logical source order: CIC Handbook identity and
+  tagline, approved quick links, the linked For organisations heading, and the
+  acknowledgement.
+- Build the identity from the existing decorative book mark and adjacent
+  accessible “CIC Handbook” text; do not reproduce or extract the CIC WA lockup
+  from the raster reference.
+- Separate the current-year copyright and general-information disclaimer from the
+  main columns with one subtle internal divider.
+- Stack the columns and bottom content in the same logical order as the viewport
+  narrows, keeping every link target at least 44px and every focus indicator clear.
+- Keep the original dotted quarter-circle motif peripheral, low contrast and
+  hidden from assistive technology; crop or omit it when it could overlap content.
+- Hide the branded footer in print while retaining printable page content.
+- Keep Starlight guide pagination above the branded footer rather than replacing
+  or absorbing it.
+
+Only the destinations approved in [`CONTENT.md`](CONTENT.md) belong in the
+footer. Do not display the reference's unapproved legal, news, contact, training,
+resource, or social links and controls.
 
 ## 7. Typography application
 

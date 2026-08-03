@@ -4,20 +4,10 @@ interface Props {
   title: string;
   description: string;
   ctaLabel: string;
-  href?: string;
-  unavailable?: boolean;
+  href: string;
 }
 
-const {
-  variant,
-  title,
-  description,
-  ctaLabel,
-  href,
-  unavailable = false,
-} = Astro.props;
-
-const statusId = `audience-card-${variant}-status`;
+const { variant, title, description, ctaLabel, href } = Astro.props;
 ---
 
 <article class:list={["audience-card", `audience-card--${variant}`]}>
@@ -72,27 +62,13 @@ const statusId = `audience-card-${variant}-status`;
     </div>
   </div>
 
-  {
-    href && !unavailable ? (
-      <a class="audience-card__action" href={href}>
-        <span>{ctaLabel}</span>
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M5 12h14" />
-          <path d="m13 6 6 6-6 6" />
-        </svg>
-      </a>
-    ) : (
-      <button
-        class="audience-card__action audience-card__action--disabled"
-        type="button"
-        disabled
-        aria-describedby={statusId}
-      >
-        <span>{ctaLabel}</span>
-        <span class="audience-card__status" id={statusId}>Coming soon</span>
-      </button>
-    )
-  }
+  <a class="audience-card__action" href={href}>
+    <span>{ctaLabel}</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M5 12h14" />
+      <path d="m13 6 6 6-6 6" />
+    </svg>
+  </a>
 </article>
 
 <style>
@@ -223,28 +199,6 @@ const statusId = `audience-card-${variant}-status`;
     outline: 2px solid var(--color-focus);
     outline-offset: 3px;
     box-shadow: 0 0 0 2px var(--color-utility-white);
-  }
-
-  .audience-card__action--disabled {
-    flex-wrap: wrap;
-    background: var(--color-brand-midnight-navy);
-    cursor: not-allowed;
-  }
-
-  .audience-card__action--disabled:hover {
-    transform: none;
-    box-shadow: none;
-  }
-
-  .audience-card__status {
-    padding: 0.2rem 0.5rem;
-    border-radius: var(--radius-sm);
-    background: var(--color-brand-sage-mist);
-    color: var(--color-brand-midnight-navy);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
   }
 
   @media (max-width: 39.99rem) {

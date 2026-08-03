@@ -1,7 +1,7 @@
 # CIC Handbook — Approved Content
 
 **Document status:** Partial approval record
-**Last updated:** 30 July 2026
+**Last updated:** 2 August 2026
 
 This document records content explicitly approved by the project owner. Content not recorded here remains subject to the confirmation rules in [`PROJECT_SPEC.md`](PROJECT_SPEC.md).
 
@@ -27,6 +27,37 @@ The desktop and compact navigation use the same order:
 **Approved visual treatment:** The global header uses a Warm Ivory surface, a
 compact CIC Handbook identity, a centred desktop link group, and a raised White
 Search control following the supplied navigation reference.
+
+## Global footer
+
+**Approval source:** Direct project-owner approval in the Codex global-footer task, 2 August 2026.
+
+The footer uses the existing book mark with adjacent accessible text identifying
+the site as **CIC Handbook**. The linked identity returns to `/`. The book mark is
+decorative because the adjacent text supplies the identity.
+
+| Area | Approved copy or behaviour |
+|---|---|
+| Tagline | Supporting victims. Empowering professionals. Strengthening communities. |
+| About CIC | Links to `/wa-guide/#what-is-criminal-injuries-compensation`. |
+| Making a claim | Links to `/wa-guide/#how-do-i-apply`. |
+| Check eligibility | Links to `/wa-guide/#who-can-apply`. |
+| Support services | Links to `/support-services/`. |
+| For organisations | The column heading links to `/for-organisations/`; no unreleased child links appear. |
+| Copyright | `© [current year] CIC Handbook. All rights reserved.` The year is generated from the current year at build time and is not hardcoded. |
+| Disclaimer | This site provides general information only and is not legal advice. |
+
+**Acknowledgement:** CIC Handbook was produced on Whadjuk Noongar Boodjar, the lands of the Traditional Custodians in Perth, Western Australia. We pay our respects to Elders past, present and emerging and extend that respect to all Aboriginal and Torres Strait Islander peoples today. We acknowledge that sovereignty was never ceded.
+
+**Approved visual treatment:** The branded footer is a full-width Midnight Navy
+section with Warm Ivory text, a 1200px content container, four desktop columns,
+a subtle internal divider, a responsive stacked layout, and a restrained
+decorative dotted quarter-circle at the lower-right.
+
+Legal-page links, news, contact, organisation training or resource links, and
+social links or controls shown in the visual reference are not approved footer
+content and must remain omitted until their destinations and behaviour are
+separately approved.
 
 ## Homepage
 

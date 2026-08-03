@@ -54,6 +54,11 @@ This checklist defines the minimum quality gates for CIC Handbook development, p
 - [ ] “CIC Handbook” is used as the public project name.
 - [ ] The interface identifies the subject as Western Australian criminal injuries compensation where context requires it.
 - [ ] General-information and not-legal-advice status is visible in the approved global or page-level location.
+- [ ] Every public page includes the approved global footer identity, tagline,
+  quick links, For organisations link, acknowledgement, current-year copyright,
+  and general-information disclaimer.
+- [ ] Legal, news, contact, organisation training or resource, and social footer
+  links remain absent unless separately approved with working destinations.
 - [ ] No copy or visual treatment implies CIC Handbook is a government agency, court, law firm, emergency service or authorised decision-maker.
 - [ ] No copy promises eligibility, an award amount, a processing time, claim approval or a successful outcome.
 - [ ] The individual pathway leads to the approved WA Guide route.
@@ -126,6 +131,9 @@ This checklist defines the minimum quality gates for CIC Handbook development, p
 - [ ] Primary actions use flat Deep Burgundy with Warm Ivory or White text; no unapproved darker state or gradient is used.
 - [ ] A section has no more than one primary action for the same decision.
 - [ ] Colour, icon, position or motion is never the only way to identify a pathway, callout, validation state or status.
+- [ ] The branded footer uses the approved Midnight Navy surface, Warm Ivory text,
+  1200px container, four-column desktop composition, subtle internal divider,
+  responsive stacking, and peripheral dotted quarter-circle treatment.
 
 ### 1.5 Responsive behaviour
 
@@ -140,6 +148,9 @@ This checklist defines the minimum quality gates for CIC Handbook development, p
 - [ ] Section spacing reduces before type is made smaller.
 - [ ] Columns collapse in the same logical order as the DOM and keyboard focus order.
 - [ ] Multi-column audience, value, resource and footer groups reduce columns until no item text overlaps, clips or causes page-level horizontal scrolling at any required viewport.
+- [ ] Footer source, reading and keyboard-focus order remains identity and tagline,
+  quick links, For organisations, acknowledgement, copyright, then disclaimer as
+  the four-column layout stacks.
 - [ ] Long-guide navigation becomes an accessible in-flow or compact navigation pattern when a sidebar no longer fits.
 - [ ] Wide tables use a labelled scroll container or an equivalent accessible small-screen presentation.
 - [ ] Images use intentional crops that preserve the meaningful focal point.
@@ -407,6 +418,8 @@ If the page has no approved form, mark this subsection `N/A` with the reason rat
 - [ ] Every informative image has context-specific alternative text.
 - [ ] Every decorative image uses empty alternative text.
 - [ ] Decorative graphics and icons are hidden from assistive technology.
+- [ ] The footer book mark reserves its intrinsic dimensions and is ignored by assistive technology because adjacent text supplies the identity.
+- [ ] The footer's decorative dotted SVG is ignored by assistive technology and does not overlap content or focus indicators.
 - [ ] Functional icons have an accessible name.
 - [ ] No essential instruction or label exists only inside an image.
 - [ ] Text over imagery remains on a controlled surface with verified contrast.
@@ -462,7 +475,12 @@ If the page has no approved form, mark this subsection `N/A` with the reason rat
 - [ ] Plain-English, step-by-step, compassionate/inclusive and WA-focused principles are present.
 - [ ] The introductory “start with the basics” pathway reaches approved content.
 - [ ] Newsletter controls are absent unless the feature and all form behaviour are approved.
-- [ ] Footer identity and destinations are approved.
+- [ ] The footer displays the existing book mark beside the accessible “CIC Handbook” identity and approved tagline.
+- [ ] Footer links reach About CIC, Making a claim, Check eligibility, Support services, and For organisations at their approved routes or fragments.
+- [ ] The acknowledgement exactly matches the approved text in `CONTENT.md`.
+- [ ] The copyright year matches the current build year and reads “CIC Handbook. All rights reserved.”
+- [ ] The footer states “This site provides general information only and is not legal advice.”
+- [ ] No unapproved legal, news, contact, training, resource, or social footer link or control appears.
 
 #### Western Australian CIC Guide
 
@@ -538,8 +556,9 @@ If the completed page is a different approved type, record its required sections
 - [ ] Every launch-blocking `[TO CONFIRM]` item is resolved or its associated page, feature or integration is removed from release.
 - [ ] Legal entity, project owner and accountable publisher are confirmed.
 - [ ] Government or legal-service affiliation wording is confirmed.
-- [ ] Disclaimer, privacy obligations, terms and required legal pages are approved.
-- [ ] Footer identity, copyright holder, acknowledgement wording and legal destinations are approved.
+- [ ] Privacy obligations, terms, and any required dedicated disclaimer or legal pages are approved.
+- [ ] Footer identity, tagline, quick-link destinations, acknowledgement, copyright wording, and general-information disclaimer match `CONTENT.md`.
+- [ ] Unapproved legal, news, contact, organisation training or resource, and social destinations are absent from the footer.
 - [ ] The organisation holding route and navigation label are approved; any
   released training scope and modules have separate approval.
 - [ ] Newsletter, contact, analytics, social, quick exit, LMS, authentication and learner-management decisions are documented as approved or excluded.
@@ -579,6 +598,8 @@ If the completed page is a different approved type, record its required sections
 - [ ] Every approved download resolves to the current artefact.
 - [ ] Every official application action leaves CIC Handbook for the approved official channel.
 - [ ] Every support action reaches the intended approved service.
+- [ ] Every public route contains one branded site footer, and every approved footer route and fragment resolves correctly.
+- [ ] Starlight previous/next pagination remains above the branded site footer where pagination applies.
 - [ ] The compact navigation works throughout the released site.
 - [ ] A deliberately unknown route reaches the 404 experience and every recovery link works.
 - [ ] Every approved form completes its success path.
@@ -612,6 +633,7 @@ If the completed page is a different approved type, record its required sections
 - [ ] Every released page is tested at 200% browser zoom.
 - [ ] Every browser and device in the approved support matrix completes the critical journeys.
 - [ ] Navigation, search, pathway cards, guide navigation, forms, tables, images and footer reflow without page-level horizontal scrolling.
+- [ ] The branded footer is tested at 320px, 640px, 1024px, 1276px, 1440px, and 200% zoom with no clipping, overlap, lost content, or obscured focus.
 - [ ] DOM order, reading order and focus order remain logical in every layout.
 - [ ] Image crops remain meaningful at every target width.
 - [ ] No sticky, fixed or overlay element obscures content or focus.
@@ -670,6 +692,8 @@ If the completed page is a different approved type, record its required sections
 - [ ] `rg -n -i 'TODO|FIXME|lorem|ipsum|coming soon|\\[TO CONFIRM\\]|example\\.com' src public` is reviewed and no unapproved user-visible placeholder remains; “Coming soon” appears only as approved page copy on `/for-organisations/`.
 - [ ] No rendered page contains an empty title, fake contact detail, temporary image, inactive control or placeholder destination.
 - [ ] No unapproved route appears in navigation, search, sitemap or footer.
+- [ ] Footer output contains the current build year, exact approved acknowledgement and disclaimer, and no stale hardcoded year.
+- [ ] The branded footer is absent from print output while Starlight page pagination remains functional on screen.
 - [ ] No unapproved newsletter, contact form, quick exit, account, authentication, LMS, progress, assessment, certificate, analytics, CRM, social link or third-party integration appears.
 - [ ] No visual treatment implies government or court authority, legal representation, eligibility, claim approval, stored application status, learner completion, certification or guaranteed compensation.
 - [ ] No published CIC guidance extends beyond Western Australia.

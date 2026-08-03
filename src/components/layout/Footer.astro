@@ -1,75 +1,359 @@
 ---
-import "../../styles/global.css";
-/* src/components/Footer.astro */
+/* src/components/layout/Footer.astro */
 import DefaultFooter from "@astrojs/starlight/components/Footer.astro";
+
+const currentYear = new Date().getFullYear();
+const { pagination } = Astro.locals.starlightRoute;
+const hasPagination = Boolean(pagination.prev || pagination.next);
+
+const quickLinks = [
+  {
+    label: "About CIC",
+    href: "/wa-guide/#what-is-criminal-injuries-compensation",
+  },
+  {
+    label: "Making a claim",
+    href: "/wa-guide/#how-do-i-apply",
+  },
+  {
+    label: "Check eligibility",
+    href: "/wa-guide/#who-can-apply",
+  },
+  {
+    label: "Support services",
+    href: "/support-services/",
+  },
+] as const;
 ---
 
-<DefaultFooter {...Astro.props} />
+{hasPagination && <DefaultFooter {...Astro.props} />}
 
-<div
-  class="relative left-1/2 right-1/2 mt-16 w-screen -ml-[50vw] -mr-[50vw] border-t-4 border-[#78081c] bg-gray-100"
->
-  <footer class="px-4 py-10 text-sm leading-6 text-gray-700 sm:px-6">
-    <div class="mx-auto max-w-5xl">
-      <div class="mb-10 flex items-center gap-3">
-        <img src="/book.png" alt="Logo" class="h-8 w-auto" />
-        <span class="text-xl font-extrabold uppercase tracking-wide text-gray-900">CIC Handbook</span>
-      </div>
+<div class="site-footer-shell print:hidden">
+  <footer class="site-footer" aria-label="Site footer">
+    <svg
+      class="site-footer__motif"
+      aria-hidden="true"
+      focusable="false"
+      viewBox="0 0 240 160"
+      fill="none"
+    >
+      <g
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-dasharray="1 8"
+      >
+        <path d="M204 160a36 36 0 0 1 36-36"></path>
+        <path d="M180 160a60 60 0 0 1 60-60"></path>
+        <path d="M156 160a84 84 0 0 1 84-84"></path>
+        <path d="M132 160a108 108 0 0 1 108-108"></path>
+        <path d="M108 160A132 132 0 0 1 240 28"></path>
+        <path d="M84 160A156 156 0 0 1 240 4"></path>
+      </g>
+    </svg>
 
-      <div class="grid grid-cols-1 gap-8 border-b border-gray-200 pb-10 md:grid-cols-[1.5fr_1fr_1fr]">
-        <div class="space-y-3">
-          <h3 class="m-0 text-base font-bold text-[#78081c]">Acknowledgement</h3>
-          <p class="m-0 text-gray-600">
-            The CIC Handbook was produced on Whadjuk Noongar Boodjar, the lands of the Traditional Custodians in Perth, Western
-            Australia. We pay our respects to Elders past and present and extend that respect to all Aboriginal and Torres
-            Strait Islander peoples today. We acknowledge that sovereignty was never ceded.
+    <div class="site-footer__inner">
+      <div class="site-footer__columns">
+        <div class="site-footer__brand">
+          <a class="site-footer__identity" href="/" aria-label="CIC Handbook home">
+            <img
+              class="site-footer__mark"
+              src="/book.png"
+              alt=""
+              width="500"
+              height="500"
+            />
+            <span class="site-footer__wordmark">CIC Handbook</span>
+          </a>
+          <p class="site-footer__tagline">
+            Supporting victims. Empowering professionals. Strengthening
+            communities.
           </p>
         </div>
 
-        <div class="space-y-3">
-          <h3 class="m-0 text-base font-bold text-[#78081c]">About this guide</h3>
-          <p class="m-0 text-gray-600">
-            This handbook is a plain-language toolkit designed to help victims of crime navigate the Criminal Injuries
-            Compensation process in Australia. It aims to reduce confusion and empower applicants with clear, accessible
-            information.
+        <nav aria-labelledby="site-footer-quick-links">
+          <p class="site-footer__heading" id="site-footer-quick-links">
+            Quick links
           </p>
-        </div>
-
-        <div class="space-y-3">
-          <h3 class="m-0 text-base font-bold text-[#78081c]">Quick Links</h3>
-          <ul class="m-0 list-none space-y-2 p-0">
-            <li>
-              <a
-                href="/"
-                class="inline-block font-semibold text-gray-900 no-underline transition hover:translate-x-1 hover:text-[#78081c]"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="/wa-guide"
-                class="inline-block font-semibold text-gray-900 no-underline transition hover:translate-x-1 hover:text-[#78081c]"
-              >
-                Western Australian Guide
-              </a>
-            </li>
-            <li>
-              <a
-                href="/support-services"
-                class="inline-block font-semibold text-gray-900 no-underline transition hover:translate-x-1 hover:text-[#78081c]"
-              >
-                Support Services
-              </a>
-            </li>
+          <ul class="site-footer__list">
+            {
+              quickLinks.map((link) => (
+                <li>
+                  <a class="site-footer__link" href={link.href}>
+                    {link.label}
+                  </a>
+                </li>
+              ))
+            }
           </ul>
-        </div>
+        </nav>
+
+        <nav aria-label="For organisations">
+          <a class="site-footer__heading-link" href="/for-organisations/">
+            For organisations
+          </a>
+        </nav>
+
+        <section aria-labelledby="site-footer-acknowledgement">
+          <p class="site-footer__heading" id="site-footer-acknowledgement">
+            We acknowledge
+          </p>
+          <p class="site-footer__acknowledgement">
+            CIC Handbook was produced on Whadjuk Noongar Boodjar, the lands of
+            the Traditional Custodians in Perth, Western Australia. We pay our
+            respects to Elders past, present and emerging and extend that respect
+            to all Aboriginal and Torres Strait Islander peoples today. We
+            acknowledge that sovereignty was never ceded.
+          </p>
+        </section>
       </div>
 
-      <div class="flex justify-end pt-6 text-xs font-medium text-gray-400">
-        &copy; {new Date().getFullYear()} CIC Handbook WA.
+      <div class="site-footer__meta">
+        <p class="site-footer__copyright">
+          &copy; {currentYear} CIC Handbook. All rights reserved.
+        </p>
+        <p class="site-footer__disclaimer">
+          This site provides general information only and is not legal advice.
+        </p>
       </div>
     </div>
   </footer>
 </div>
 
+<style>
+  .site-footer-shell {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    margin-top: 4rem;
+    margin-right: -50vw;
+    margin-left: -50vw;
+    overflow: hidden;
+    background: var(--color-brand-midnight-navy);
+  }
+
+  .site-footer {
+    position: relative;
+    color: var(--color-brand-warm-ivory);
+    font-family: var(--font-body);
+  }
+
+  .site-footer__inner {
+    position: relative;
+    z-index: 1;
+    width: min(100%, var(--container-content));
+    margin-inline: auto;
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  .site-footer__columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .site-footer__brand,
+  .site-footer__columns nav,
+  .site-footer__columns section {
+    min-width: 0;
+  }
+
+  .site-footer__identity {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-brand-warm-ivory);
+    text-decoration: none;
+  }
+
+  .site-footer__mark {
+    width: 2.75rem;
+    height: 2.75rem;
+    flex: none;
+    object-fit: contain;
+  }
+
+  .site-footer__wordmark {
+    font-family: var(--font-heading);
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+
+  p.site-footer__tagline,
+  p.site-footer__acknowledgement,
+  p.site-footer__copyright,
+  p.site-footer__disclaimer {
+    margin: 0 !important;
+    color: rgb(251 250 248 / 0.86) !important;
+    font-family: var(--font-body) !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+  }
+
+  p.site-footer__tagline {
+    max-width: 17rem;
+    margin-top: 1.25rem !important;
+  }
+
+  p.site-footer__heading {
+    margin: 0 0 0.75rem !important;
+    color: var(--color-utility-white) !important;
+    font-family: var(--font-heading) !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+  }
+
+  .site-footer__heading-link {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: flex-start;
+    color: var(--color-utility-white);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-decoration: none;
+    text-underline-offset: 0.25rem;
+  }
+
+  ul.site-footer__list {
+    display: grid;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0.5rem;
+    list-style: none !important;
+  }
+
+  .site-footer__list > li {
+    margin: 0 !important;
+    padding: 0 !important;
+    color: inherit !important;
+  }
+
+  .site-footer__list > li::before {
+    content: none !important;
+  }
+
+  .site-footer__link {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    color: rgb(251 250 248 / 0.86);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    text-decoration: none;
+    text-underline-offset: 0.25rem;
+  }
+
+  .site-footer__link:hover,
+  .site-footer__heading-link:hover,
+  .site-footer__identity:hover {
+    color: var(--color-utility-white);
+    text-decoration: underline;
+  }
+
+  .site-footer__link:focus-visible,
+  .site-footer__heading-link:focus-visible,
+  .site-footer__identity:focus-visible {
+    border-radius: var(--radius-sm);
+    outline: 2px solid var(--color-brand-warm-ivory);
+    outline-offset: 3px;
+  }
+
+  p.site-footer__acknowledgement {
+    max-width: 28rem;
+  }
+
+  .site-footer__meta {
+    display: flex;
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    flex-direction: column;
+    gap: 0.75rem;
+    border-top: 1px solid rgb(251 250 248 / 0.24);
+  }
+
+  p.site-footer__copyright,
+  p.site-footer__disclaimer {
+    font-size: 0.875rem !important;
+  }
+
+  .site-footer__motif {
+    display: none;
+    position: absolute;
+    z-index: 0;
+    right: -2.5rem;
+    bottom: 3.5rem;
+    width: 15rem;
+    height: 10rem;
+    color: var(--color-brand-deep-burgundy);
+    opacity: 0.78;
+    pointer-events: none;
+  }
+
+  @media (min-width: 40rem) {
+    .site-footer__inner {
+      padding-inline: 1.5rem;
+    }
+
+    .site-footer__columns {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 3rem;
+    }
+
+    .site-footer__meta {
+      flex-direction: row;
+      align-items: start;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    p.site-footer__disclaimer {
+      max-width: 36rem;
+      text-align: right;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .site-footer__inner {
+      padding: 3rem 2rem 1.5rem;
+    }
+
+    .site-footer__columns {
+      grid-template-columns:
+        minmax(13rem, 1.25fr) minmax(9rem, 0.9fr) minmax(8rem, 0.65fr)
+        minmax(18rem, 1.5fr);
+      gap: 2.5rem;
+    }
+
+    .site-footer__motif {
+      display: block;
+      right: 0;
+      bottom: -3.5rem;
+    }
+
+    .site-footer__meta {
+      padding-right: 13rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .site-footer__link,
+    .site-footer__identity {
+      scroll-behavior: auto;
+    }
+  }
+
+  @media print {
+    .site-footer-shell {
+      display: none !important;
+    }
+  }
+</style>
