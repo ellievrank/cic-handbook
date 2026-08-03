@@ -50,6 +50,32 @@
   --brand-slate: var(--color-brand-midnight-navy);
 }
 
+/* Keep the branded footer as the terminal edge of every screen page. */
+@media screen {
+  .main-pane > main {
+    display: flex;
+    min-height: calc(
+      100vh - var(--sl-nav-height) - var(--sl-mobile-toc-height)
+    );
+    min-height: calc(
+      100dvh - var(--sl-nav-height) - var(--sl-mobile-toc-height)
+    );
+    padding-bottom: 0;
+    flex-direction: column;
+  }
+
+  main > .content-panel:last-child,
+  main > .content-panel:last-child > .sl-container {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+  }
+
+  main > .content-panel:last-child {
+    padding-bottom: 0;
+  }
+}
+
 a.anchor,
 a[class*="anchor"],
 a[class*="heading-anchor"],

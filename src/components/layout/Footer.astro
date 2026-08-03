@@ -28,105 +28,111 @@ const quickLinks = [
 
 {hasPagination && <DefaultFooter {...Astro.props} />}
 
-<div class="site-footer-shell print:hidden">
-  <footer class="site-footer" aria-label="Site footer">
-    <svg
-      class="site-footer__motif"
-      aria-hidden="true"
-      focusable="false"
-      viewBox="0 0 240 160"
-      fill="none"
-    >
-      <g
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-dasharray="1 8"
+<div class="site-footer-placement print:hidden">
+  <div class="site-footer-shell">
+    <footer class="site-footer" aria-label="Site footer">
+      <svg
+        class="site-footer__motif"
+        aria-hidden="true"
+        focusable="false"
+        viewBox="0 0 240 160"
+        fill="none"
       >
-        <path d="M204 160a36 36 0 0 1 36-36"></path>
-        <path d="M180 160a60 60 0 0 1 60-60"></path>
-        <path d="M156 160a84 84 0 0 1 84-84"></path>
-        <path d="M132 160a108 108 0 0 1 108-108"></path>
-        <path d="M108 160A132 132 0 0 1 240 28"></path>
-        <path d="M84 160A156 156 0 0 1 240 4"></path>
-      </g>
-    </svg>
+        <g
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-dasharray="1 8"
+        >
+          <path d="M204 160a36 36 0 0 1 36-36"></path>
+          <path d="M180 160a60 60 0 0 1 60-60"></path>
+          <path d="M156 160a84 84 0 0 1 84-84"></path>
+          <path d="M132 160a108 108 0 0 1 108-108"></path>
+          <path d="M108 160A132 132 0 0 1 240 28"></path>
+          <path d="M84 160A156 156 0 0 1 240 4"></path>
+        </g>
+      </svg>
 
-    <div class="site-footer__inner">
-      <div class="site-footer__columns">
-        <div class="site-footer__brand">
-          <a class="site-footer__identity" href="/" aria-label="CIC Handbook home">
-            <img
-              class="site-footer__mark"
-              src="/book.png"
-              alt=""
-              width="500"
-              height="500"
-            />
-            <span class="site-footer__wordmark">CIC Handbook</span>
-          </a>
-          <p class="site-footer__tagline">
-            Supporting victims. Empowering professionals. Strengthening
-            communities.
-          </p>
+      <div class="site-footer__inner">
+        <div class="site-footer__columns">
+          <div class="site-footer__brand">
+            <a class="site-footer__identity" href="/" aria-label="CIC Handbook home">
+              <img
+                class="site-footer__mark"
+                src="/book.png"
+                alt=""
+                width="500"
+                height="500"
+              />
+              <span class="site-footer__wordmark">CIC Handbook</span>
+            </a>
+            <p class="site-footer__tagline">
+              Supporting victims. Empowering professionals. Strengthening
+              communities.
+            </p>
+          </div>
+
+          <nav aria-labelledby="site-footer-quick-links">
+            <p class="site-footer__heading" id="site-footer-quick-links">
+              Quick links
+            </p>
+            <ul class="site-footer__list">
+              {
+                quickLinks.map((link) => (
+                  <li>
+                    <a class="site-footer__link" href={link.href}>
+                      {link.label}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
+
+          <nav aria-label="For organisations">
+            <a class="site-footer__heading-link" href="/for-organisations/">
+              For organisations
+            </a>
+          </nav>
+
+          <section aria-labelledby="site-footer-acknowledgement">
+            <p class="site-footer__heading" id="site-footer-acknowledgement">
+              We acknowledge
+            </p>
+            <p class="site-footer__acknowledgement">
+              CIC Handbook was produced on Whadjuk Noongar Boodjar, the lands of
+              the Traditional Custodians in Perth, Western Australia. We pay our
+              respects to Elders past, present and emerging and extend that
+              respect to all Aboriginal and Torres Strait Islander peoples today.
+              We acknowledge that sovereignty was never ceded.
+            </p>
+          </section>
         </div>
 
-        <nav aria-labelledby="site-footer-quick-links">
-          <p class="site-footer__heading" id="site-footer-quick-links">
-            Quick links
+        <div class="site-footer__meta">
+          <p class="site-footer__copyright">
+            &copy; {currentYear} CIC Handbook. All rights reserved.
           </p>
-          <ul class="site-footer__list">
-            {
-              quickLinks.map((link) => (
-                <li>
-                  <a class="site-footer__link" href={link.href}>
-                    {link.label}
-                  </a>
-                </li>
-              ))
-            }
-          </ul>
-        </nav>
-
-        <nav aria-label="For organisations">
-          <a class="site-footer__heading-link" href="/for-organisations/">
-            For organisations
-          </a>
-        </nav>
-
-        <section aria-labelledby="site-footer-acknowledgement">
-          <p class="site-footer__heading" id="site-footer-acknowledgement">
-            We acknowledge
+          <p class="site-footer__disclaimer">
+            This site provides general information only and is not legal advice.
           </p>
-          <p class="site-footer__acknowledgement">
-            CIC Handbook was produced on Whadjuk Noongar Boodjar, the lands of
-            the Traditional Custodians in Perth, Western Australia. We pay our
-            respects to Elders past, present and emerging and extend that respect
-            to all Aboriginal and Torres Strait Islander peoples today. We
-            acknowledge that sovereignty was never ceded.
-          </p>
-        </section>
+        </div>
       </div>
-
-      <div class="site-footer__meta">
-        <p class="site-footer__copyright">
-          &copy; {currentYear} CIC Handbook. All rights reserved.
-        </p>
-        <p class="site-footer__disclaimer">
-          This site provides general information only and is not legal advice.
-        </p>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </div>
 
 <style>
+  .site-footer-placement {
+    margin-block-start: auto;
+    padding-block-start: 4rem;
+  }
+
   .site-footer-shell {
     position: relative;
     left: 50%;
     right: 50%;
     width: 100vw;
-    margin-top: 4rem;
     margin-right: -50vw;
     margin-left: -50vw;
     overflow: hidden;
@@ -352,7 +358,7 @@ const quickLinks = [
   }
 
   @media print {
-    .site-footer-shell {
+    .site-footer-placement {
       display: none !important;
     }
   }

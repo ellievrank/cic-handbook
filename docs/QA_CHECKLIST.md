@@ -634,6 +634,10 @@ If the completed page is a different approved type, record its required sections
 - [ ] Every browser and device in the approved support matrix completes the critical journeys.
 - [ ] Navigation, search, pathway cards, guide navigation, forms, tables, images and footer reflow without page-level horizontal scrolling.
 - [ ] The branded footer is tested at 320px, 640px, 1024px, 1276px, 1440px, and 200% zoom with no clipping, overlap, lost content, or obscured focus.
+- [ ] Every public route has zero visible document or background gap beneath the
+  branded footer on short pages and tall viewports; the footer remains in normal
+  flow after long content and Starlight pagination without fixed, sticky or
+  overlay positioning.
 - [ ] DOM order, reading order and focus order remain logical in every layout.
 - [ ] Image crops remain meaningful at every target width.
 - [ ] No sticky, fixed or overlay element obscures content or focus.

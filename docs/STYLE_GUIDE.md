@@ -175,6 +175,11 @@ Personalised progress behaviour remains **`[TO CONFIRM]`** and is currently outs
 - Hide the branded footer in print while retaining printable page content.
 - Keep Starlight guide pagination above the branded footer rather than replacing
   or absorbing it.
+- Treat the branded footer as the terminal visual edge of the page, with no
+  document or background gap visible beneath it.
+- Keep the footer in normal document flow. On short pages, use the page shell to
+  bottom-align it to a tall viewport; never use fixed, sticky, absolute or overlay
+  positioning. Long content and pagination continue to flow naturally before it.
 
 Only the destinations approved in [`CONTENT.md`](CONTENT.md) belong in the
 footer. Do not display the reference's unapproved legal, news, contact, training,
