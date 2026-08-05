@@ -6,7 +6,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-    site: "http://cichandbook.com",
+    site: "https://cichandbook.com",
     integrations: [tailwind({
         applyBaseStyles: false,
     }), starlight({
@@ -40,6 +40,7 @@ export default defineConfig({
         components: {
             Header: './src/components/layout/Header.astro',
             Footer: './src/components/layout/Footer.astro',
+            Hero: './src/components/home/Hero.astro',
         },
     }), sitemap()],
 });

@@ -1,25 +1,210 @@
----
-import "../../styles/global.css";
-import { LinkButton } from "@astrojs/starlight/components";
-/* src/components/HomeCTA.astro */
----
+<section class="support-cta" aria-labelledby="support-cta-heading">
+  <div class="support-cta__panel">
+    <div class="support-cta__icon" aria-hidden="true">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-phone-icon lucide-phone"
+        focusable="false"
+      >
+        <path
+          d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
+        ></path>
+      </svg>
+    </div>
 
-<div
-  class="mt-12 rounded-xl border border-rose-200 bg-rose-50 px-6 py-8 text-center"
->
-  <h3 class="mt-0 text-xl font-extrabold text-[#78081c] mb-2">
-    Need immediate help or support?
-  </h3>
-  <p class="mb-6 text-gray-600">Find confidential support services available in your area.</p>
+    <div class="support-cta__copy">
+      <h2 class="support-cta__heading" id="support-cta-heading">
+        Need support? You’re not alone.
+      </h2>
+      <p class="support-cta__description">
+        Find support services and organisations that can help. Whether you need
+        legal help, counselling, crisis support or information about local
+        services, we’re here to help you connect with the right service.
+      </p>
+    </div>
 
-  <LinkButton
-    href="/support-services"
-    variant="primary"
-    icon="external"
-    class="inline-flex items-center justify-center"
-  >
-    Explore Support Services
-  </LinkButton>
-</div>
+    <a class="support-cta__action" href="/support-services/">
+      Find support near you
+    </a>
+  </div>
+</section>
 
+<style>
+  .support-cta {
+    width: 100vw;
+    margin-block: 3rem 0 !important;
+    margin-inline: calc(50% - 50vw);
+    padding: 0 1rem 4rem;
+    overflow: clip;
+    background: var(--color-utility-white);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+  }
 
+  .support-cta__panel {
+    display: grid;
+    width: min(100%, var(--container-content));
+    margin: 0 auto !important;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    border: var(--border-subtle);
+    border-radius: var(--radius-lg);
+    background: var(--color-brand-dusty-rose);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .support-cta__icon {
+    display: grid;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 !important;
+    place-items: center;
+    border-radius: var(--radius-full);
+    background: var(--color-utility-white);
+    color: var(--color-brand-deep-burgundy);
+  }
+
+  .support-cta__icon svg {
+    display: block !important;
+    visibility: visible !important;
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    fill: none;
+    stroke: currentColor;
+  }
+
+  .support-cta__copy {
+    min-width: 0;
+    margin: 0 !important;
+  }
+
+  h2.support-cta__heading {
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: var(--color-brand-midnight-navy) !important;
+    font-family: var(--font-heading) !important;
+    font-size: clamp(2rem, 1.5rem + 2vw, 3rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.02em !important;
+    text-align: left !important;
+  }
+
+  p.support-cta__description {
+    max-width: 46rem;
+    margin: 0.75rem 0 0 !important;
+    color: var(--color-brand-midnight-navy) !important;
+    font-family: var(--font-body) !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+  }
+
+  .support-cta__action {
+    display: inline-flex;
+    width: 100%;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+    padding: 0.75rem 1.5rem;
+    border: 0;
+    border-radius: var(--radius-md);
+    background: var(--color-brand-deep-burgundy);
+    color: var(--color-utility-white);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    transition:
+      transform 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .support-cta__action:hover {
+    color: var(--color-utility-white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .support-cta__action:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 2px var(--color-utility-white);
+  }
+
+  @media (min-width: 40rem) {
+    .support-cta {
+      padding-inline: 1.5rem;
+      padding-bottom: 5rem;
+    }
+
+    .support-cta__panel {
+      grid-template-columns: 4rem minmax(0, 1fr);
+      align-items: center;
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .support-cta__icon {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .support-cta__copy {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .support-cta__action {
+      width: fit-content;
+      grid-column: 2;
+      grid-row: 2;
+      justify-self: start;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .support-cta {
+      padding-inline: 2rem;
+    }
+
+    .support-cta__panel {
+      grid-template-columns: 4rem minmax(0, 1fr) auto;
+      gap: 2rem;
+    }
+
+    .support-cta__action {
+      min-width: 13rem;
+      grid-column: 3;
+      grid-row: 1;
+      justify-self: end;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .support-cta__action {
+      transition: none;
+    }
+
+    .support-cta__action:hover {
+      transform: none;
+    }
+  }
+</style>

@@ -8,3 +8,4 @@
 - [x] edit styling WA page
 - [x] edit styling support page
 - [ ] fix next/previous buttons
+- [ ] migrate Astro 6 and Tailwind 4 together with visual regression testing

@@ -1,0 +1,249 @@
+---
+interface Props {
+  variant: "individual" | "organisation";
+  title: string;
+  description: string;
+  ctaLabel: string;
+  href: string;
+}
+
+const { variant, title, description, ctaLabel, href } = Astro.props;
+---
+
+<article class:list={["audience-card", `audience-card--${variant}`]}>
+  <div class="audience-card__body">
+    <div class="audience-card__icon" aria-hidden="true">
+      {
+        variant === "individual" ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-user-search-icon lucide-user-search"
+            focusable="false"
+          >
+            <circle cx="10" cy="7" r="4" />
+            <path d="M10.3 15H7a4 4 0 0 0-4 4v2" />
+            <circle cx="17" cy="17" r="3" />
+            <path d="m21 21-1.9-1.9" />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users-icon lucide-users"
+            focusable="false"
+          >
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+            <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+            <circle cx="9" cy="7" r="4" />
+          </svg>
+        )
+      }
+    </div>
+
+    <div class="audience-card__copy">
+      <h3 class="audience-card__title">{title}</h3>
+      <p class="audience-card__description">{description}</p>
+    </div>
+  </div>
+
+  <a class="audience-card__action" href={href}>
+    <span>{ctaLabel}</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M5 12h14" />
+      <path d="m13 6 6 6-6 6" />
+    </svg>
+  </a>
+</article>
+
+<style>
+  .audience-card {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border: var(--border-subtle);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface-card);
+    box-shadow: var(--shadow-lg);
+    font-family: var(--font-body);
+  }
+
+  .audience-card__body {
+    display: grid;
+    grid-template-columns: 6rem minmax(0, 1fr);
+    align-items: start;
+    gap: 1.5rem;
+  }
+
+  .audience-card__icon {
+    display: grid;
+    width: 6rem;
+    height: 6rem;
+    place-items: center;
+    border-radius: var(--radius-full);
+  }
+
+  .audience-card--individual .audience-card__icon {
+    color: var(--color-brand-deep-burgundy);
+    background: var(--color-brand-dusty-rose);
+  }
+
+  .audience-card--organisation .audience-card__icon {
+    color: var(--color-brand-midnight-navy);
+    background: var(--color-brand-sage-mist);
+  }
+
+  .audience-card__icon svg {
+    width: 3.5rem;
+    height: 3.5rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .audience-card__copy {
+    min-width: 0;
+  }
+
+  h3.audience-card__title {
+    margin: 0 !important;
+    font-family: var(--font-heading) !important;
+    font-size: clamp(1.5rem, 1.25rem + 0.5vw, 1.75rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  .audience-card--individual .audience-card__title {
+    color: var(--color-brand-deep-burgundy) !important;
+  }
+
+  .audience-card--organisation .audience-card__title {
+    color: var(--color-brand-midnight-navy) !important;
+  }
+
+  p.audience-card__description {
+    margin: 1rem 0 0 !important;
+    color: var(--color-text-primary) !important;
+    font-family: var(--font-body) !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+  }
+
+  .audience-card__action {
+    display: inline-flex;
+    width: 100%;
+    min-height: 3.25rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 0;
+    border-radius: var(--radius-md);
+    background: var(--color-brand-deep-burgundy);
+    color: var(--color-text-on-dark);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    transition:
+      transform 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .audience-card__action svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 180ms ease;
+  }
+
+  .audience-card__action:hover {
+    color: var(--color-text-on-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .audience-card__action:hover svg {
+    transform: translateX(2px);
+  }
+
+  .audience-card__action:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 2px var(--color-utility-white);
+  }
+
+  @media (max-width: 39.99rem) {
+    .audience-card {
+      gap: 1.25rem;
+      padding: 1.25rem;
+    }
+
+    .audience-card__body {
+      grid-template-columns: 4.5rem minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    .audience-card__icon {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
+    .audience-card__icon svg {
+      width: 2.75rem;
+      height: 2.75rem;
+    }
+  }
+
+  @media (max-width: 22.5rem) {
+    .audience-card__body {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .audience-card {
+      min-height: 18.5rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .audience-card__action,
+    .audience-card__action svg {
+      transition: none;
+    }
+
+    .audience-card__action:hover,
+    .audience-card__action:hover svg {
+      transform: none;
+    }
+  }
+</style>
