@@ -1,18 +1,10 @@
 ---
 import "../../styles/global.css";
-/* src/components/LegalHelpCard.astro */
-import { LinkButton } from "@astrojs/starlight/components";
 ---
 
 <div
-  class="mt-8 mb-8 flex flex-col items-center gap-6 rounded-xl border border-slate-200 bg-slate-50 p-8 text-center shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-lg md:flex-row md:items-start md:p-10 md:text-left"
+  class="mt-8 mb-8 flex flex-col items-center gap-6 rounded-xl border border-slate-200 bg-slate-50 p-8 text-center shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-lg md:flex-row md:items-center md:p-10 md:text-left"
 >
-  <div
-    class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white text-2xl shadow-md"
-  >
-    <span>⚖️</span>
-  </div>
-
   <div class="space-y-2">
     <h3 class="m-0 text-xl font-bold text-slate-800">
       Need free legal advice?
@@ -24,16 +16,30 @@ import { LinkButton } from "@astrojs/starlight/components";
     </p>
   </div>
 
-  <div class="md:ml-auto md:self-center">
-    <LinkButton
+  <div class="md:ml-12 md:self-center shrink-0">
+    <a
       href="https://clcs.org.au/legal-help/"
       target="_blank"
       rel="noopener noreferrer"
-      variant="primary"
-      icon="external"
-      class="inline-flex items-center justify-center"
+      class="inline-flex items-center justify-center gap-2 rounded-lg bg-[#78081c] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#5a0615] hover:shadow-md no-underline"
     >
       Find a Legal Centre
-    </LinkButton>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+        ></path>
+        <polyline points="15 3 21 3 21 9"></polyline>
+        <line x1="10" y1="14" x2="21" y2="3"></line>
+      </svg>
+    </a>
   </div>
 </div>

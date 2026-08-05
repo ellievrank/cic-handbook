@@ -168,7 +168,6 @@ h4 svg,
   margin-bottom: 2rem !important;
 }
 
-/* dot point style*/
 .sl-markdown-content li {
   position: relative;
   padding-left: 1.5rem; 
@@ -193,7 +192,6 @@ h4 svg,
   color: #1e293b; 
 }
 
-/* Details/Summary accordion styles */
 details {
   background-color: white;
   border: 1px solid #e2e8f0;
@@ -259,7 +257,6 @@ details > *:not(summary) {
   color: #475569;
 }
 
-/* Hero section (Starlight template) */
 .hero {
   background-color: #ffffff !important;
   padding: 4rem 1rem !important;
@@ -353,11 +350,6 @@ details > *:not(summary) {
   background-color: #eddaff !important;
   border-color: #a855f7 !important;
   color: #6b21a8 !important;
-}
-.starlight-aside--tip .starlight-aside__title {
-  color: #7c3aed !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.05em;
 }
 
 .starlight-aside--note {

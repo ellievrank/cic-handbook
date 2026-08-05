@@ -1,52 +1,167 @@
 ---
-import "../../styles/global.css";
-/* src/components/SupportServicesGrid.astro */
+/* src/components/services-visuals/SupportServicesGrid.astro */
+
+const services = [
+  {
+    name: "Victims of Crime Helpline",
+    phone: "1800 819 817",
+    desc: "Free, confidential support and referrals for victims of crime across Australia.",
+    href: "tel:1800819817",
+    titleClass: "text-blue-800",
+    phoneClass: "text-blue-900 hover:text-blue-700",
+    bgClass: "bg-blue-50",
+    borderClass: "border-blue-200",
+  },
+  {
+    name: "1800RESPECT",
+    phone: "1800 737 732",
+    desc: "24/7 counselling and support for people affected by sexual assault, family violence, or domestic violence.",
+    href: "https://www.1800respect.org.au/",
+    titleClass: "text-purple-800",
+    phoneClass: "text-purple-900 hover:text-purple-700",
+    bgClass: "bg-purple-50",
+    borderClass: "border-purple-200",
+  },
+  {
+    name: "Lifeline",
+    phone: "13 11 14",
+    desc: "24/7 crisis support for anyone experiencing emotional distress.",
+    href: "https://www.lifeline.org.au/",
+    titleClass: "text-[#002B5C]",
+    phoneClass: "text-[#002B5C] hover:opacity-80",
+    bgClass: "bg-[#E5F0FA]",
+    borderClass: "border-[#B3D7F5]",
+  },
+  {
+    name: "13YARN",
+    phone: "13 92 76",
+    desc: "24/7 culturally safe crisis support for Aboriginal and Torres Strait Islander peoples.",
+    href: "https://www.13yarn.org.au/",
+    titleClass: "text-[#D32F2F]",
+    phoneClass: "text-[#C62828] hover:opacity-80",
+    bgClass: "bg-[#FFEBEE]",
+    borderClass: "border-[#FFCDD2]",
+  },
+  {
+    name: "Blue Knot Foundation",
+    phone: "1300 657 380",
+    desc: "Specialist support for people with complex trauma and survivors of childhood abuse.",
+    href: "https://blueknot.org.au/",
+    titleClass: "text-indigo-800",
+    phoneClass: "text-indigo-900 hover:text-indigo-700",
+    bgClass: "bg-indigo-50",
+    borderClass: "border-indigo-200",
+  },
+  {
+    name: "Men’s Referral Service",
+    phone: "1300 766 491",
+    desc: "Counselling and referrals for men concerned about their own behaviour or experiencing family violence.",
+    href: "https://ntv.org.au/",
+    titleClass: "text-cyan-800",
+    phoneClass: "text-cyan-900 hover:text-cyan-700",
+    bgClass: "bg-cyan-50",
+    borderClass: "border-cyan-200",
+  },
+  {
+    name: "National Relay Service",
+    phone: "133 677",
+    desc: "Assistance for people who are deaf, hard of hearing, or have a speech impairment.",
+    href: "https://www.accesshub.gov.au/about-the-nrs",
+    titleClass: "text-slate-800",
+    phoneClass: "text-slate-900 hover:text-slate-700",
+    bgClass: "bg-slate-50",
+    borderClass: "border-slate-200",
+  },
+  {
+    name: "Djirra",
+    phone: "1800 105 303",
+    desc: "Specialist legal and non-legal support for Aboriginal people experiencing family violence.",
+    href: "https://djirra.org.au/",
+    titleClass: "text-orange-800",
+    phoneClass: "text-orange-900 hover:text-orange-700",
+    bgClass: "bg-orange-50",
+    borderClass: "border-orange-200",
+  },
+  {
+    name: "InTouch",
+    phone: "1800 755 988",
+    desc: "Multicultural Centre Against Family Violence. Specialist support for women from migrant and refugee backgrounds.",
+    href: "https://intouch.org.au/",
+    titleClass: "text-violet-800",
+    phoneClass: "text-violet-900 hover:text-violet-700",
+    bgClass: "bg-violet-50",
+    borderClass: "border-violet-200",
+  },
+  {
+    name: "QLife",
+    phone: "1800 184 527",
+    desc: "Anonymous and free LGBTIQ+ peer support and referrals. Available 3pm – midnight every day.",
+    href: "https://qlife.org.au/",
+    titleClass: "text-pink-700",
+    phoneClass: "text-pink-800 hover:text-pink-600",
+    bgClass: "bg-pink-50",
+    borderClass: "border-pink-200",
+  },
+  {
+    name: "Diverse Voices",
+    phone: "1800 184 527",
+    desc: "Focuses on the wellbeing of LGBTIQ+ communities through peer support.",
+    href: "https://diversevoices.org.au/",
+    titleClass: "text-fuchsia-700",
+    phoneClass: "text-fuchsia-800 hover:text-fuchsia-600",
+    bgClass: "bg-fuchsia-50",
+    borderClass: "border-fuchsia-200",
+  },
+  {
+    name: "Rainbow Violence Helpline",
+    phone: "1800 497 212",
+    desc: "Specialist counselling for LGBTIQ+ people who have experienced sexual, domestic, or family violence.",
+    href: "https://fullstop.org.au/",
+    titleClass: "text-emerald-800",
+    phoneClass: "text-emerald-900 hover:text-emerald-700",
+    bgClass: "bg-emerald-50",
+    borderClass: "border-emerald-200",
+  },
+  {
+    name: "Relationships Australia",
+    phone: "1300 364 277",
+    desc: "Counselling and support for individuals, families, and relationships.",
+    href: "https://www.relationships.org.au/",
+    titleClass: "text-teal-800",
+    phoneClass: "text-teal-900 hover:text-teal-700",
+    bgClass: "bg-teal-50",
+    borderClass: "border-teal-200",
+  },
+];
 ---
 
-<div class="mt-6 mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-  <div class="flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-rose-200 hover:shadow-lg">
-    <h3 class="m-0 text-lg font-bold text-[#78081c]">Victims of Crime Helpline</h3>
-    <a href="tel:1800819817" class="mb-2 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-[#78081c] hover:underline">
-      📞 1800 819 817
-    </a>
-    <p class="m-0 text-sm text-gray-600">Free, confidential support and referrals for victims of crime across Australia.</p>
-  </div>
+<div
+  class="mt-6 mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+>
+  {
+    services.map((service) => (
+      <div
+        class={`flex flex-col gap-2 rounded-xl border p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg ${service.bgClass} ${service.borderClass}`}
+      >
+        <h3 class={`m-0 text-base font-bold ${service.titleClass}`}>
+          {service.name}
+        </h3>
 
-  <div class="flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-rose-200 hover:shadow-lg">
-    <h3 class="m-0 text-lg font-bold text-[#78081c]">1800RESPECT</h3>
-    <a href="tel:1800737732" class="mb-2 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-[#78081c] hover:underline">
-      📞 1800 737 732
-    </a>
-    <p class="m-0 text-sm text-gray-600">
-      24/7 counselling and support for people affected by sexual assault, family violence, or domestic violence.
-    </p>
-  </div>
+        <a
+          href={
+            service.href.startsWith("http")
+              ? service.href
+              : `tel:${service.phone.replace(/\s/g, "")}`
+          }
+          class={`mb-1 inline-block text-base font-bold no-underline transition hover:underline ${service.phoneClass}`}
+        >
+          📞 {service.phone}
+        </a>
 
-  <div class="flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-rose-200 hover:shadow-lg">
-    <h3 class="m-0 text-lg font-bold text-[#78081c]">Lifeline</h3>
-    <a href="tel:131114" class="mb-2 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-[#78081c] hover:underline">
-      📞 13 11 14
-    </a>
-    <p class="m-0 text-sm text-gray-600">24/7 crisis support for anyone experiencing emotional distress.</p>
-  </div>
-
-  <div class="flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-rose-200 hover:shadow-lg">
-    <h3 class="m-0 text-lg font-bold text-[#78081c]">13YARN</h3>
-    <a href="tel:139276" class="mb-2 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-[#78081c] hover:underline">
-      📞 13 92 76
-    </a>
-    <p class="m-0 text-sm text-gray-600">
-      24/7 culturally safe crisis support for Aboriginal and Torres Strait Islander peoples.
-    </p>
-  </div>
-
-  <div class="flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-rose-200 hover:shadow-lg">
-    <h3 class="m-0 text-lg font-bold text-[#78081c]">Relationships Australia</h3>
-    <a href="tel:1300364277" class="mb-2 inline-block text-lg font-bold text-gray-900 no-underline transition hover:text-[#78081c] hover:underline">
-      📞 1300 364 277
-    </a>
-    <p class="m-0 text-sm text-gray-600">Counselling and support for individuals, families, and relationships.</p>
-  </div>
+        <p class="m-0 text-sm text-gray-700 font-medium leading-snug">
+          {service.desc}
+        </p>
+      </div>
+    ))
+  }
 </div>
-
-
